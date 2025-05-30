@@ -11,15 +11,15 @@ app_license = "mit"
 # required_apps = []
 
 # Each item in the list will be shown as an app in the apps page
-# add_to_apps_screen = [
-# 	{
-# 		"name": "sahl_erp",
-# 		"logo": "/assets/sahl_erp/logo.png",
-# 		"title": "Sahl Erp",
-# 		"route": "/sahl_erp",
-# 		"has_permission": "sahl_erp.api.permission.has_app_permission"
-# 	}
-# ]
+add_to_apps_screen = [
+	{
+		"name": "sahl_erp",
+		"logo": "/assets/sahl_erp/images/sahl-logo.png",
+		"title": "Sahl Erp",
+		"route": "/app/sahl_erp",
+		#"has_permission": "sahl_erp.api.permission.has_app_permission"
+	}
+]
 
 # Includes in <head>
 # ------------------
