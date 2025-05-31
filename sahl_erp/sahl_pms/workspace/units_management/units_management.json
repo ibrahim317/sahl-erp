@@ -1,7 +1,7 @@
 {
  "app": "sahl_erp",
  "charts": [],
- "content": "[{\"type\":\"header\",\"data\":{\"text\":\"Units Management\"}}]",
+ "content": "[{\"id\":\"w1PnCN2_fV\",\"type\":\"header\",\"data\":{\"text\":\"<span style=\\\"font-size: 16px;\\\">Overview</span>\",\"col\":12}},{\"id\":\"ozeoFQiwXW\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Rent Units Count\",\"col\":4}},{\"id\":\"N8JYTarngC\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Investment Units Count\",\"col\":4}},{\"id\":\"UuwGCHwF8E\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Ownership Units Count\",\"col\":4}},{\"id\":\"J9K7hjcHg6\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Units Count\",\"col\":12}},{\"id\":\"Eg0yzxEhU2\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Main entities</b></span>\",\"col\":12}},{\"id\":\"ick5miF2G6\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Owners\",\"col\":3}},{\"id\":\"IwKhvIu2-2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Unit\",\"col\":3}},{\"id\":\"jC7ZTuWw-T\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Meta Data</b></span>\",\"col\":12}},{\"id\":\"9mfjd1jeTT\",\"type\":\"card\",\"data\":{\"card_name\":\"Categories\",\"col\":4}},{\"id\":\"4iNtlV81go\",\"type\":\"card\",\"data\":{\"card_name\":\"Places\",\"col\":4}},{\"id\":\"0ISiFUxFyd\",\"type\":\"card\",\"data\":{\"card_name\":\"Other\",\"col\":4}}]",
  "creation": "2025-05-31 21:15:16.014510",
  "custom_blocks": [],
  "docstatus": 0,
@@ -14,19 +14,131 @@
  "is_hidden": 0,
  "label": "Units Management",
  "link_type": "DocType",
- "links": [],
- "modified": "2025-05-31 23:14:52.773474",
- "modified_by": "i.aboelsoud21@gmail.com",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Categories",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Unites Categories",
+   "link_count": 0,
+   "link_to": "Unit Category",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Unit Owner Types",
+   "link_count": 0,
+   "link_to": "Unit Owner Type",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Places",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Cities",
+   "link_count": 0,
+   "link_to": "City",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Sub-Cities",
+   "link_count": 0,
+   "link_to": "Sub City",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Other",
+   "link_count": 1,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Unit Features",
+   "link_count": 0,
+   "link_to": "Unit Feature",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2025-06-01 01:07:41.959754",
+ "modified_by": "Administrator",
  "module": "Sahl PMS",
  "name": "Units Management",
- "number_cards": [],
+ "number_cards": [
+  {
+   "label": "Rent Units Count",
+   "number_card_name": "Rent Units Count"
+  },
+  {
+   "label": "Investment Units Count",
+   "number_card_name": "Investment Units Count"
+  },
+  {
+   "label": "Ownership Units Count",
+   "number_card_name": "Ownership Units Count"
+  },
+  {
+   "label": "Total Units Count",
+   "number_card_name": "Total Units Count"
+  }
+ ],
  "owner": "i.aboelsoud21@gmail.com",
  "parent_page": "",
  "public": 1,
  "quick_lists": [],
  "roles": [],
  "sequence_id": 23.0,
- "shortcuts": [],
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Owners",
+   "link_to": "Unit Owner",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Unit",
+   "link_to": "Unit",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
  "title": "Units Management",
  "type": "Workspace"
 }

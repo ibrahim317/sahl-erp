@@ -1,25 +1,143 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "autoincrement",
  "creation": "2025-05-31 21:49:42.429358",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "section_break_jq52"
+  "type",
+  "location_service_employee",
+  "subcity",
+  "features",
+  "bathrooms",
+  "floor",
+  "model_number",
+  "column_break_yqtr",
+  "owner1",
+  "city",
+  "category",
+  "rooms",
+  "elevators",
+  "area",
+  "building_status"
  ],
  "fields": [
   {
-   "fieldname": "section_break_jq52",
-   "fieldtype": "Section Break"
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type",
+   "options": "Rent\nOwnership\nInvestment",
+   "reqd": 1
+  },
+  {
+   "fieldname": "location_service_employee",
+   "fieldtype": "Link",
+   "label": "Location Service Employee",
+   "link_filters": "[[\"User\",\"role\",\"=\",\"Location Service Employee\"]]",
+   "options": "User"
+  },
+  {
+   "fieldname": "subcity",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Sub-City",
+   "options": "Sub City",
+   "reqd": 1
+  },
+  {
+   "fieldname": "features",
+   "fieldtype": "Table MultiSelect",
+   "label": "Features",
+   "options": "Unit Feature",
+   "reqd": 1
+  },
+  {
+   "fieldname": "floor",
+   "fieldtype": "Int",
+   "label": "Floor",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "model_number",
+   "fieldtype": "Int",
+   "label": "Model Number",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_yqtr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "owner1",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Owner",
+   "options": "Unit Owner",
+   "reqd": 1
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "City",
+   "options": "City",
+   "reqd": 1
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Link",
+   "label": "Category",
+   "options": "Unit Category",
+   "reqd": 1
+  },
+  {
+   "fieldname": "bathrooms",
+   "fieldtype": "Data",
+   "is_virtual": 1,
+   "label": "Bathrooms",
+   "reqd": 1
+  },
+  {
+   "fieldname": "rooms",
+   "fieldtype": "Int",
+   "label": "Rooms",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "elevators",
+   "fieldtype": "Int",
+   "label": "Elevators",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "area",
+   "fieldtype": "Int",
+   "label": "Area",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "building_status",
+   "fieldtype": "Select",
+   "label": "Building Status",
+   "options": "New\nOld",
+   "reqd": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-05-31 23:53:47.401894",
+ "modified": "2025-06-01 01:48:30.618082",
  "modified_by": "Administrator",
  "module": "Sahl PMS",
  "name": "Unit",
+ "naming_rule": "Autoincrement",
  "owner": "i.aboelsoud21@gmail.com",
  "permissions": [
   {
@@ -38,5 +156,6 @@
  "row_format": "Dynamic",
  "sort_field": "creation",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "city"
 }
