@@ -16,7 +16,7 @@ add_to_apps_screen = [
 		"name": "sahl_erp",
 		"logo": "/assets/sahl_erp/images/sahl-logo.png",
 		"title": "Sahl Erp",
-		"route": "/app/sahl-home",
+		"route": "/app/erp-home",
 		#"has_permission": "sahl_erp.api.permission.has_app_permission"
 	}
 ]
