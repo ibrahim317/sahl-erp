@@ -9,10 +9,13 @@
   "type",
   "location_service_employee",
   "subcity",
-  "features",
   "bathrooms",
+  "features",
   "floor",
   "model_number",
+  "entrance_type",
+  "finishing",
+  "price",
   "column_break_yqtr",
   "owner1",
   "city",
@@ -20,7 +23,29 @@
   "rooms",
   "elevators",
   "area",
-  "building_status"
+  "building_status",
+  "street_view",
+  "furnishing",
+  "status",
+  "data_uhnz",
+  "section_break_trdq",
+  "images",
+  "videos",
+  "section_break_coiu",
+  "description",
+  "section_break_zejw",
+  "street_name",
+  "column_break_hlto",
+  "building_name",
+  "column_break_zlsy",
+  "apartment_number",
+  "column_break_qefx",
+  "nearest_landmark",
+  "section_break_iqox",
+  "geolocation_vwpv",
+  "section_break_uvkw",
+  "need_initial_inspection",
+  "is_premium_unit"
  ],
  "fields": [
   {
@@ -28,7 +53,7 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Type",
-   "options": "Rent\nOwnership\nInvestment",
+   "options": "Rent\nOwnership",
    "reqd": 1
   },
   {
@@ -44,13 +69,14 @@
    "in_list_view": 1,
    "label": "Sub-City",
    "options": "Sub City",
-   "reqd": 1
+   "reqd": 1,
+   "search_index": 1
   },
   {
    "fieldname": "features",
    "fieldtype": "Table MultiSelect",
    "label": "Features",
-   "options": "Unit Feature",
+   "options": "Unit Feature Link",
    "reqd": 1
   },
   {
@@ -85,7 +111,8 @@
    "in_list_view": 1,
    "label": "City",
    "options": "City",
-   "reqd": 1
+   "reqd": 1,
+   "search_index": 1
   },
   {
    "fieldname": "category",
@@ -97,7 +124,6 @@
   {
    "fieldname": "bathrooms",
    "fieldtype": "Data",
-   "is_virtual": 1,
    "label": "Bathrooms",
    "reqd": 1
   },
@@ -128,12 +154,138 @@
    "label": "Building Status",
    "options": "New\nOld",
    "reqd": 1
+  },
+  {
+   "fieldname": "entrance_type",
+   "fieldtype": "Select",
+   "label": "Entrance Type",
+   "options": "Hotel\nStandard"
+  },
+  {
+   "fieldname": "finishing",
+   "fieldtype": "Select",
+   "label": "Finishing",
+   "options": "Ultar Luxury\nSuper Luxury\nNot Finished"
+  },
+  {
+   "fieldname": "street_view",
+   "fieldtype": "Select",
+   "label": "Street View",
+   "options": "Main Street\nSide Street"
+  },
+  {
+   "fieldname": "furnishing",
+   "fieldtype": "Select",
+   "label": "Furnishing",
+   "options": "Modern\nNormal"
+  },
+  {
+   "fieldname": "price",
+   "fieldtype": "Float",
+   "label": "Price"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Available\nRented\nNot Available"
+  },
+  {
+   "fieldname": "section_break_trdq",
+   "fieldtype": "Section Break",
+   "label": "Attachments"
+  },
+  {
+   "fieldname": "images",
+   "fieldtype": "Table",
+   "label": "Images",
+   "options": "Unit Images"
+  },
+  {
+   "fieldname": "videos",
+   "fieldtype": "Table",
+   "label": "Videos",
+   "options": "Unit Videos"
+  },
+  {
+   "fieldname": "section_break_coiu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "section_break_zejw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "street_name",
+   "fieldtype": "Data",
+   "label": "Street Name"
+  },
+  {
+   "fieldname": "column_break_hlto",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "building_name",
+   "fieldtype": "Data",
+   "label": "Building Name"
+  },
+  {
+   "fieldname": "column_break_zlsy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "apartment_number",
+   "fieldtype": "Data",
+   "label": "Apartment number"
+  },
+  {
+   "fieldname": "column_break_qefx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "nearest_landmark",
+   "fieldtype": "Data",
+   "label": "Nearest Landmark"
+  },
+  {
+   "fieldname": "section_break_iqox",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "Cairo",
+   "fieldname": "geolocation_vwpv",
+   "fieldtype": "Geolocation"
+  },
+  {
+   "fieldname": "section_break_uvkw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "need_initial_inspection",
+   "fieldtype": "Check",
+   "label": "Need initial inspection?"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_premium_unit",
+   "fieldtype": "Check",
+   "label": "Is premium unit?"
+  },
+  {
+   "fieldname": "data_uhnz",
+   "fieldtype": "Data"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-06-01 01:48:30.618082",
+ "modified": "2025-06-02 23:03:43.341075",
  "modified_by": "Administrator",
  "module": "Sahl PMS",
  "name": "Unit",

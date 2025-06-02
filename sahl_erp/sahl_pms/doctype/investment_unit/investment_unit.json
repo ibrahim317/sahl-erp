@@ -1,0 +1,100 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "autoincrement",
+ "creation": "2025-06-02 13:41:30.186632",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "onwer1",
+  "city",
+  "sub_city",
+  "area",
+  "start_date",
+  "end_date",
+  "price",
+  "detailed_address"
+ ],
+ "fields": [
+  {
+   "fieldname": "onwer1",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Owner",
+   "options": "Unit Owner",
+   "reqd": 1
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "City",
+   "options": "City",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sub_city",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Sub City",
+   "options": "Sub City",
+   "reqd": 1
+  },
+  {
+   "fieldname": "area",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Area",
+   "reqd": 1
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "price",
+   "fieldtype": "Float",
+   "label": "Price",
+   "reqd": 1
+  },
+  {
+   "fieldname": "detailed_address",
+   "fieldtype": "Small Text",
+   "label": "Detailed Address"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-06-03 00:36:35.514604",
+ "modified_by": "Administrator",
+ "module": "Sahl PMS",
+ "name": "Investment Unit",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "city"
+}
