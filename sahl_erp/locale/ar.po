@@ -1,4 +1,4 @@
-# Translations template for Sahl Erp.
+# Arabic translations for Sahl Erp.
 # Copyright (C) 2025 Softa Solutions
 # This file is distributed under the same license as the Sahl Erp project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
