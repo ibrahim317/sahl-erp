@@ -1,7 +1,7 @@
 {
  "app": "sahl_erp",
  "charts": [],
- "content": "[{\"id\":\"w1PnCN2_fV\",\"type\":\"header\",\"data\":{\"text\":\"<span style=\\\"font-size: 16px;\\\">Overview</span>\",\"col\":12}},{\"id\":\"ozeoFQiwXW\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Rent Units Count\",\"col\":4}},{\"id\":\"N8JYTarngC\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Investment Units Count\",\"col\":4}},{\"id\":\"UuwGCHwF8E\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Ownership Units Count\",\"col\":4}},{\"id\":\"J9K7hjcHg6\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Units Count\",\"col\":12}},{\"id\":\"Eg0yzxEhU2\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Main entities</b></span>\",\"col\":12}},{\"id\":\"IwKhvIu2-2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Investment Units\",\"col\":3}},{\"id\":\"5AK4QGOLTh\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Rent Units\",\"col\":3}},{\"id\":\"CL5zuw57T5\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Ownership Units\",\"col\":3}},{\"id\":\"ick5miF2G6\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Owners\",\"col\":3}},{\"id\":\"jC7ZTuWw-T\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Meta Data</b></span>\",\"col\":12}},{\"id\":\"9mfjd1jeTT\",\"type\":\"card\",\"data\":{\"card_name\":\"Categories\",\"col\":4}},{\"id\":\"4iNtlV81go\",\"type\":\"card\",\"data\":{\"card_name\":\"Places\",\"col\":4}},{\"id\":\"0ISiFUxFyd\",\"type\":\"card\",\"data\":{\"card_name\":\"Other\",\"col\":4}}]",
+ "content": "[{\"id\":\"w1PnCN2_fV\",\"type\":\"header\",\"data\":{\"text\":\"<span style=\\\"font-size: 16px;\\\">Overview</span>\",\"col\":12}},{\"id\":\"ozeoFQiwXW\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Rent Units Count\",\"col\":4}},{\"id\":\"N8JYTarngC\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Investment Units Count\",\"col\":4}},{\"id\":\"UuwGCHwF8E\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Ownership Units Count\",\"col\":4}},{\"id\":\"J9K7hjcHg6\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Units Count\",\"col\":12}},{\"id\":\"Eg0yzxEhU2\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Main entities</b></span>\",\"col\":12}},{\"id\":\"IwKhvIu2-2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Investment Units\",\"col\":3}},{\"id\":\"5AK4QGOLTh\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Rent Units\",\"col\":3}},{\"id\":\"CL5zuw57T5\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Ownership Units\",\"col\":3}},{\"id\":\"ick5miF2G6\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Owners\",\"col\":3}},{\"id\":\"jC7ZTuWw-T\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Meta Data</b></span>\",\"col\":12}},{\"id\":\"9mfjd1jeTT\",\"type\":\"card\",\"data\":{\"card_name\":\"Categories\",\"col\":4}},{\"id\":\"4iNtlV81go\",\"type\":\"card\",\"data\":{\"card_name\":\"Places\",\"col\":4}},{\"id\":\"0ISiFUxFyd\",\"type\":\"card\",\"data\":{\"card_name\":\"Other\",\"col\":4}},{\"id\":\"H7phL3C3ZI\",\"type\":\"card\",\"data\":{\"card_name\":\"Reports\",\"col\":4}}]",
  "creation": "2025-05-31 21:15:16.014510",
  "custom_blocks": [],
  "docstatus": 0,
@@ -91,9 +91,62 @@
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reports",
+   "link_count": 4,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Number Of Available Units Per Area",
+   "link_count": 0,
+   "link_to": "Number Of Available Units Per Area",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Unit",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Number Of Units Per Number of Rooms",
+   "link_count": 0,
+   "link_to": "Number Of Units Per Number of Rooms",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Unit",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Number Of Units Per City",
+   "link_count": 0,
+   "link_to": "Number Of Units Per City",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Unit",
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Number Of Rented Units Per Price",
+   "link_count": 0,
+   "link_to": "Number Of Rented Units Per Price",
+   "link_type": "Report",
+   "onboard": 0,
+   "report_ref_doctype": "Unit",
+   "type": "Link"
   }
  ],
- "modified": "2025-06-02 16:33:46.789282",
+ "modified": "2025-06-04 23:20:18.661072",
  "modified_by": "Administrator",
  "module": "Sahl PMS",
  "name": "Units Management",

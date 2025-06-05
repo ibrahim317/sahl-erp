@@ -25,8 +25,8 @@ add_to_apps_screen = [
 # ------------------
 
 # include js, css files in header of desk.html
-# app_include_css = "/assets/sahl_erp/css/sahl_erp.css"
 app_include_js = ["/assets/sahl_erp/js/map_defaults.js"]
+app_include_css = ["/assets/sahl_erp/css/override_desk_components.css"]
 
 # include js, css files in header of web template
 # web_include_css = "/assets/sahl_erp/css/sahl_erp.css"
@@ -57,7 +57,7 @@ app_include_js = ["/assets/sahl_erp/js/map_defaults.js"]
 # ----------
 
 # application home page (will override Website Settings)
-# home_page = "login"
+home_page = "/app/erp-home"
 
 # website user home page (by Role)
 # role_home_page = {
