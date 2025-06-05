@@ -1,4 +1,4 @@
-# Arabic translations for Sahl Erp.
+# Translations template for Sahl Erp.
 # Copyright (C) 2025 Softa Solutions
 # This file is distributed under the same license as the Sahl Erp project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
@@ -7,15 +7,24 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Sahl Erp VERSION\n"
 "Report-Msgid-Bugs-To: support@softa-solutions.com\n"
-"POT-Creation-Date: 2025-06-03 01:06+0205\n"
-"PO-Revision-Date: 2025-06-03 01:06+0205\n"
+"POT-Creation-Date: 2025-06-05 13:44+0205\n"
+"PO-Revision-Date: 2025-06-05 13:44+0205\n"
 "Last-Translator: support@softa-solutions.com\n"
 "Language-Team: support@softa-solutions.com\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.13.1\n"
-"Language: ar\n"
+
+#. Header text in the Reports Workspace
+#: sahl_erp/sahl_erp/workspace/reports/reports.json
+msgid "<span class=\"h4\"><b>CRM Reports</b></span>"
+msgstr "<span class=\"h4\"><b>تقارير إدارة علاقات العملاء</b></span>"
+
+#. Header text in the Reports Workspace
+#: sahl_erp/sahl_erp/workspace/reports/reports.json
+msgid "<span class=\"h4\"><b>HR Reports</b></span>"
+msgstr "<span class=\"h4\"><b>تقارير الموارد البشرية</b></span>"
 
 #. Header text in the Units Management Workspace
 #: sahl_erp/sahl_pms/workspace/units_management/units_management.json
@@ -37,10 +46,25 @@ msgstr "<span class=\"h4\">الرئيسية لنظام ERP</span>"
 msgid "<span class=\"h4\">Student Services</span>"
 msgstr "<span class=\"h4\">خدمات الطلاب</span>"
 
+#. Header text in the Reports Workspace
+#: sahl_erp/sahl_erp/workspace/reports/reports.json
+msgid "<span class=\"h4\">Unit Reports</span>"
+msgstr "<span class=\"h4\">تقارير الوحدات</span>"
+
 #. Header text in the Units Management Workspace
 #: sahl_erp/sahl_pms/workspace/units_management/units_management.json
 msgid "<span style=\"font-size: 16px;\">Overview</span>"
 msgstr "<span style=\"font-size: 16px;\">نظرة عامة</span>"
+
+#. Name of a DocType
+#: sahl_erp/sahl_pms/doctype/add_unit_request/add_unit_request.json
+msgid "Add Unit Request"
+msgstr "طلب إضافة وحدة"
+
+#. Label of the section_break_uvkw (Section Break) field in DocType 'Unit'
+#: sahl_erp/sahl_pms/doctype/unit/unit.json
+msgid "Additional info"
+msgstr "معلومات إضافية"
 
 #. Label of the apartment_number (Data) field in DocType 'Unit'
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
@@ -64,6 +88,11 @@ msgstr "المرفقات"
 msgid "Available"
 msgstr "متاحة"
 
+#. Label of a shortcut in the Reports Workspace
+#: sahl_erp/sahl_erp/workspace/reports/reports.json
+msgid "Available Units Per Area"
+msgstr "الوحدات المتاحة حسب المنطقة"
+
 #. Label of the bathrooms (Data) field in DocType 'Unit'
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
 msgid "Bathrooms"
@@ -71,8 +100,8 @@ msgstr "الحمامات"
 
 #. Label of the building_name (Data) field in DocType 'Unit'
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
-msgid "Building Name"
-msgstr "اسم المبنى"
+msgid "Building Number"
+msgstr "رقم المبنى"
 
 #. Label of the building_status (Select) field in DocType 'Unit'
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
@@ -169,6 +198,11 @@ msgstr "الطابق"
 msgid "Furnishing"
 msgstr "الفرش"
 
+#. Label of the has_furnishing (Check) field in DocType 'Unit'
+#: sahl_erp/sahl_pms/doctype/unit/unit.json
+msgid "Has Furnishing"
+msgstr "مفروشة"
+
 #. Option for the 'Entrance Type' (Select) field in DocType 'Unit'
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
 msgid "Hotel"
@@ -210,10 +244,10 @@ msgstr "عدد الوحدات الاستثمارية"
 msgid "Is premium unit?"
 msgstr "هل هي وحدة مميزة؟"
 
-#. Label of the location_service_employee (Link) field in DocType 'Unit'
+#. Option for the 'Finishing' (Select) field in DocType 'Unit'
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
-msgid "Location Service Employee"
-msgstr "موظف خدمة الموقع"
+msgid "Luxury"
+msgstr "فاخر"
 
 #. Option for the 'Street View' (Select) field in DocType 'Unit'
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
@@ -281,10 +315,45 @@ msgstr "غير مشطبة"
 msgid "Note"
 msgstr "ملاحظة"
 
+#. Name of a report
+#. Label of a Link in the Units Management Workspace
+#: sahl_erp/sahl_pms/report/number_of_available_units_per_area/number_of_available_units_per_area.json
+#: sahl_erp/sahl_pms/workspace/units_management/units_management.json
+msgid "Number Of Available Units Per Area"
+msgstr "عدد الوحدات المتاحة حسب المنطقة"
+
+#. Name of a report
+#. Label of a Link in the Units Management Workspace
+#: sahl_erp/sahl_pms/report/number_of_rented_units_per_price/number_of_rented_units_per_price.json
+#: sahl_erp/sahl_pms/workspace/units_management/units_management.json
+#: sahl_erp/sahl_reporting/report/number_of_rented_units_per_price/number_of_rented_units_per_price.json
+msgid "Number Of Rented Units Per Price"
+msgstr "عدد الوحدات المؤجرة حسب السعر"
+
+#. Name of a report
+#. Label of a Link in the Units Management Workspace
+#: sahl_erp/sahl_pms/report/number_of_units_per_city/number_of_units_per_city.json
+#: sahl_erp/sahl_pms/workspace/units_management/units_management.json
+#: sahl_erp/sahl_reporting/report/number_of_units_per_city/number_of_units_per_city.json
+msgid "Number Of Units Per City"
+msgstr "عدد الوحدات حسب المدينة"
+
+#. Name of a report
+#. Label of a Link in the Units Management Workspace
+#: sahl_erp/sahl_pms/report/number_of_units_per_number_of_rooms/number_of_units_per_number_of_rooms.json
+#: sahl_erp/sahl_pms/workspace/units_management/units_management.json
+msgid "Number Of Units Per Number of Rooms"
+msgstr "عدد الوحدات حسب عدد الغرف"
+
 #. Option for the 'Building Status' (Select) field in DocType 'Unit'
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
 msgid "Old"
 msgstr "قديم"
+
+#. Title of an Onboarding Step
+#: sahl_erp/sahl_pms/onboarding_step/open_sahl_unit_management_page/open_sahl_unit_management_page.json
+msgid "Open Sahl Unit management page"
+msgstr "فتح صفحة إدارة وحدات سهل"
 
 #. Label of a Card Break in the Units Management Workspace
 #: sahl_erp/sahl_pms/workspace/units_management/units_management.json
@@ -357,6 +426,25 @@ msgstr "عدد الوحدات للإيجار"
 msgid "Rented"
 msgstr "مؤجرة"
 
+#. Label of a shortcut in the Reports Workspace
+#. Name of a report
+#: sahl_erp/sahl_erp/workspace/reports/reports.json
+#: sahl_erp/sahl_pms/report/rented_units_per_price/rented_units_per_price.json
+msgid "Rented Units Per Price"
+msgstr "الوحدات المؤجرة حسب السعر"
+
+#. Label of the rent_end_date (Date) field in DocType 'Unit'
+#: sahl_erp/sahl_pms/doctype/unit/unit.json
+msgid "Rented until"
+msgstr "مؤجرة حتى"
+
+#. Name of a Workspace
+#. Label of a Card Break in the Units Management Workspace
+#: sahl_erp/sahl_erp/workspace/reports/reports.json
+#: sahl_erp/sahl_pms/workspace/units_management/units_management.json
+msgid "Reports"
+msgstr "التقارير"
+
 #. Label of the request_type (Data) field in DocType 'Student Request Type'
 #: sahl_erp/sahl_student_services/doctype/student_request_type/student_request_type.json
 msgid "Request Type"
@@ -366,6 +454,11 @@ msgstr "نوع الطلب"
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
 msgid "Rooms"
 msgstr "الغرف"
+
+#. Title of the Module Onboarding 'Sahl Unit managment'
+#: sahl_erp/sahl_pms/module_onboarding/sahl_unit_managment/sahl_unit_managment.json
+msgid "Sahl Unit managment"
+msgstr "إدارة وحدات سهل"
 
 #. Option for the 'Street View' (Select) field in DocType 'Unit'
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
@@ -430,6 +523,7 @@ msgid "Super Luxury"
 msgstr "سوبر لوكس"
 
 #. Name of a role
+#: sahl_erp/sahl_pms/doctype/add_unit_request/add_unit_request.json
 #: sahl_erp/sahl_pms/doctype/city/city.json
 #: sahl_erp/sahl_pms/doctype/investment_unit/investment_unit.json
 #: sahl_erp/sahl_pms/doctype/sub_city/sub_city.json
@@ -519,6 +613,22 @@ msgstr "فئات الوحدات"
 msgid "Units Management"
 msgstr "إدارة الوحدات"
 
+#. Label of a shortcut in the Reports Workspace
+#: sahl_erp/sahl_erp/workspace/reports/reports.json
+msgid "Units Per City"
+msgstr "الوحدات حسب المدينة"
+
+#. Label of a shortcut in the Reports Workspace
+#: sahl_erp/sahl_erp/workspace/reports/reports.json
+msgid "Units Per Number Of Rooms"
+msgstr "الوحدات حسب عدد الغرف"
+
+#. Name of a report
+#: sahl_erp/sahl_pms/report/units_stats/units_stats.json
+#: sahl_erp/sahl_reporting/report/units_stats/units_stats.json
+msgid "Units stats"
+msgstr "إحصائيات الوحدات"
+
 #. Label of the videos (Table) field in DocType 'Unit'
 #. Label of the videos (Attach) field in DocType 'Unit Videos'
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
@@ -531,3 +641,12 @@ msgstr "الفيديوهات"
 msgid "Whatsapp"
 msgstr "واتساب"
 
+#. Success message of the Module Onboarding 'Sahl Unit managment'
+#: sahl_erp/sahl_pms/module_onboarding/sahl_unit_managment/sahl_unit_managment.json
+msgid "You have successfully finished the onboarding"
+msgstr "لقد أنهيت الإعداد بنجاح"
+
+#. Subtitle of the Module Onboarding 'Sahl Unit managment'
+#: sahl_erp/sahl_pms/module_onboarding/sahl_unit_managment/sahl_unit_managment.json
+msgid "asd"
+msgstr "وصف قصير"

@@ -7,14 +7,24 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Sahl Erp VERSION\n"
 "Report-Msgid-Bugs-To: support@softa-solutions.com\n"
-"POT-Creation-Date: 2025-06-04 01:20+0205\n"
-"PO-Revision-Date: 2025-06-04 01:20+0205\n"
+"POT-Creation-Date: 2025-06-05 13:44+0205\n"
+"PO-Revision-Date: 2025-06-05 13:44+0205\n"
 "Last-Translator: support@softa-solutions.com\n"
 "Language-Team: support@softa-solutions.com\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.13.1\n"
+
+#. Header text in the Reports Workspace
+#: sahl_erp/sahl_erp/workspace/reports/reports.json
+msgid "<span class=\"h4\"><b>CRM Reports</b></span>"
+msgstr ""
+
+#. Header text in the Reports Workspace
+#: sahl_erp/sahl_erp/workspace/reports/reports.json
+msgid "<span class=\"h4\"><b>HR Reports</b></span>"
+msgstr ""
 
 #. Header text in the Units Management Workspace
 #: sahl_erp/sahl_pms/workspace/units_management/units_management.json
@@ -36,9 +46,19 @@ msgstr ""
 msgid "<span class=\"h4\">Student Services</span>"
 msgstr ""
 
+#. Header text in the Reports Workspace
+#: sahl_erp/sahl_erp/workspace/reports/reports.json
+msgid "<span class=\"h4\">Unit Reports</span>"
+msgstr ""
+
 #. Header text in the Units Management Workspace
 #: sahl_erp/sahl_pms/workspace/units_management/units_management.json
 msgid "<span style=\"font-size: 16px;\">Overview</span>"
+msgstr ""
+
+#. Name of a DocType
+#: sahl_erp/sahl_pms/doctype/add_unit_request/add_unit_request.json
+msgid "Add Unit Request"
 msgstr ""
 
 #. Label of the section_break_uvkw (Section Break) field in DocType 'Unit'
@@ -66,6 +86,11 @@ msgstr ""
 #. Option for the 'Status' (Select) field in DocType 'Unit'
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
 msgid "Available"
+msgstr ""
+
+#. Label of a shortcut in the Reports Workspace
+#: sahl_erp/sahl_erp/workspace/reports/reports.json
+msgid "Available Units Per Area"
 msgstr ""
 
 #. Label of the bathrooms (Data) field in DocType 'Unit'
@@ -173,6 +198,11 @@ msgstr ""
 msgid "Furnishing"
 msgstr ""
 
+#. Label of the has_furnishing (Check) field in DocType 'Unit'
+#: sahl_erp/sahl_pms/doctype/unit/unit.json
+msgid "Has Furnishing"
+msgstr ""
+
 #. Option for the 'Entrance Type' (Select) field in DocType 'Unit'
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
 msgid "Hotel"
@@ -212,6 +242,11 @@ msgstr ""
 #. Label of the is_premium_unit (Check) field in DocType 'Unit'
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
 msgid "Is premium unit?"
+msgstr ""
+
+#. Option for the 'Finishing' (Select) field in DocType 'Unit'
+#: sahl_erp/sahl_pms/doctype/unit/unit.json
+msgid "Luxury"
 msgstr ""
 
 #. Option for the 'Street View' (Select) field in DocType 'Unit'
@@ -260,6 +295,7 @@ msgstr ""
 msgid "New"
 msgstr ""
 
+#. Option for the 'Finishing' (Select) field in DocType 'Unit'
 #. Option for the 'Furnishing' (Select) field in DocType 'Unit'
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
 msgid "Normal"
@@ -278,6 +314,36 @@ msgstr ""
 #. Label of the note (Small Text) field in DocType 'Unit Owner'
 #: sahl_erp/sahl_pms/doctype/unit_owner/unit_owner.json
 msgid "Note"
+msgstr ""
+
+#. Name of a report
+#. Label of a Link in the Units Management Workspace
+#: sahl_erp/sahl_pms/report/number_of_available_units_per_area/number_of_available_units_per_area.json
+#: sahl_erp/sahl_pms/workspace/units_management/units_management.json
+msgid "Number Of Available Units Per Area"
+msgstr ""
+
+#. Name of a report
+#. Label of a Link in the Units Management Workspace
+#: sahl_erp/sahl_pms/report/number_of_rented_units_per_price/number_of_rented_units_per_price.json
+#: sahl_erp/sahl_pms/workspace/units_management/units_management.json
+#: sahl_erp/sahl_reporting/report/number_of_rented_units_per_price/number_of_rented_units_per_price.json
+msgid "Number Of Rented Units Per Price"
+msgstr ""
+
+#. Name of a report
+#. Label of a Link in the Units Management Workspace
+#: sahl_erp/sahl_pms/report/number_of_units_per_city/number_of_units_per_city.json
+#: sahl_erp/sahl_pms/workspace/units_management/units_management.json
+#: sahl_erp/sahl_reporting/report/number_of_units_per_city/number_of_units_per_city.json
+msgid "Number Of Units Per City"
+msgstr ""
+
+#. Name of a report
+#. Label of a Link in the Units Management Workspace
+#: sahl_erp/sahl_pms/report/number_of_units_per_number_of_rooms/number_of_units_per_number_of_rooms.json
+#: sahl_erp/sahl_pms/workspace/units_management/units_management.json
+msgid "Number Of Units Per Number of Rooms"
 msgstr ""
 
 #. Option for the 'Building Status' (Select) field in DocType 'Unit'
@@ -333,7 +399,7 @@ msgid "Places"
 msgstr ""
 
 #. Label of the price (Float) field in DocType 'Investment Unit'
-#. Label of the price (Float) field in DocType 'Unit'
+#. Label of the price (Int) field in DocType 'Unit'
 #. Label of the price (Float) field in DocType 'Student Request Type'
 #: sahl_erp/sahl_pms/doctype/investment_unit/investment_unit.json
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
@@ -361,9 +427,23 @@ msgstr ""
 msgid "Rented"
 msgstr ""
 
-#. Label of the rent_end_date (Data) field in DocType 'Unit'
+#. Label of a shortcut in the Reports Workspace
+#. Name of a report
+#: sahl_erp/sahl_erp/workspace/reports/reports.json
+#: sahl_erp/sahl_pms/report/rented_units_per_price/rented_units_per_price.json
+msgid "Rented Units Per Price"
+msgstr ""
+
+#. Label of the rent_end_date (Date) field in DocType 'Unit'
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
 msgid "Rented until"
+msgstr ""
+
+#. Name of a Workspace
+#. Label of a Card Break in the Units Management Workspace
+#: sahl_erp/sahl_erp/workspace/reports/reports.json
+#: sahl_erp/sahl_pms/workspace/units_management/units_management.json
+msgid "Reports"
 msgstr ""
 
 #. Label of the request_type (Data) field in DocType 'Student Request Type'
@@ -444,6 +524,7 @@ msgid "Super Luxury"
 msgstr ""
 
 #. Name of a role
+#: sahl_erp/sahl_pms/doctype/add_unit_request/add_unit_request.json
 #: sahl_erp/sahl_pms/doctype/city/city.json
 #: sahl_erp/sahl_pms/doctype/investment_unit/investment_unit.json
 #: sahl_erp/sahl_pms/doctype/sub_city/sub_city.json
@@ -531,6 +612,22 @@ msgstr ""
 #. Name of a Workspace
 #: sahl_erp/sahl_pms/workspace/units_management/units_management.json
 msgid "Units Management"
+msgstr ""
+
+#. Label of a shortcut in the Reports Workspace
+#: sahl_erp/sahl_erp/workspace/reports/reports.json
+msgid "Units Per City"
+msgstr ""
+
+#. Label of a shortcut in the Reports Workspace
+#: sahl_erp/sahl_erp/workspace/reports/reports.json
+msgid "Units Per Number Of Rooms"
+msgstr ""
+
+#. Name of a report
+#: sahl_erp/sahl_pms/report/units_stats/units_stats.json
+#: sahl_erp/sahl_reporting/report/units_stats/units_stats.json
+msgid "Units stats"
 msgstr ""
 
 #. Label of the videos (Table) field in DocType 'Unit'
