@@ -34,9 +34,7 @@
   "furnishing",
   "location_employee",
   "section_break_trdq",
-  "images",
-  "tmep",
-  "videos",
+  "main_image",
   "section_break_coiu",
   "description",
   "section_break_zejw",
@@ -186,18 +184,6 @@
    "label": "Attachments"
   },
   {
-   "fieldname": "images",
-   "fieldtype": "Table",
-   "label": "Images",
-   "options": "Unit Images"
-  },
-  {
-   "fieldname": "videos",
-   "fieldtype": "Table",
-   "label": "Videos",
-   "options": "Unit Videos"
-  },
-  {
    "fieldname": "section_break_coiu",
    "fieldtype": "Section Break"
   },
@@ -292,25 +278,25 @@
    "label": "Enter Owner Full phone number"
   },
   {
-   "fieldname": "tmep",
-   "fieldtype": "Attach Image",
-   "label": "tmep"
-  },
-  {
    "fieldname": "location_employee",
    "fieldtype": "Link",
    "hidden": 1,
    "label": "Location employee",
    "options": "User"
+  },
+  {
+   "fieldname": "main_image",
+   "fieldtype": "Attach Image",
+   "label": "Main image"
   }
  ],
  "grid_page_length": 50,
- "image_field": "tmep",
+ "image_field": "main_image",
  "index_web_pages_for_search": 1,
  "links": [],
  "make_attachments_public": 1,
  "max_attachments": 10,
- "modified": "2025-06-08 18:18:05.670461",
+ "modified": "2025-06-09 00:09:46.456859",
  "modified_by": "Administrator",
  "module": "Sahl PMS",
  "name": "Unit",

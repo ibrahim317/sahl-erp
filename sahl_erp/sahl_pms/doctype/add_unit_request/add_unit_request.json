@@ -1,25 +1,296 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:REQ-{MM}-{YYYY}-{###}",
  "creation": "2025-06-04 02:16:40.140967",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "section_break_h95p"
+  "type",
+  "section_break_lobd",
+  "owner1",
+  "city",
+  "bathrooms",
+  "floor",
+  "model_number",
+  "entrance_type",
+  "finishing",
+  "building_status",
+  "unit_status",
+  "street_view",
+  "features",
+  "column_break_yqtr",
+  "category",
+  "subcity",
+  "rooms",
+  "elevators",
+  "area",
+  "price",
+  "rent_end_date",
+  "has_furnishing",
+  "furnishing",
+  "data_search_employee",
+  "section_break_trdq",
+  "main_image",
+  "section_break_coiu",
+  "description",
+  "section_break_zejw",
+  "street_name",
+  "column_break_hlto",
+  "building_name",
+  "column_break_zlsy",
+  "apartment_number",
+  "column_break_qefx",
+  "nearest_landmark",
+  "section_break_iqox",
+  "geolocation_vwpv",
+  "section_break_uvkw",
+  "need_initial_inspection",
+  "is_premium_unit"
  ],
  "fields": [
   {
-   "fieldname": "section_break_h95p",
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type",
+   "options": "Rent\nOwnership"
+  },
+  {
+   "fieldname": "subcity",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Sub-City",
+   "options": "Sub City",
+   "search_index": 1
+  },
+  {
+   "fieldname": "features",
+   "fieldtype": "Table MultiSelect",
+   "label": "Features",
+   "options": "Unit Feature Link"
+  },
+  {
+   "fieldname": "floor",
+   "fieldtype": "Int",
+   "label": "Floor",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "model_number",
+   "fieldtype": "Int",
+   "label": "Model Number",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "column_break_yqtr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "owner1",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Owner",
+   "options": "Temp Owner"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "City",
+   "options": "City",
+   "search_index": 1
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Link",
+   "label": "Category",
+   "options": "Unit Category"
+  },
+  {
+   "fieldname": "bathrooms",
+   "fieldtype": "Data",
+   "label": "Bathrooms"
+  },
+  {
+   "fieldname": "rooms",
+   "fieldtype": "Int",
+   "label": "Rooms",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "elevators",
+   "fieldtype": "Int",
+   "label": "Elevators",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "area",
+   "fieldtype": "Int",
+   "label": "Area",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "building_status",
+   "fieldtype": "Select",
+   "label": "Building Status",
+   "options": "\nNew\nOld"
+  },
+  {
+   "fieldname": "entrance_type",
+   "fieldtype": "Select",
+   "label": "Entrance Type",
+   "options": "\nHotel\nStandard"
+  },
+  {
+   "fieldname": "finishing",
+   "fieldtype": "Select",
+   "label": "Finishing",
+   "options": "\nUltar Luxury\nSuper Luxury\nLuxury\nNormal\nNot Finished"
+  },
+  {
+   "fieldname": "street_view",
+   "fieldtype": "Select",
+   "label": "Street View",
+   "options": "\nMain Street\nSide Street"
+  },
+  {
+   "depends_on": "eval:doc.has_furnishing == true;",
+   "fieldname": "furnishing",
+   "fieldtype": "Select",
+   "label": "Furnishing",
+   "mandatory_depends_on": "eval:doc.has_furnishing != null;",
+   "options": "Modern\nNormal"
+  },
+  {
+   "fieldname": "price",
+   "fieldtype": "Int",
+   "label": "Price",
+   "precision": "2"
+  },
+  {
+   "fieldname": "section_break_trdq",
+   "fieldtype": "Section Break",
+   "label": "Attachments"
+  },
+  {
+   "fieldname": "section_break_coiu",
    "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "section_break_zejw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "street_name",
+   "fieldtype": "Data",
+   "label": "Street Name"
+  },
+  {
+   "fieldname": "column_break_hlto",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "building_name",
+   "fieldtype": "Data",
+   "label": "Building Number"
+  },
+  {
+   "fieldname": "column_break_zlsy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "apartment_number",
+   "fieldtype": "Data",
+   "label": "Apartment number"
+  },
+  {
+   "fieldname": "column_break_qefx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "nearest_landmark",
+   "fieldtype": "Data",
+   "label": "Nearest Landmark"
+  },
+  {
+   "fieldname": "section_break_iqox",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "geolocation_vwpv",
+   "fieldtype": "Geolocation"
+  },
+  {
+   "fieldname": "section_break_uvkw",
+   "fieldtype": "Section Break",
+   "label": "Additional info"
+  },
+  {
+   "default": "0",
+   "fieldname": "need_initial_inspection",
+   "fieldtype": "Check",
+   "label": "Need initial inspection?"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_premium_unit",
+   "fieldtype": "Check",
+   "label": "Is premium unit?"
+  },
+  {
+   "depends_on": "eval:doc.status == \"Rented\";",
+   "fieldname": "rent_end_date",
+   "fieldtype": "Date",
+   "label": "Rented until",
+   "mandatory_depends_on": "eval:doc.status == \"Rented\";",
+   "read_only_depends_on": "eval:doc.status != \"Rented\";"
+  },
+  {
+   "default": "0",
+   "fieldname": "has_furnishing",
+   "fieldtype": "Check",
+   "label": "Has Furnishing"
+  },
+  {
+   "fieldname": "section_break_lobd",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "main_image",
+   "fieldtype": "Attach Image",
+   "label": "Main image"
+  },
+  {
+   "fieldname": "unit_status",
+   "fieldtype": "Select",
+   "label": "Unit Status",
+   "options": "\nAvailable\nRented\nNot Available"
+  },
+  {
+   "fieldname": "data_search_employee",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Data Search Employee",
+   "options": "User"
   }
  ],
  "grid_page_length": 50,
+ "image_field": "main_image",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-06-04 02:16:40.140967",
+ "make_attachments_public": 1,
+ "max_attachments": 10,
+ "modified": "2025-06-09 01:01:56.339410",
  "modified_by": "Administrator",
  "module": "Sahl PMS",
  "name": "Add Unit Request",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -38,5 +309,6 @@
  "row_format": "Dynamic",
  "sort_field": "creation",
  "sort_order": "DESC",
- "states": []
+ "states": [],
+ "title_field": "city"
 }
