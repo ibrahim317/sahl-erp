@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Sahl Erp VERSION\n"
 "Report-Msgid-Bugs-To: support@softa-solutions.com\n"
-"POT-Creation-Date: 2025-06-05 13:44+0205\n"
-"PO-Revision-Date: 2025-06-05 13:44+0205\n"
+"POT-Creation-Date: 2025-06-08 18:22+0205\n"
+"PO-Revision-Date: 2025-06-08 18:22+0205\n"
 "Last-Translator: support@softa-solutions.com\n"
 "Language-Team: support@softa-solutions.com\n"
 "MIME-Version: 1.0\n"
@@ -66,6 +66,10 @@ msgstr "طلب إضافة وحدة"
 msgid "Additional info"
 msgstr "معلومات إضافية"
 
+#: sahl_erp/sahl_pms/doctype/unit/unit.js:103
+msgid "An error occurred while fetching the location. Please try again."
+msgstr "حدث خطأ أثناء جلب الموقع. يرجى المحاولة مرة أخرى."
+
 #. Label of the apartment_number (Data) field in DocType 'Unit'
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
 msgid "Apartment number"
@@ -87,11 +91,6 @@ msgstr "المرفقات"
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
 msgid "Available"
 msgstr "متاحة"
-
-#. Label of a shortcut in the Reports Workspace
-#: sahl_erp/sahl_erp/workspace/reports/reports.json
-msgid "Available Units Per Area"
-msgstr "الوحدات المتاحة حسب المنطقة"
 
 #. Label of the bathrooms (Data) field in DocType 'Unit'
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
@@ -133,6 +132,7 @@ msgstr "المدن"
 #. Label of the city (Link) field in DocType 'Unit'
 #: sahl_erp/sahl_pms/doctype/city/city.json
 #: sahl_erp/sahl_pms/doctype/investment_unit/investment_unit.json
+#: sahl_erp/sahl_pms/doctype/sub_city/sub_city.json
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
 msgid "City"
 msgstr "المدينة"
@@ -168,10 +168,19 @@ msgstr "المصاعد"
 msgid "End Date"
 msgstr "تاريخ الانتهاء"
 
+#. Label of the owner_phone (Phone) field in DocType 'Unit'
+#: sahl_erp/sahl_pms/doctype/unit/unit.json
+msgid "Enter Owner Full phone number"
+msgstr "أدخل رقم هاتف المالك كاملاً"
+
 #. Label of the entrance_type (Select) field in DocType 'Unit'
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
 msgid "Entrance Type"
 msgstr "نوع المدخل"
+
+#: sahl_erp/sahl_pms/doctype/unit/unit.js:102
+msgid "Error"
+msgstr "خطأ"
 
 #. Label of the feature (Link) field in DocType 'Unit Feature Link'
 #: sahl_erp/sahl_pms/doctype/unit_feature_link/unit_feature_link.json
@@ -244,6 +253,15 @@ msgstr "عدد الوحدات الاستثمارية"
 msgid "Is premium unit?"
 msgstr "هل هي وحدة مميزة؟"
 
+#: sahl_erp/sahl_pms/doctype/unit/unit.js:93
+msgid "Location Not Found"
+msgstr "لم يتم العثور على الموقع"
+
+#. Label of the location_employee (Link) field in DocType 'Unit'
+#: sahl_erp/sahl_pms/doctype/unit/unit.json
+msgid "Location employee"
+msgstr "موظف الموقع"
+
 #. Option for the 'Finishing' (Select) field in DocType 'Unit'
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
 msgid "Luxury"
@@ -295,6 +313,12 @@ msgstr "هل تحتاج إلى معاينة أولية؟"
 msgid "New"
 msgstr "جديد"
 
+#: sahl_erp/sahl_pms/doctype/unit/unit.js:94
+msgid ""
+"No location found for the provided address. Please check the address "
+"details."
+msgstr "لم يتم العثور على موقع للعنوان المدخل. يرجى التحقق من تفاصيل العنوان."
+
 #. Option for the 'Furnishing' (Select) field in DocType 'Unit'
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
 msgid "Normal"
@@ -317,6 +341,7 @@ msgstr "ملاحظة"
 
 #. Name of a report
 #. Label of a Link in the Units Management Workspace
+#: sahl_erp/sahl_erp/workspace/reports/reports.json
 #: sahl_erp/sahl_pms/report/number_of_available_units_per_area/number_of_available_units_per_area.json
 #: sahl_erp/sahl_pms/workspace/units_management/units_management.json
 msgid "Number Of Available Units Per Area"
@@ -324,6 +349,7 @@ msgstr "عدد الوحدات المتاحة حسب المنطقة"
 
 #. Name of a report
 #. Label of a Link in the Units Management Workspace
+#: sahl_erp/sahl_erp/workspace/reports/reports.json
 #: sahl_erp/sahl_pms/report/number_of_rented_units_per_price/number_of_rented_units_per_price.json
 #: sahl_erp/sahl_pms/workspace/units_management/units_management.json
 #: sahl_erp/sahl_reporting/report/number_of_rented_units_per_price/number_of_rented_units_per_price.json
@@ -332,11 +358,17 @@ msgstr "عدد الوحدات المؤجرة حسب السعر"
 
 #. Name of a report
 #. Label of a Link in the Units Management Workspace
+#: sahl_erp/sahl_erp/workspace/reports/reports.json
 #: sahl_erp/sahl_pms/report/number_of_units_per_city/number_of_units_per_city.json
 #: sahl_erp/sahl_pms/workspace/units_management/units_management.json
 #: sahl_erp/sahl_reporting/report/number_of_units_per_city/number_of_units_per_city.json
 msgid "Number Of Units Per City"
 msgstr "عدد الوحدات حسب المدينة"
+
+#. Label of a shortcut in the Reports Workspace
+#: sahl_erp/sahl_erp/workspace/reports/reports.json
+msgid "Number Of Units Per Number Of Rooms"
+msgstr "عدد الوحدات حسب عدد الغرف"
 
 #. Name of a report
 #. Label of a Link in the Units Management Workspace
@@ -344,6 +376,27 @@ msgstr "عدد الوحدات حسب المدينة"
 #: sahl_erp/sahl_pms/workspace/units_management/units_management.json
 msgid "Number Of Units Per Number of Rooms"
 msgstr "عدد الوحدات حسب عدد الغرف"
+
+#. Label of a shortcut in the Reports Workspace
+#. Name of a report
+#. Label of a Link in the Units Management Workspace
+#: sahl_erp/sahl_erp/workspace/reports/reports.json
+#: sahl_erp/sahl_pms/report/number_of_units_per_status/number_of_units_per_status.json
+#: sahl_erp/sahl_pms/workspace/units_management/units_management.json
+msgid "Number Of Units Per Status"
+msgstr "عدد الوحدات حسب الحالة"
+
+#. Label of a shortcut in the Reports Workspace
+#: sahl_erp/sahl_erp/workspace/reports/reports.json
+msgid "Number Of Units Per Sub City"
+msgstr "عدد الوحدات حسب المدينة الفرعية"
+
+#. Name of a report
+#. Label of a Link in the Units Management Workspace
+#: sahl_erp/sahl_pms/report/number_of_units_per_sub_city/number_of_units_per_sub_city.json
+#: sahl_erp/sahl_pms/workspace/units_management/units_management.json
+msgid "Number Of Units Per Sub-City"
+msgstr "عدد الوحدات حسب المدينة الفرعية"
 
 #. Option for the 'Building Status' (Select) field in DocType 'Unit'
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
@@ -366,6 +419,15 @@ msgstr "أخرى"
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
 msgid "Owner"
 msgstr "المالك"
+
+#. Label of the owner_phone (Phone) field in DocType 'Investment Unit'
+#: sahl_erp/sahl_pms/doctype/investment_unit/investment_unit.json
+msgid "Owner Phone"
+msgstr "هاتف المالك"
+
+#: sahl_erp/public/js/common_unit_scripts.js:23
+msgid "Owner not found for this phone number."
+msgstr "لم يتم العثور على مالك لهذا الرقم."
 
 #. Label of a shortcut in the Units Management Workspace
 #: sahl_erp/sahl_pms/workspace/units_management/units_management.json
@@ -428,7 +490,6 @@ msgstr "مؤجرة"
 
 #. Label of a shortcut in the Reports Workspace
 #. Name of a report
-#: sahl_erp/sahl_erp/workspace/reports/reports.json
 #: sahl_erp/sahl_pms/report/rented_units_per_price/rented_units_per_price.json
 msgid "Rented Units Per Price"
 msgstr "الوحدات المؤجرة حسب السعر"
@@ -538,8 +599,8 @@ msgstr "مدير النظام"
 
 #. Label of a number card in the Units Management Workspace
 #: sahl_erp/sahl_pms/workspace/units_management/units_management.json
-msgid "Total Units Count"
-msgstr "إجمالي عدد الوحدات"
+msgid "Total Units Count (Rent and Ownership)"
+msgstr "إجمالي عدد الوحدات (الإيجار والملكية)"
 
 #. Label of the type (Select) field in DocType 'Unit'
 #. Label of the type (Link) field in DocType 'Unit Owner'
@@ -565,6 +626,7 @@ msgstr "فئة الوحدة"
 
 #. Name of a DocType
 #: sahl_erp/sahl_pms/doctype/unit_feature/unit_feature.json
+#: sahl_erp/sahl_pms/workspace/units_management/units_management.json
 msgid "Unit Feature"
 msgstr "ميزة الوحدة"
 
@@ -572,11 +634,6 @@ msgstr "ميزة الوحدة"
 #: sahl_erp/sahl_pms/doctype/unit_feature_link/unit_feature_link.json
 msgid "Unit Feature Link"
 msgstr "رابط ميزة الوحدة"
-
-#. Label of a Link in the Units Management Workspace
-#: sahl_erp/sahl_pms/workspace/units_management/units_management.json
-msgid "Unit Features"
-msgstr "ميزات الوحدة"
 
 #. Name of a DocType
 #: sahl_erp/sahl_pms/doctype/unit_images/unit_images.json
@@ -613,15 +670,15 @@ msgstr "فئات الوحدات"
 msgid "Units Management"
 msgstr "إدارة الوحدات"
 
-#. Label of a shortcut in the Reports Workspace
-#: sahl_erp/sahl_erp/workspace/reports/reports.json
-msgid "Units Per City"
-msgstr "الوحدات حسب المدينة"
+#. Name of a report
+#: sahl_erp/sahl_pms/report/units_per_status/units_per_status.json
+msgid "Units Per Status"
+msgstr "الوحدات حسب الحالة"
 
-#. Label of a shortcut in the Reports Workspace
-#: sahl_erp/sahl_erp/workspace/reports/reports.json
-msgid "Units Per Number Of Rooms"
-msgstr "الوحدات حسب عدد الغرف"
+#. Name of a report
+#: sahl_erp/sahl_pms/report/units_per_sub_city/units_per_sub_city.json
+msgid "Units Per Sub-City"
+msgstr "الوحدات حسب المدينة الفرعية"
 
 #. Name of a report
 #: sahl_erp/sahl_pms/report/units_stats/units_stats.json
@@ -650,3 +707,8 @@ msgstr "لقد أنهيت الإعداد بنجاح"
 #: sahl_erp/sahl_pms/module_onboarding/sahl_unit_managment/sahl_unit_managment.json
 msgid "asd"
 msgstr "وصف قصير"
+
+#. Label of the tmep (Attach Image) field in DocType 'Unit'
+#: sahl_erp/sahl_pms/doctype/unit/unit.json
+msgid "tmep"
+msgstr ""
