@@ -1,7 +1,7 @@
 {
  "app": "sahl_erp",
  "charts": [],
- "content": "[{\"id\":\"0adK6mWX3x\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Unit Reports</span>\",\"col\":12}},{\"id\":\"iMdiDHz9eC\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Available Units Per Area\",\"col\":3}},{\"id\":\"gzSLLl2fnj\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Rented Units Per Price\",\"col\":3}},{\"id\":\"NgFHnJOz4Y\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Units Per City\",\"col\":3}},{\"id\":\"Cd8CjBisRc\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Units Per Number Of Rooms\",\"col\":3}},{\"id\":\"Tm8RBXqMxO\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>CRM Reports</b></span>\",\"col\":12}},{\"id\":\"SPsNw1SdtS\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>HR Reports</b></span>\",\"col\":12}}]",
+ "content": "[{\"id\":\"0adK6mWX3x\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Unit Reports</span>\",\"col\":12}},{\"id\":\"gzSLLl2fnj\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Number Of Rented Units Per Price\",\"col\":6}},{\"id\":\"NgFHnJOz4Y\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Number Of Units Per City\",\"col\":6}},{\"id\":\"I58IH-Qj9g\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Number Of Units Per Sub City\",\"col\":6}},{\"id\":\"iMdiDHz9eC\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Number Of Available Units Per Area\",\"col\":6}},{\"id\":\"Cd8CjBisRc\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Number Of Units Per Number Of Rooms\",\"col\":6}},{\"id\":\"TKI3suKHAy\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Number Of Units Per Status\",\"col\":6}},{\"id\":\"Tm8RBXqMxO\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>CRM Reports</b></span>\",\"col\":12}},{\"id\":\"SPsNw1SdtS\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>HR Reports</b></span>\",\"col\":12}}]",
  "creation": "2025-06-04 02:30:01.397149",
  "custom_blocks": [],
  "docstatus": 0,
@@ -15,7 +15,7 @@
  "label": "Reports",
  "link_type": "DocType",
  "links": [],
- "modified": "2025-06-04 23:23:45.781553",
+ "modified": "2025-06-08 13:04:15.566740",
  "modified_by": "Administrator",
  "module": "Sahl Erp",
  "name": "Reports",
@@ -30,15 +30,15 @@
   {
    "color": "Grey",
    "doc_view": "List",
-   "label": "Available Units Per Area",
-   "link_to": "Number Of Available Units Per Area",
+   "label": "Number Of Units Per Status",
+   "link_to": "Number Of Units Per Status",
    "report_ref_doctype": "Unit",
    "type": "Report"
   },
   {
    "color": "Grey",
    "doc_view": "List",
-   "label": "Rented Units Per Price",
+   "label": "Number Of Rented Units Per Price",
    "link_to": "Number Of Rented Units Per Price",
    "report_ref_doctype": "Unit",
    "type": "Report"
@@ -46,7 +46,7 @@
   {
    "color": "Grey",
    "doc_view": "List",
-   "label": "Units Per City",
+   "label": "Number Of Units Per City",
    "link_to": "Number Of Units Per City",
    "report_ref_doctype": "Unit",
    "type": "Report"
@@ -54,7 +54,23 @@
   {
    "color": "Grey",
    "doc_view": "List",
-   "label": "Units Per Number Of Rooms",
+   "label": "Number Of Units Per Sub City",
+   "link_to": "Number Of Units Per Sub-City",
+   "report_ref_doctype": "Unit",
+   "type": "Report"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Number Of Available Units Per Area",
+   "link_to": "Number Of Available Units Per Area",
+   "report_ref_doctype": "Unit",
+   "type": "Report"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Number Of Units Per Number Of Rooms",
    "link_to": "Number Of Units Per Number of Rooms",
    "report_ref_doctype": "Unit",
    "type": "Report"

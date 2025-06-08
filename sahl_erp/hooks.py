@@ -25,7 +25,7 @@ add_to_apps_screen = [
 # ------------------
 
 # include js, css files in header of desk.html
-app_include_js = ["/assets/sahl_erp/js/map_defaults.js"]
+app_include_js = ["/assets/sahl_erp/js/map_defaults.js", "/assets/sahl_erp/js/common_unit_scripts.js"]
 app_include_css = ["/assets/sahl_erp/css/override_desk_components.css"]
 
 # include js, css files in header of web template

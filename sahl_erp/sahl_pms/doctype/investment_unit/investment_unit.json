@@ -6,7 +6,8 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "onwer1",
+  "owner_phone",
+  "owner1",
   "city",
   "sub_city",
   "area",
@@ -16,14 +17,6 @@
   "detailed_address"
  ],
  "fields": [
-  {
-   "fieldname": "onwer1",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Owner",
-   "options": "Unit Owner",
-   "reqd": 1
-  },
   {
    "fieldname": "city",
    "fieldtype": "Link",
@@ -67,12 +60,28 @@
    "fieldname": "detailed_address",
    "fieldtype": "Small Text",
    "label": "Detailed Address"
+  },
+  {
+   "fieldname": "owner_phone",
+   "fieldtype": "Phone",
+   "in_list_view": 1,
+   "label": "Owner Phone",
+   "options": "Unit Owner",
+   "reqd": 1
+  },
+  {
+   "fieldname": "owner1",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Owner",
+   "options": "Unit Owner",
+   "reqd": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-06-03 00:36:35.514604",
+ "modified": "2025-06-08 14:59:54.197450",
  "modified_by": "Administrator",
  "module": "Sahl PMS",
  "name": "Investment Unit",

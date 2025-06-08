@@ -1,5 +1,7 @@
 {
  "actions": [],
+ "allow_auto_repeat": 1,
+ "allow_events_in_timeline": 1,
  "allow_rename": 1,
  "autoname": "format:{type}-{model_number}",
  "creation": "2025-05-31 21:49:42.429358",
@@ -7,6 +9,8 @@
  "engine": "InnoDB",
  "field_order": [
   "type",
+  "section_break_lobd",
+  "owner_phone",
   "subcity",
   "bathrooms",
   "floor",
@@ -28,8 +32,10 @@
   "rent_end_date",
   "has_furnishing",
   "furnishing",
+  "location_employee",
   "section_break_trdq",
   "images",
+  "tmep",
   "videos",
   "section_break_coiu",
   "description",
@@ -79,7 +85,8 @@
    "fieldname": "model_number",
    "fieldtype": "Int",
    "label": "Model Number",
-   "non_negative": 1
+   "non_negative": 1,
+   "reqd": 1
   },
   {
    "fieldname": "column_break_yqtr",
@@ -273,12 +280,37 @@
    "fieldname": "has_furnishing",
    "fieldtype": "Check",
    "label": "Has Furnishing"
+  },
+  {
+   "fieldname": "section_break_lobd",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "+20-",
+   "fieldname": "owner_phone",
+   "fieldtype": "Phone",
+   "label": "Enter Owner Full phone number"
+  },
+  {
+   "fieldname": "tmep",
+   "fieldtype": "Attach Image",
+   "label": "tmep"
+  },
+  {
+   "fieldname": "location_employee",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Location employee",
+   "options": "User"
   }
  ],
  "grid_page_length": 50,
+ "image_field": "tmep",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-06-04 22:45:28.416323",
+ "make_attachments_public": 1,
+ "max_attachments": 10,
+ "modified": "2025-06-08 18:18:05.670461",
  "modified_by": "Administrator",
  "module": "Sahl PMS",
  "name": "Unit",

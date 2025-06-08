@@ -6,7 +6,9 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "name1"
+  "name1",
+  "column_break_dabu",
+  "city"
  ],
  "fields": [
   {
@@ -17,12 +19,23 @@
    "label": "Name",
    "reqd": 1,
    "unique": 1
+  },
+  {
+   "fieldname": "column_break_dabu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Link",
+   "label": "City",
+   "options": "City",
+   "reqd": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-06-02 23:10:00.470947",
+ "modified": "2025-06-08 17:17:09.337243",
  "modified_by": "Administrator",
  "module": "Sahl PMS",
  "name": "Sub City",
