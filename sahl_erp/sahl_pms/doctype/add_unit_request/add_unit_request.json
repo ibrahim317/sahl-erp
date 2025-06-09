@@ -46,7 +46,9 @@
   "geolocation_vwpv",
   "section_break_uvkw",
   "need_initial_inspection",
-  "is_premium_unit"
+  "is_premium_unit",
+  "rejection_reason",
+  "amended_from"
  ],
  "fields": [
   {
@@ -278,15 +280,33 @@
    "hidden": 1,
    "label": "Data Search Employee",
    "options": "User"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Add Unit Request",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "rejection_reason",
+   "fieldtype": "Small Text",
+   "hidden": 1,
+   "label": "Rejection Reason"
   }
  ],
  "grid_page_length": 50,
  "image_field": "main_image",
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
  "make_attachments_public": 1,
  "max_attachments": 10,
- "modified": "2025-06-09 01:01:56.339410",
+ "modified": "2025-06-09 03:07:21.183317",
  "modified_by": "Administrator",
  "module": "Sahl PMS",
  "name": "Add Unit Request",
@@ -310,5 +330,6 @@
  "sort_field": "creation",
  "sort_order": "DESC",
  "states": [],
- "title_field": "city"
+ "title_field": "city",
+ "track_changes": 1
 }

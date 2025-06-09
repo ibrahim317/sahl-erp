@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Sahl Erp VERSION\n"
 "Report-Msgid-Bugs-To: support@softa-solutions.com\n"
-"POT-Creation-Date: 2025-06-08 18:22+0205\n"
-"PO-Revision-Date: 2025-06-08 18:22+0205\n"
+"POT-Creation-Date: 2025-06-09 03:40+0205\n"
+"PO-Revision-Date: 2025-06-09 03:40+0205\n"
 "Last-Translator: support@softa-solutions.com\n"
 "Language-Team: support@softa-solutions.com\n"
 "MIME-Version: 1.0\n"
@@ -33,13 +33,33 @@ msgstr "<span class=\"h4\"><b>الكيانات الرئيسية</b></span>"
 
 #. Header text in the Units Management Workspace
 #: sahl_erp/sahl_pms/workspace/units_management/units_management.json
-msgid "<span class=\"h4\"><b>Meta Data</b></span>"
+msgid "<span class=\"h4\"><b>Meta data</b></span>"
 msgstr "<span class=\"h4\"><b>البيانات الوصفية</b></span>"
 
-#. Header text in the ERP Home Workspace
-#: sahl_erp/sahl_erp/workspace/erp_home/erp_home.json
-msgid "<span class=\"h4\">ERP Home</span>"
-msgstr "<span class=\"h4\">الرئيسية لنظام ERP</span>"
+#. Header text in the Units Management Workspace
+#: sahl_erp/sahl_pms/workspace/units_management/units_management.json
+msgid "<span class=\"h4\"><b>Overview</b></span>"
+msgstr "<span class=\"h4\"><b>نظرة عامة</b></span>"
+
+#. Header text in the Units Management Workspace
+#: sahl_erp/sahl_pms/workspace/units_management/units_management.json
+msgid "<span class=\"h4\"><b>Reports</b></span>"
+msgstr "<span class=\"h4\"><b>التقارير</b></span>"
+
+#. Header text in the Data Entry Workspace
+#: sahl_erp/sahl_pms/workspace/data_entry/data_entry.json
+msgid "<span class=\"h4\"><b>Requests From Data Search</b></span>"
+msgstr "<span class=\"h4\"><b>الطلبات من بحث البيانات</b></span>"
+
+#. Header text in the Integrated CRM Workspace
+#: sahl_erp/sahl_integrated_crm/workspace/integrated_crm/integrated_crm.json
+msgid "<span class=\"h4\">Integrated CRM</span>"
+msgstr "<span class=\"h4\">إدارة علاقات العملاء المتكاملة</span>"
+
+#. Header text in the Data Search Workspace
+#: sahl_erp/sahl_pms/workspace/data_search/data_search.json
+msgid "<span class=\"h4\">Quick Access</span>"
+msgstr "<span class=\"h4\">الوصول السريع</span>"
 
 #. Header text in the Student Services Workspace
 #: sahl_erp/sahl_student_services/workspace/student_services/student_services.json
@@ -51,58 +71,75 @@ msgstr "<span class=\"h4\">خدمات الطلاب</span>"
 msgid "<span class=\"h4\">Unit Reports</span>"
 msgstr "<span class=\"h4\">تقارير الوحدات</span>"
 
-#. Header text in the Units Management Workspace
-#: sahl_erp/sahl_pms/workspace/units_management/units_management.json
-msgid "<span style=\"font-size: 16px;\">Overview</span>"
-msgstr "<span style=\"font-size: 16px;\">نظرة عامة</span>"
+#. Header text in the Data Entry Workspace
+#: sahl_erp/sahl_pms/workspace/data_entry/data_entry.json
+msgid "<span style=\"font-size: 16px;\">Units</span>"
+msgstr "<span style=\"font-size: 16px;\">الوحدات</span>"
 
 #. Name of a DocType
 #: sahl_erp/sahl_pms/doctype/add_unit_request/add_unit_request.json
+#: sahl_erp/sahl_pms/workspace/data_entry/data_entry.json
+#: sahl_erp/sahl_pms/workspace/data_search/data_search.json
+#: sahl_erp/sahl_pms/workspace/units_management/units_management.json
 msgid "Add Unit Request"
 msgstr "طلب إضافة وحدة"
 
 #. Label of the section_break_uvkw (Section Break) field in DocType 'Unit'
+#: sahl_erp/sahl_pms/doctype/add_unit_request/add_unit_request.json
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
 msgid "Additional info"
 msgstr "معلومات إضافية"
 
+#. Label of the amended_from (Link) field in DocType 'Add Unit Request'
+#: sahl_erp/sahl_pms/doctype/add_unit_request/add_unit_request.json
+msgid "Amended From"
+msgstr "معدل من"
+
+#: sahl_erp/sahl_pms/doctype/add_unit_request/add_unit_request.js:102
 #: sahl_erp/sahl_pms/doctype/unit/unit.js:103
 msgid "An error occurred while fetching the location. Please try again."
 msgstr "حدث خطأ أثناء جلب الموقع. يرجى المحاولة مرة أخرى."
 
 #. Label of the apartment_number (Data) field in DocType 'Unit'
+#: sahl_erp/sahl_pms/doctype/add_unit_request/add_unit_request.json
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
 msgid "Apartment number"
 msgstr "رقم الشقة"
 
 #. Label of the area (Int) field in DocType 'Investment Unit'
 #. Label of the area (Int) field in DocType 'Unit'
+#: sahl_erp/sahl_pms/doctype/add_unit_request/add_unit_request.json
 #: sahl_erp/sahl_pms/doctype/investment_unit/investment_unit.json
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
 msgid "Area"
 msgstr "المساحة"
 
 #. Label of the section_break_trdq (Section Break) field in DocType 'Unit'
+#: sahl_erp/sahl_pms/doctype/add_unit_request/add_unit_request.json
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
 msgid "Attachments"
 msgstr "المرفقات"
 
 #. Option for the 'Status' (Select) field in DocType 'Unit'
+#: sahl_erp/sahl_pms/doctype/add_unit_request/add_unit_request.json
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
 msgid "Available"
 msgstr "متاحة"
 
 #. Label of the bathrooms (Data) field in DocType 'Unit'
+#: sahl_erp/sahl_pms/doctype/add_unit_request/add_unit_request.json
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
 msgid "Bathrooms"
 msgstr "الحمامات"
 
 #. Label of the building_name (Data) field in DocType 'Unit'
+#: sahl_erp/sahl_pms/doctype/add_unit_request/add_unit_request.json
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
 msgid "Building Number"
 msgstr "رقم المبنى"
 
 #. Label of the building_status (Select) field in DocType 'Unit'
+#: sahl_erp/sahl_pms/doctype/add_unit_request/add_unit_request.json
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
 msgid "Building Status"
 msgstr "حالة المبنى"
@@ -113,6 +150,7 @@ msgid "Categories"
 msgstr "الفئات"
 
 #. Label of the category (Link) field in DocType 'Unit'
+#: sahl_erp/sahl_pms/doctype/add_unit_request/add_unit_request.json
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
 msgid "Category"
 msgstr "الفئة"
@@ -130,6 +168,7 @@ msgstr "المدن"
 #. Name of a DocType
 #. Label of the city (Link) field in DocType 'Investment Unit'
 #. Label of the city (Link) field in DocType 'Unit'
+#: sahl_erp/sahl_pms/doctype/add_unit_request/add_unit_request.json
 #: sahl_erp/sahl_pms/doctype/city/city.json
 #: sahl_erp/sahl_pms/doctype/investment_unit/investment_unit.json
 #: sahl_erp/sahl_pms/doctype/sub_city/sub_city.json
@@ -142,7 +181,24 @@ msgstr "المدينة"
 msgid "City Name"
 msgstr "اسم المدينة"
 
+#. Name of a Workspace
+#: sahl_erp/sahl_pms/workspace/data_entry/data_entry.json
+msgid "Data Entry"
+msgstr "إدخال البيانات"
+
+#. Name of a Workspace
+#: sahl_erp/sahl_pms/workspace/data_search/data_search.json
+msgid "Data Search"
+msgstr "بحث البيانات"
+
+#. Label of the data_search_employee (Link) field in DocType 'Add Unit
+#. Request'
+#: sahl_erp/sahl_pms/doctype/add_unit_request/add_unit_request.json
+msgid "Data Search Employee"
+msgstr "موظف بحث البيانات"
+
 #. Label of the description (Small Text) field in DocType 'Unit'
+#: sahl_erp/sahl_pms/doctype/add_unit_request/add_unit_request.json
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
 msgid "Description"
 msgstr "الوصف"
@@ -159,6 +215,7 @@ msgid "ERP Home"
 msgstr "الرئيسية لنظام ERP"
 
 #. Label of the elevators (Int) field in DocType 'Unit'
+#: sahl_erp/sahl_pms/doctype/add_unit_request/add_unit_request.json
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
 msgid "Elevators"
 msgstr "المصاعد"
@@ -174,10 +231,12 @@ msgid "Enter Owner Full phone number"
 msgstr "أدخل رقم هاتف المالك كاملاً"
 
 #. Label of the entrance_type (Select) field in DocType 'Unit'
+#: sahl_erp/sahl_pms/doctype/add_unit_request/add_unit_request.json
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
 msgid "Entrance Type"
 msgstr "نوع المدخل"
 
+#: sahl_erp/sahl_pms/doctype/add_unit_request/add_unit_request.js:101
 #: sahl_erp/sahl_pms/doctype/unit/unit.js:102
 msgid "Error"
 msgstr "خطأ"
@@ -188,31 +247,37 @@ msgid "Feature"
 msgstr "الميزة"
 
 #. Label of the features (Table MultiSelect) field in DocType 'Unit'
+#: sahl_erp/sahl_pms/doctype/add_unit_request/add_unit_request.json
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
 msgid "Features"
 msgstr "الميزات"
 
 #. Label of the finishing (Select) field in DocType 'Unit'
+#: sahl_erp/sahl_pms/doctype/add_unit_request/add_unit_request.json
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
 msgid "Finishing"
 msgstr "التشطيب"
 
 #. Label of the floor (Int) field in DocType 'Unit'
+#: sahl_erp/sahl_pms/doctype/add_unit_request/add_unit_request.json
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
 msgid "Floor"
 msgstr "الطابق"
 
 #. Label of the furnishing (Select) field in DocType 'Unit'
+#: sahl_erp/sahl_pms/doctype/add_unit_request/add_unit_request.json
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
 msgid "Furnishing"
 msgstr "الفرش"
 
 #. Label of the has_furnishing (Check) field in DocType 'Unit'
+#: sahl_erp/sahl_pms/doctype/add_unit_request/add_unit_request.json
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
 msgid "Has Furnishing"
 msgstr "مفروشة"
 
 #. Option for the 'Entrance Type' (Select) field in DocType 'Unit'
+#: sahl_erp/sahl_pms/doctype/add_unit_request/add_unit_request.json
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
 msgid "Hotel"
 msgstr "فندقي"
@@ -221,11 +286,6 @@ msgstr "فندقي"
 #: sahl_erp/sahl_pms/doctype/unit_images/unit_images.json
 msgid "Image"
 msgstr "صورة"
-
-#. Label of the images (Table) field in DocType 'Unit'
-#: sahl_erp/sahl_pms/doctype/unit/unit.json
-msgid "Images"
-msgstr "الصور"
 
 #. Name of a Workspace
 #. Header text in the Integrated CRM Workspace
@@ -249,10 +309,12 @@ msgid "Investment Units Count"
 msgstr "عدد الوحدات الاستثمارية"
 
 #. Label of the is_premium_unit (Check) field in DocType 'Unit'
+#: sahl_erp/sahl_pms/doctype/add_unit_request/add_unit_request.json
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
 msgid "Is premium unit?"
 msgstr "هل هي وحدة مميزة؟"
 
+#: sahl_erp/sahl_pms/doctype/add_unit_request/add_unit_request.js:92
 #: sahl_erp/sahl_pms/doctype/unit/unit.js:93
 msgid "Location Not Found"
 msgstr "لم يتم العثور على الموقع"
@@ -263,21 +325,32 @@ msgid "Location employee"
 msgstr "موظف الموقع"
 
 #. Option for the 'Finishing' (Select) field in DocType 'Unit'
+#: sahl_erp/sahl_pms/doctype/add_unit_request/add_unit_request.json
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
 msgid "Luxury"
 msgstr "فاخر"
 
 #. Option for the 'Street View' (Select) field in DocType 'Unit'
+#: sahl_erp/sahl_pms/doctype/add_unit_request/add_unit_request.json
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
 msgid "Main Street"
 msgstr "شارع رئيسي"
 
+#. Label of the main_image (Attach Image) field in DocType 'Add Unit Request'
+#. Label of the main_image (Attach Image) field in DocType 'Unit'
+#: sahl_erp/sahl_pms/doctype/add_unit_request/add_unit_request.json
+#: sahl_erp/sahl_pms/doctype/unit/unit.json
+msgid "Main image"
+msgstr "الصورة الرئيسية"
+
 #. Label of the model_number (Int) field in DocType 'Unit'
+#: sahl_erp/sahl_pms/doctype/add_unit_request/add_unit_request.json
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
 msgid "Model Number"
 msgstr "رقم الموديل"
 
 #. Option for the 'Furnishing' (Select) field in DocType 'Unit'
+#: sahl_erp/sahl_pms/doctype/add_unit_request/add_unit_request.json
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
 msgid "Modern"
 msgstr "مودرن"
@@ -287,6 +360,7 @@ msgstr "مودرن"
 #. Label of the name1 (Data) field in DocType 'Unit Owner'
 #. Label of the name1 (Data) field in DocType 'Unit Owner Type'
 #: sahl_erp/sahl_pms/doctype/sub_city/sub_city.json
+#: sahl_erp/sahl_pms/doctype/temp_owner/temp_owner.json
 #: sahl_erp/sahl_pms/doctype/unit_feature/unit_feature.json
 #: sahl_erp/sahl_pms/doctype/unit_owner/unit_owner.json
 #: sahl_erp/sahl_pms/doctype/unit_owner_type/unit_owner_type.json
@@ -294,25 +368,30 @@ msgid "Name"
 msgstr "الاسم"
 
 #. Label of the nationality (Link) field in DocType 'Unit Owner'
+#: sahl_erp/sahl_pms/doctype/temp_owner/temp_owner.json
 #: sahl_erp/sahl_pms/doctype/unit_owner/unit_owner.json
 msgid "Nationality"
 msgstr "الجنسية"
 
 #. Label of the nearest_landmark (Data) field in DocType 'Unit'
+#: sahl_erp/sahl_pms/doctype/add_unit_request/add_unit_request.json
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
 msgid "Nearest Landmark"
 msgstr "أقرب معلم"
 
 #. Label of the need_initial_inspection (Check) field in DocType 'Unit'
+#: sahl_erp/sahl_pms/doctype/add_unit_request/add_unit_request.json
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
 msgid "Need initial inspection?"
 msgstr "هل تحتاج إلى معاينة أولية؟"
 
 #. Option for the 'Building Status' (Select) field in DocType 'Unit'
+#: sahl_erp/sahl_pms/doctype/add_unit_request/add_unit_request.json
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
 msgid "New"
 msgstr "جديد"
 
+#: sahl_erp/sahl_pms/doctype/add_unit_request/add_unit_request.js:93
 #: sahl_erp/sahl_pms/doctype/unit/unit.js:94
 msgid ""
 "No location found for the provided address. Please check the address "
@@ -320,21 +399,25 @@ msgid ""
 msgstr "لم يتم العثور على موقع للعنوان المدخل. يرجى التحقق من تفاصيل العنوان."
 
 #. Option for the 'Furnishing' (Select) field in DocType 'Unit'
+#: sahl_erp/sahl_pms/doctype/add_unit_request/add_unit_request.json
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
 msgid "Normal"
 msgstr "عادي"
 
 #. Option for the 'Status' (Select) field in DocType 'Unit'
+#: sahl_erp/sahl_pms/doctype/add_unit_request/add_unit_request.json
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
 msgid "Not Available"
 msgstr "غير متاحة"
 
 #. Option for the 'Finishing' (Select) field in DocType 'Unit'
+#: sahl_erp/sahl_pms/doctype/add_unit_request/add_unit_request.json
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
 msgid "Not Finished"
 msgstr "غير مشطبة"
 
 #. Label of the note (Small Text) field in DocType 'Unit Owner'
+#: sahl_erp/sahl_pms/doctype/temp_owner/temp_owner.json
 #: sahl_erp/sahl_pms/doctype/unit_owner/unit_owner.json
 msgid "Note"
 msgstr "ملاحظة"
@@ -399,6 +482,7 @@ msgid "Number Of Units Per Sub-City"
 msgstr "عدد الوحدات حسب المدينة الفرعية"
 
 #. Option for the 'Building Status' (Select) field in DocType 'Unit'
+#: sahl_erp/sahl_pms/doctype/add_unit_request/add_unit_request.json
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
 msgid "Old"
 msgstr "قديم"
@@ -415,6 +499,7 @@ msgstr "أخرى"
 
 #. Label of the onwer1 (Link) field in DocType 'Investment Unit'
 #. Label of the owner1 (Link) field in DocType 'Unit'
+#: sahl_erp/sahl_pms/doctype/add_unit_request/add_unit_request.json
 #: sahl_erp/sahl_pms/doctype/investment_unit/investment_unit.json
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
 msgid "Owner"
@@ -435,11 +520,13 @@ msgid "Owners"
 msgstr "الملاك"
 
 #. Option for the 'Type' (Select) field in DocType 'Unit'
+#: sahl_erp/sahl_pms/doctype/add_unit_request/add_unit_request.json
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
 msgid "Ownership"
 msgstr "تمليك"
 
 #. Label of a shortcut in the Units Management Workspace
+#: sahl_erp/sahl_pms/workspace/data_entry/data_entry.json
 #: sahl_erp/sahl_pms/workspace/units_management/units_management.json
 msgid "Ownership Units"
 msgstr "وحدات التمليك"
@@ -450,6 +537,7 @@ msgid "Ownership Units Count"
 msgstr "عدد وحدات التمليك"
 
 #. Label of the phone (Phone) field in DocType 'Unit Owner'
+#: sahl_erp/sahl_pms/doctype/temp_owner/temp_owner.json
 #: sahl_erp/sahl_pms/doctype/unit_owner/unit_owner.json
 msgid "Phone"
 msgstr "الهاتف"
@@ -462,18 +550,27 @@ msgstr "الأماكن"
 #. Label of the price (Float) field in DocType 'Investment Unit'
 #. Label of the price (Float) field in DocType 'Unit'
 #. Label of the price (Float) field in DocType 'Student Request Type'
+#: sahl_erp/sahl_pms/doctype/add_unit_request/add_unit_request.json
 #: sahl_erp/sahl_pms/doctype/investment_unit/investment_unit.json
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
 #: sahl_erp/sahl_student_services/doctype/student_request_type/student_request_type.json
 msgid "Price"
 msgstr "السعر"
 
+#. Label of the rejection_reason (Small Text) field in DocType 'Add Unit
+#. Request'
+#: sahl_erp/sahl_pms/doctype/add_unit_request/add_unit_request.json
+msgid "Rejection Reason"
+msgstr "سبب الرفض"
+
 #. Option for the 'Type' (Select) field in DocType 'Unit'
+#: sahl_erp/sahl_pms/doctype/add_unit_request/add_unit_request.json
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
 msgid "Rent"
 msgstr "إيجار"
 
 #. Label of a shortcut in the Units Management Workspace
+#: sahl_erp/sahl_pms/workspace/data_entry/data_entry.json
 #: sahl_erp/sahl_pms/workspace/units_management/units_management.json
 msgid "Rent Units"
 msgstr "وحدات للإيجار"
@@ -484,6 +581,7 @@ msgid "Rent Units Count"
 msgstr "عدد الوحدات للإيجار"
 
 #. Option for the 'Status' (Select) field in DocType 'Unit'
+#: sahl_erp/sahl_pms/doctype/add_unit_request/add_unit_request.json
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
 msgid "Rented"
 msgstr "مؤجرة"
@@ -495,6 +593,7 @@ msgid "Rented Units Per Price"
 msgstr "الوحدات المؤجرة حسب السعر"
 
 #. Label of the rent_end_date (Date) field in DocType 'Unit'
+#: sahl_erp/sahl_pms/doctype/add_unit_request/add_unit_request.json
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
 msgid "Rented until"
 msgstr "مؤجرة حتى"
@@ -512,6 +611,7 @@ msgid "Request Type"
 msgstr "نوع الطلب"
 
 #. Label of the rooms (Int) field in DocType 'Unit'
+#: sahl_erp/sahl_pms/doctype/add_unit_request/add_unit_request.json
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
 msgid "Rooms"
 msgstr "الغرف"
@@ -522,11 +622,13 @@ msgid "Sahl Unit managment"
 msgstr "إدارة وحدات سهل"
 
 #. Option for the 'Street View' (Select) field in DocType 'Unit'
+#: sahl_erp/sahl_pms/doctype/add_unit_request/add_unit_request.json
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
 msgid "Side Street"
 msgstr "شارع جانبي"
 
 #. Option for the 'Entrance Type' (Select) field in DocType 'Unit'
+#: sahl_erp/sahl_pms/doctype/add_unit_request/add_unit_request.json
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
 msgid "Standard"
 msgstr "قياسي"
@@ -542,11 +644,13 @@ msgid "Status"
 msgstr "الحالة"
 
 #. Label of the street_name (Data) field in DocType 'Unit'
+#: sahl_erp/sahl_pms/doctype/add_unit_request/add_unit_request.json
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
 msgid "Street Name"
 msgstr "اسم الشارع"
 
 #. Label of the street_view (Select) field in DocType 'Unit'
+#: sahl_erp/sahl_pms/doctype/add_unit_request/add_unit_request.json
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
 msgid "Street View"
 msgstr "إطلالة الشارع"
@@ -574,11 +678,13 @@ msgid "Sub-Cities"
 msgstr "المناطق"
 
 #. Label of the subcity (Link) field in DocType 'Unit'
+#: sahl_erp/sahl_pms/doctype/add_unit_request/add_unit_request.json
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
 msgid "Sub-City"
 msgstr "المنطقة"
 
 #. Option for the 'Finishing' (Select) field in DocType 'Unit'
+#: sahl_erp/sahl_pms/doctype/add_unit_request/add_unit_request.json
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
 msgid "Super Luxury"
 msgstr "سوبر لوكس"
@@ -588,6 +694,7 @@ msgstr "سوبر لوكس"
 #: sahl_erp/sahl_pms/doctype/city/city.json
 #: sahl_erp/sahl_pms/doctype/investment_unit/investment_unit.json
 #: sahl_erp/sahl_pms/doctype/sub_city/sub_city.json
+#: sahl_erp/sahl_pms/doctype/temp_owner/temp_owner.json
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
 #: sahl_erp/sahl_pms/doctype/unit_category/unit_category.json
 #: sahl_erp/sahl_pms/doctype/unit_feature/unit_feature.json
@@ -597,6 +704,11 @@ msgstr "سوبر لوكس"
 msgid "System Manager"
 msgstr "مدير النظام"
 
+#. Name of a DocType
+#: sahl_erp/sahl_pms/doctype/temp_owner/temp_owner.json
+msgid "Temp Owner"
+msgstr "المالك المؤقت"
+
 #. Label of a number card in the Units Management Workspace
 #: sahl_erp/sahl_pms/workspace/units_management/units_management.json
 msgid "Total Units Count (Rent and Ownership)"
@@ -604,12 +716,15 @@ msgstr "إجمالي عدد الوحدات (الإيجار والملكية)"
 
 #. Label of the type (Select) field in DocType 'Unit'
 #. Label of the type (Link) field in DocType 'Unit Owner'
+#: sahl_erp/sahl_pms/doctype/add_unit_request/add_unit_request.json
+#: sahl_erp/sahl_pms/doctype/temp_owner/temp_owner.json
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
 #: sahl_erp/sahl_pms/doctype/unit_owner/unit_owner.json
 msgid "Type"
 msgstr "النوع"
 
 #. Option for the 'Finishing' (Select) field in DocType 'Unit'
+#: sahl_erp/sahl_pms/doctype/add_unit_request/add_unit_request.json
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
 msgid "Ultar Luxury"
 msgstr "الترا لوكس"
@@ -655,6 +770,11 @@ msgstr "نوع مالك الوحدة"
 msgid "Unit Owner Types"
 msgstr "أنواع ملاك الوحدات"
 
+#. Label of the unit_status (Select) field in DocType 'Add Unit Request'
+#: sahl_erp/sahl_pms/doctype/add_unit_request/add_unit_request.json
+msgid "Unit Status"
+msgstr "حالة الوحدة"
+
 #. Name of a DocType
 #: sahl_erp/sahl_pms/doctype/unit_videos/unit_videos.json
 msgid "Unit Videos"
@@ -688,12 +808,12 @@ msgstr "إحصائيات الوحدات"
 
 #. Label of the videos (Table) field in DocType 'Unit'
 #. Label of the videos (Attach) field in DocType 'Unit Videos'
-#: sahl_erp/sahl_pms/doctype/unit/unit.json
 #: sahl_erp/sahl_pms/doctype/unit_videos/unit_videos.json
 msgid "Videos"
 msgstr "الفيديوهات"
 
 #. Label of the whatsapp (Phone) field in DocType 'Unit Owner'
+#: sahl_erp/sahl_pms/doctype/temp_owner/temp_owner.json
 #: sahl_erp/sahl_pms/doctype/unit_owner/unit_owner.json
 msgid "Whatsapp"
 msgstr "واتساب"
@@ -707,8 +827,3 @@ msgstr "لقد أنهيت الإعداد بنجاح"
 #: sahl_erp/sahl_pms/module_onboarding/sahl_unit_managment/sahl_unit_managment.json
 msgid "asd"
 msgstr "وصف قصير"
-
-#. Label of the tmep (Attach Image) field in DocType 'Unit'
-#: sahl_erp/sahl_pms/doctype/unit/unit.json
-msgid "tmep"
-msgstr ""

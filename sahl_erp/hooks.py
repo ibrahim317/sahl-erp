@@ -237,3 +237,38 @@ home_page = "/app/erp-home"
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+fixtures = [
+    # To export specific documents from a DocType, use a dictionary with filters.
+    # This is the recommended approach.
+
+    # Exporting specific Roles
+    {"doctype": "Role", "filters": [
+        ["name", "in", [
+            "Data Entry",
+            "Data Search"
+        ]]
+    ]},
+    # 2. Export the permissions for those roles from DocPerm
+    # This is the crucial missing piece.
+    {"doctype": "DocPerm", "filters": [
+        ["role", "in", [
+            "Data Entry",
+            "Data Search"
+        ]]
+    ]},
+
+    # 3. (Recommended) Export any permissions for custom doctypes
+    {"doctype": "Custom DocPerm", "filters": [
+        ["role", "in", [
+            "Data Entry",
+            "Data Search"
+        ]]
+    ]},
+
+    # Exporting a specific Workflow
+    {"doctype": "Workflow", "filters": [
+        ["name", "in", [
+            "Add Unit Request Workflow"
+        ]]
+    ]}
+]

@@ -15,7 +15,7 @@
  "label": "Data Entry",
  "link_type": "DocType",
  "links": [],
- "modified": "2025-06-09 00:21:32.939003",
+ "modified": "2025-06-09 01:47:59.069015",
  "modified_by": "Administrator",
  "module": "Sahl PMS",
  "name": "Data Entry",
@@ -34,6 +34,14 @@
   {
    "color": "Grey",
    "doc_view": "List",
+   "label": "Add Unit Request",
+   "link_to": "Add Unit Request",
+   "stats_filter": "[[\"Add Unit Request\",\"workflow_state\",\"=\",\"Approval Pending\",false]]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
    "label": "Rent Units",
    "link_to": "Unit",
    "stats_filter": "[[\"Unit\",\"type\",\"=\",\"Rent\",false]]",
@@ -45,14 +53,6 @@
    "label": "Ownership Units",
    "link_to": "Unit",
    "stats_filter": "[[\"Unit\",\"type\",\"=\",\"Ownership\",false]]",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Add Unit Request",
-   "link_to": "Add Unit Request",
-   "stats_filter": "[]",
    "type": "DocType"
   }
  ],
