@@ -168,7 +168,7 @@
    "type": "Link"
   }
  ],
- "modified": "2025-06-09 00:12:04.777246",
+ "modified": "2025-06-10 02:12:45.525646",
  "modified_by": "Administrator",
  "module": "Sahl PMS",
  "name": "Units Management",
@@ -214,6 +214,14 @@
   },
   {
    "color": "Grey",
+   "doc_view": "Image",
+   "label": "Rent Units",
+   "link_to": "Unit",
+   "stats_filter": "[[\"Unit\",\"type\",\"=\",\"Rent\",false]]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
    "doc_view": "List",
    "label": "Owners",
    "link_to": "Unit Owner",
@@ -226,14 +234,6 @@
    "label": "Add Unit Request",
    "link_to": "Add Unit Request",
    "stats_filter": "[]",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Rent Units",
-   "link_to": "Unit",
-   "stats_filter": "[[\"Unit\",\"type\",\"=\",\"Rent\",false]]",
    "type": "DocType"
   },
   {
