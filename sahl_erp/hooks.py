@@ -33,14 +33,10 @@ app_include_js = [
     "/assets/sahl_erp/js/workflows/add_unit_request.js",
 ]
 
-app_include_css = ["/assets/sahl_erp/css/override_desk_components.css"]
-
-# Determine the language
-lang = frappe.local.lang if hasattr(frappe.local, "lang") else frappe.db.get_single_value("System Settings", "language")
-
-# Conditionally append the Arabic font stylesheet
-if lang == "ar":
-    app_include_css.append("/assets/sahl_erp/css/arabic_font.css")
+app_include_css = [
+    "/assets/sahl_erp/css/override_desk_components.css",
+    "/assets/sahl_erp/css/arabic_font.css",
+]
 
 # include js, css files in header of web template
 # web_include_css = "/assets/sahl_erp/css/sahl_erp.css"
