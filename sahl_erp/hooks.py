@@ -1,3 +1,5 @@
+import frappe
+
 app_name = "sahl_erp"
 app_title = "Sahl Erp"
 app_publisher = "Softa Solutions"
@@ -31,25 +33,14 @@ app_include_js = [
     "/assets/sahl_erp/js/workflows/add_unit_request.js",
 ]
 
+app_include_css = ["/assets/sahl_erp/css/override_desk_components.css"]
 
-def include_arabic_font_style():
-    import frappe
+# Determine the language
+lang = frappe.local.lang if hasattr(frappe.local, "lang") else frappe.db.get_single_value("System Settings", "language")
 
-    lang = None
-
-    if hasattr(frappe.local, "lang"):
-        lang = frappe.local.lang
-    else:
-        lang = frappe.db.get_single_value("System Settings", "language")
-    if lang == "ar":
-        return "/assets/sahl_erp/css/arabic_font.css"
-    return None
-
-
-app_include_css = [
-    "/assets/sahl_erp/css/override_desk_components.css",
-    include_arabic_font_style(),
-]
+# Conditionally append the Arabic font stylesheet
+if lang == "ar":
+    app_include_css.append("/assets/sahl_erp/css/arabic_font.css")
 
 # include js, css files in header of web template
 # web_include_css = "/assets/sahl_erp/css/sahl_erp.css"
