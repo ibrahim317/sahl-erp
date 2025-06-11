@@ -8,25 +8,48 @@ app_license = "mit"
 # Apps
 # ------------------
 
-# required_apps = []
+required_apps = ["erpnext", "raven"]
 
 # Each item in the list will be shown as an app in the apps page
 add_to_apps_screen = [
-	{
-		"name": "sahl_erp",
-		"logo": "/assets/sahl_erp/images/sahl-logo.png",
-		"title": "Sahl Erp",
-		"route": "/app/erp-home",
-		#"has_permission": "sahl_erp.api.permission.has_app_permission"
-	}
+    {
+        "name": "sahl_erp",
+        "logo": "/assets/sahl_erp/images/sahl-logo.png",
+        "title": "Sahl Erp",
+        "route": "/app/erp-home",
+        # "has_permission": "sahl_erp.api.permission.has_app_permission"
+    }
 ]
 
 # Includes in <head>
 # ------------------
 
 # include js, css files in header of desk.html
-app_include_js = ["/assets/sahl_erp/js/map_defaults.js", "/assets/sahl_erp/js/common_unit_scripts.js"]
-app_include_css = ["/assets/sahl_erp/css/override_desk_components.css"]
+app_include_js = [
+    "/assets/sahl_erp/js/utils/map_defaults.js",
+    "/assets/sahl_erp/js/utils/common_unit_scripts.js",
+    "/assets/sahl_erp/js/workflows/add_unit_request.js",
+]
+
+
+def include_arabic_font_style():
+    import frappe
+
+    lang = None
+
+    if hasattr(frappe.local, "lang"):
+        lang = frappe.local.lang
+    else:
+        lang = frappe.db.get_single_value("System Settings", "language")
+    if lang == "ar":
+        return "/assets/sahl_erp/css/arabic_font.css"
+    return None
+
+
+app_include_css = [
+    "/assets/sahl_erp/css/override_desk_components.css",
+    include_arabic_font_style(),
+]
 
 # include js, css files in header of web template
 # web_include_css = "/assets/sahl_erp/css/sahl_erp.css"
@@ -236,39 +259,24 @@ home_page = "/app/erp-home"
 # default_log_clearing_doctypes = {
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
+website_context = {
+	"favicon": "/assets/sahl_erp/images/favicon.ico",
+	"splash_image": "/assets/sahl_erp/images/sahl-logo.png",
+}
 
 fixtures = [
     # To export specific documents from a DocType, use a dictionary with filters.
     # This is the recommended approach.
-
     # Exporting specific Roles
-    {"doctype": "Role", "filters": [
-        ["name", "in", [
-            "Data Entry",
-            "Data Search"
-        ]]
-    ]},
+    {"doctype": "Role", "filters": [["name", "in", ["Data Entry", "Data Search"]]]},
     # 2. Export the permissions for those roles from DocPerm
     # This is the crucial missing piece.
-    {"doctype": "DocPerm", "filters": [
-        ["role", "in", [
-            "Data Entry",
-            "Data Search"
-        ]]
-    ]},
-
+    {"doctype": "DocPerm", "filters": [["role", "in", ["Data Entry", "Data Search"]]]},
     # 3. (Recommended) Export any permissions for custom doctypes
-    {"doctype": "Custom DocPerm", "filters": [
-        ["role", "in", [
-            "Data Entry",
-            "Data Search"
-        ]]
-    ]},
-
+    {
+        "doctype": "Custom DocPerm",
+        "filters": [["role", "in", ["Data Entry", "Data Search"]]],
+    },
     # Exporting a specific Workflow
-    {"doctype": "Workflow", "filters": [
-        ["name", "in", [
-            "Add Unit Request Workflow"
-        ]]
-    ]}
+    {"doctype": "Workflow"},
 ]

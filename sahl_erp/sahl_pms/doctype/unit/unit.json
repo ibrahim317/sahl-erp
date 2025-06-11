@@ -3,7 +3,7 @@
  "allow_auto_repeat": 1,
  "allow_events_in_timeline": 1,
  "allow_rename": 1,
- "autoname": "format:{type}-{model_number}",
+ "autoname": "format:{unit_name_prefix}-{model_number}",
  "creation": "2025-05-31 21:49:42.429358",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -32,7 +32,6 @@
   "rent_end_date",
   "has_furnishing",
   "furnishing",
-  "location_employee",
   "section_break_trdq",
   "main_image",
   "section_break_coiu",
@@ -45,11 +44,17 @@
   "apartment_number",
   "column_break_qefx",
   "nearest_landmark",
+  "column_break_cwdp",
+  "nearest_main_street",
   "section_break_iqox",
   "geolocation_vwpv",
   "section_break_uvkw",
   "need_initial_inspection",
-  "is_premium_unit"
+  "is_premium_unit",
+  "hidden_fields_section",
+  "unit_name_prefix",
+  "column_break_qrfs",
+  "location_employee"
  ],
  "fields": [
   {
@@ -57,7 +62,8 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Type",
-   "options": "Rent\nOwnership"
+   "options": "Rent\nOwnership",
+   "reqd": 1
   },
   {
    "fieldname": "subcity",
@@ -65,6 +71,7 @@
    "in_list_view": 1,
    "label": "Sub-City",
    "options": "Sub City",
+   "reqd": 1,
    "search_index": 1
   },
   {
@@ -77,7 +84,8 @@
    "fieldname": "floor",
    "fieldtype": "Int",
    "label": "Floor",
-   "non_negative": 1
+   "non_negative": 1,
+   "reqd": 1
   },
   {
    "fieldname": "model_number",
@@ -97,9 +105,10 @@
   {
    "fieldname": "owner1",
    "fieldtype": "Link",
-   "in_list_view": 1,
    "label": "Owner",
-   "options": "Unit Owner"
+   "options": "Unit Owner",
+   "reqd": 1,
+   "set_only_once": 1
   },
   {
    "fieldname": "city",
@@ -107,6 +116,7 @@
    "in_list_view": 1,
    "label": "City",
    "options": "City",
+   "reqd": 1,
    "search_index": 1
   },
   {
@@ -116,12 +126,14 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Category",
-   "options": "Unit Category"
+   "options": "Unit Category",
+   "reqd": 1
   },
   {
    "fieldname": "bathrooms",
    "fieldtype": "Data",
-   "label": "Bathrooms"
+   "label": "Bathrooms",
+   "reqd": 1
   },
   {
    "fieldname": "rooms",
@@ -130,13 +142,15 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Rooms",
-   "non_negative": 1
+   "non_negative": 1,
+   "reqd": 1
   },
   {
    "fieldname": "elevators",
    "fieldtype": "Int",
    "label": "Elevators",
-   "non_negative": 1
+   "non_negative": 1,
+   "reqd": 1
   },
   {
    "fieldname": "area",
@@ -146,31 +160,36 @@
    "in_preview": 1,
    "in_standard_filter": 1,
    "label": "Area",
-   "non_negative": 1
+   "non_negative": 1,
+   "reqd": 1
   },
   {
    "fieldname": "building_status",
    "fieldtype": "Select",
    "label": "Building Status",
-   "options": "\nNew\nOld"
+   "options": "\nNew\nOld",
+   "reqd": 1
   },
   {
    "fieldname": "entrance_type",
    "fieldtype": "Select",
    "label": "Entrance Type",
-   "options": "\nHotel\nStandard"
+   "options": "\nHotel\nStandard",
+   "reqd": 1
   },
   {
    "fieldname": "finishing",
    "fieldtype": "Select",
    "label": "Finishing",
-   "options": "\nUltar Luxury\nSuper Luxury\nLuxury\nNormal\nNot Finished"
+   "options": "\nUltar Luxury\nSuper Luxury\nLuxury\nNormal\nNot Finished",
+   "reqd": 1
   },
   {
    "fieldname": "street_view",
    "fieldtype": "Select",
    "label": "Street View",
-   "options": "\nMain Street\nSide Street"
+   "options": "\nMain Street\nSide Street",
+   "reqd": 1
   },
   {
    "depends_on": "eval:doc.has_furnishing == true;",
@@ -184,13 +203,15 @@
    "fieldname": "price",
    "fieldtype": "Int",
    "label": "Price",
-   "precision": "2"
+   "precision": "2",
+   "reqd": 1
   },
   {
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "\nAvailable\nRented\nNot Available"
+   "options": "\nAvailable\nRented\nNot Available",
+   "reqd": 1
   },
   {
    "fieldname": "section_break_trdq",
@@ -211,6 +232,7 @@
    "fieldtype": "Section Break"
   },
   {
+   "default": " ",
    "fieldname": "street_name",
    "fieldtype": "Data",
    "label": "Street Name"
@@ -220,6 +242,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "default": " ",
    "fieldname": "building_name",
    "fieldtype": "Data",
    "label": "Building Number"
@@ -231,7 +254,7 @@
   {
    "fieldname": "apartment_number",
    "fieldtype": "Data",
-   "label": "Apartment number"
+   "label": "Apartment Number"
   },
   {
    "fieldname": "column_break_qefx",
@@ -277,7 +300,8 @@
    "fieldtype": "Date",
    "label": "Rented until",
    "mandatory_depends_on": "eval:doc.status == \"Rented\";",
-   "read_only_depends_on": "eval:doc.status != \"Rented\";"
+   "read_only_depends_on": "eval:doc.status != \"Rented\";",
+   "reqd": 1
   },
   {
    "default": "0",
@@ -290,22 +314,52 @@
    "fieldtype": "Section Break"
   },
   {
-   "default": "+20-",
    "fieldname": "owner_phone",
    "fieldtype": "Phone",
-   "label": "Enter Owner Full phone number"
+   "label": "Owner Phone Number"
   },
   {
    "fieldname": "location_employee",
    "fieldtype": "Link",
    "hidden": 1,
-   "label": "Location employee",
-   "options": "User"
+   "label": "Data Search employee",
+   "options": "User",
+   "print_hide": 1,
+   "report_hide": 1
   },
   {
    "fieldname": "main_image",
    "fieldtype": "Attach Image",
    "label": "Main image"
+  },
+  {
+   "depends_on": "eval: doc.street_view != \"Main Street\"",
+   "fieldname": "column_break_cwdp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval: doc.street_view != \"Main Street\"",
+   "fieldname": "nearest_main_street",
+   "fieldtype": "Data",
+   "label": "Nearest Main Street"
+  },
+  {
+   "fieldname": "hidden_fields_section",
+   "fieldtype": "Section Break",
+   "label": "Hidden fields"
+  },
+  {
+   "fieldname": "unit_name_prefix",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Unit Name Preview",
+   "print_hide": 1,
+   "read_only": 1,
+   "report_hide": 1
+  },
+  {
+   "fieldname": "column_break_qrfs",
+   "fieldtype": "Column Break"
   }
  ],
  "grid_page_length": 50,
@@ -314,7 +368,7 @@
  "links": [],
  "make_attachments_public": 1,
  "max_attachments": 10,
- "modified": "2025-06-10 02:48:36.593152",
+ "modified": "2025-06-11 03:12:20.054839",
  "modified_by": "Administrator",
  "module": "Sahl PMS",
  "name": "Unit",
