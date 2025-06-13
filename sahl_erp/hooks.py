@@ -28,9 +28,9 @@ add_to_apps_screen = [
 
 # include js, css files in header of desk.html
 app_include_js = [
-    "/assets/sahl_erp/js/utils/map_defaults.js",
-    "/assets/sahl_erp/js/utils/common_unit_scripts.js",
-    "/assets/sahl_erp/js/workflows/add_unit_request.js",
+    "/assets/sahl_erp/js/map_defaults.js",
+    "/assets/sahl_erp/js/unit_utils.js",
+    "/assets/sahl_erp/js/desk_styling.js",
 ]
 
 app_include_css = [
@@ -255,14 +255,14 @@ fixtures = [
     # To export specific documents from a DocType, use a dictionary with filters.
     # This is the recommended approach.
     # Exporting specific Roles
-    {"doctype": "Role", "filters": [["name", "in", ["Data Entry", "Data Search"]]]},
+    {"doctype": "Role", "filters": [["name", "in", ["Data Entry", "Data Search", "Data Check"]]]},
     # 2. Export the permissions for those roles from DocPerm
     # This is the crucial missing piece.
-    {"doctype": "DocPerm", "filters": [["role", "in", ["Data Entry", "Data Search"]]]},
+    {"doctype": "DocPerm", "filters": [["role", "in", ["Data Entry", "Data Search", "Data Check"]]]},
     # 3. (Recommended) Export any permissions for custom doctypes
     {
         "doctype": "Custom DocPerm",
-        "filters": [["role", "in", ["Data Entry", "Data Search"]]],
+        "filters": [["role", "in", ["Data Entry", "Data Search", "Data Check"]]],
     },
     # Exporting a specific Workflow
     {"doctype": "Workflow"},

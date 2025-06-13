@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "name1",
+ "autoname": "format:{name1}-{####}",
  "creation": "2025-06-08 20:28:38.003585",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -10,6 +10,7 @@
   "type",
   "nationality",
   "whatsapp",
+  "additional_phone_numbers",
   "column_break_bhxn",
   "name1",
   "phone",
@@ -66,16 +67,22 @@
    "fieldname": "note",
    "fieldtype": "Small Text",
    "label": "Note"
+  },
+  {
+   "fieldname": "additional_phone_numbers",
+   "fieldtype": "Table",
+   "label": "Additional Phone Numbers",
+   "options": "Unit Owner Additional Phone Numbers"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-06-09 00:54:16.134107",
+ "modified": "2025-06-13 04:16:34.860522",
  "modified_by": "Administrator",
  "module": "Sahl PMS",
  "name": "Temp Owner",
- "naming_rule": "By fieldname",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

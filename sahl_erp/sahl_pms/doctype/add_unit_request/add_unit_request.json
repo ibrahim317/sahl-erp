@@ -6,6 +6,8 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "rejection_reason",
+  "section_break_zxbt",
   "type",
   "section_break_lobd",
   "owner1",
@@ -42,12 +44,10 @@
   "apartment_number",
   "column_break_qefx",
   "nearest_landmark",
+  "nearest_main_street",
   "section_break_iqox",
   "geolocation_vwpv",
   "section_break_uvkw",
-  "need_initial_inspection",
-  "is_premium_unit",
-  "rejection_reason",
   "amended_from"
  ],
  "fields": [
@@ -64,6 +64,7 @@
    "in_list_view": 1,
    "label": "Sub-City",
    "options": "Sub City",
+   "reqd": 1,
    "search_index": 1
   },
   {
@@ -82,7 +83,8 @@
    "fieldname": "model_number",
    "fieldtype": "Int",
    "label": "Model Number",
-   "non_negative": 1
+   "non_negative": 1,
+   "reqd": 1
   },
   {
    "fieldname": "column_break_yqtr",
@@ -101,6 +103,7 @@
    "in_list_view": 1,
    "label": "City",
    "options": "City",
+   "reqd": 1,
    "search_index": 1
   },
   {
@@ -189,6 +192,7 @@
    "fieldtype": "Section Break"
   },
   {
+   "default": " ",
    "fieldname": "street_name",
    "fieldtype": "Data",
    "label": "Street Name"
@@ -198,6 +202,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "default": " ",
    "fieldname": "building_name",
    "fieldtype": "Data",
    "label": "Building Number"
@@ -207,6 +212,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "default": " ",
    "fieldname": "apartment_number",
    "fieldtype": "Data",
    "label": "Apartment number"
@@ -216,6 +222,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "default": " ",
    "fieldname": "nearest_landmark",
    "fieldtype": "Data",
    "label": "Nearest Landmark"
@@ -234,24 +241,12 @@
    "label": "Additional info"
   },
   {
-   "default": "0",
-   "fieldname": "need_initial_inspection",
-   "fieldtype": "Check",
-   "label": "Need initial inspection?"
-  },
-  {
-   "default": "0",
-   "fieldname": "is_premium_unit",
-   "fieldtype": "Check",
-   "label": "Is premium unit?"
-  },
-  {
-   "depends_on": "eval:doc.status == \"Rented\";",
+   "depends_on": "eval:doc.unit_status == \"Rented\";",
    "fieldname": "rent_end_date",
    "fieldtype": "Date",
    "label": "Rented until",
-   "mandatory_depends_on": "eval:doc.status == \"Rented\";",
-   "read_only_depends_on": "eval:doc.status != \"Rented\";"
+   "mandatory_depends_on": "eval:doc.unit_status == \"Rented\";",
+   "read_only_depends_on": "eval:doc.unit_status != \"Rented\";"
   },
   {
    "default": "0",
@@ -293,10 +288,21 @@
   },
   {
    "allow_on_submit": 1,
+   "depends_on": "eval: doc.workflow_state == \"Rejected\"",
    "fieldname": "rejection_reason",
    "fieldtype": "Small Text",
-   "hidden": 1,
    "label": "Rejection Reason"
+  },
+  {
+   "default": " ",
+   "depends_on": "eval: doc.street_view != \"Main Street\"",
+   "fieldname": "nearest_main_street",
+   "fieldtype": "Data",
+   "label": "Nearest Main Street"
+  },
+  {
+   "fieldname": "section_break_zxbt",
+   "fieldtype": "Section Break"
   }
  ],
  "grid_page_length": 50,
@@ -306,7 +312,7 @@
  "links": [],
  "make_attachments_public": 1,
  "max_attachments": 10,
- "modified": "2025-06-09 03:07:21.183317",
+ "modified": "2025-06-13 06:34:18.736616",
  "modified_by": "Administrator",
  "module": "Sahl PMS",
  "name": "Add Unit Request",

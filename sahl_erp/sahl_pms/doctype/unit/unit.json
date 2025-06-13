@@ -18,7 +18,7 @@
   "entrance_type",
   "finishing",
   "building_status",
-  "status",
+  "unit_status",
   "street_view",
   "features",
   "column_break_yqtr",
@@ -54,7 +54,7 @@
   "hidden_fields_section",
   "unit_name_prefix",
   "column_break_qrfs",
-  "location_employee"
+  "data_search_employee"
  ],
  "fields": [
   {
@@ -131,7 +131,7 @@
   },
   {
    "fieldname": "bathrooms",
-   "fieldtype": "Data",
+   "fieldtype": "Int",
    "label": "Bathrooms",
    "reqd": 1
   },
@@ -204,13 +204,6 @@
    "fieldtype": "Int",
    "label": "Price",
    "precision": "2",
-   "reqd": 1
-  },
-  {
-   "fieldname": "status",
-   "fieldtype": "Select",
-   "label": "Status",
-   "options": "\nAvailable\nRented\nNot Available",
    "reqd": 1
   },
   {
@@ -295,13 +288,12 @@
    "label": "Is premium unit?"
   },
   {
-   "depends_on": "eval:doc.status == \"Rented\";",
+   "depends_on": "eval:doc.unit_status == \"Rented\";",
    "fieldname": "rent_end_date",
    "fieldtype": "Date",
    "label": "Rented until",
-   "mandatory_depends_on": "eval:doc.status == \"Rented\";",
-   "read_only_depends_on": "eval:doc.status != \"Rented\";",
-   "reqd": 1
+   "mandatory_depends_on": "eval:doc.unit_status == \"Rented\";",
+   "read_only_depends_on": "eval:doc.unit_status != \"Rented\";"
   },
   {
    "default": "0",
@@ -317,15 +309,6 @@
    "fieldname": "owner_phone",
    "fieldtype": "Phone",
    "label": "Owner Phone Number"
-  },
-  {
-   "fieldname": "location_employee",
-   "fieldtype": "Link",
-   "hidden": 1,
-   "label": "Data Search employee",
-   "options": "User",
-   "print_hide": 1,
-   "report_hide": 1
   },
   {
    "fieldname": "main_image",
@@ -352,7 +335,7 @@
    "fieldname": "unit_name_prefix",
    "fieldtype": "Data",
    "hidden": 1,
-   "label": "Unit Name Preview",
+   "label": "Unit Name Prefix",
    "print_hide": 1,
    "read_only": 1,
    "report_hide": 1
@@ -360,6 +343,22 @@
   {
    "fieldname": "column_break_qrfs",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "unit_status",
+   "fieldtype": "Select",
+   "label": "Unit Status",
+   "options": "\nAvailable\nRented\nNot Available",
+   "reqd": 1
+  },
+  {
+   "fieldname": "data_search_employee",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Data Search employee",
+   "options": "User",
+   "print_hide": 1,
+   "report_hide": 1
   }
  ],
  "grid_page_length": 50,
@@ -368,7 +367,7 @@
  "links": [],
  "make_attachments_public": 1,
  "max_attachments": 10,
- "modified": "2025-06-11 03:12:20.054839",
+ "modified": "2025-06-13 06:36:30.582536",
  "modified_by": "Administrator",
  "module": "Sahl PMS",
  "name": "Unit",

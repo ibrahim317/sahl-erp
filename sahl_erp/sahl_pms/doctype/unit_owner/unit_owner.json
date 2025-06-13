@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:name1",
+ "autoname": "format:{name1}-{####}",
  "creation": "2025-06-01 00:28:27.667791",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -9,6 +9,7 @@
   "type",
   "nationality",
   "whatsapp",
+  "additional_phone_numbers",
   "column_break_bhxn",
   "name1",
   "phone",
@@ -49,8 +50,7 @@
    "fieldname": "name1",
    "fieldtype": "Data",
    "label": "Name",
-   "reqd": 1,
-   "unique": 1
+   "reqd": 1
   },
   {
    "allow_in_quick_entry": 1,
@@ -65,16 +65,22 @@
    "fieldname": "note",
    "fieldtype": "Small Text",
    "label": "Note"
+  },
+  {
+   "fieldname": "additional_phone_numbers",
+   "fieldtype": "Table",
+   "label": "Additional Phone Numbers",
+   "options": "Unit Owner Additional Phone Numbers"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-06-04 00:58:04.156947",
+ "modified": "2025-06-13 06:28:51.137833",
  "modified_by": "Administrator",
  "module": "Sahl PMS",
  "name": "Unit Owner",
- "naming_rule": "By fieldname",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

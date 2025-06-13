@@ -1,108 +1,132 @@
-// Copyright (c) 2025, Softa Solutions and contributors
-// For license information, please see license.txt
+frappe.sahl_erp.add_unit_request = {};
 
-// Copyright (c) 2025, Softa Solutions and contributors
-// For license information, please see license.txt
-const get_sub_city_query = (doc) => {
-    return {
-        filters: {
-            city: doc.city
-        }
-    };
-};
+frappe.sahl_erp.add_unit_request.DESCRIPTION_UPDATE_FIELDS = [
+	"features",
+	"type",
+	"subcity",
+	"city",
+	"price",
+	"category",
+	"rooms",
+	"bathrooms",
+	"area",
+	"floor",
+	"elevators",
+	"street_view",
+	"building_status",
+	"entrance_type",
+	"finishing",
+	"has_furnishing",
+	"furnishing",
+	"is_premium_unit",
+];
 
-frappe.ui.form.on('Add Unit Request', {
-    refresh: function(frm) {
-        frm.fields_dict.subcity.get_query = get_sub_city_query; // Filter sub-cities by city
-    },
-    city: function(frm) {
-		frm.fields_dict.subcity.get_query = get_sub_city_query; // Filter sub-cities by city
-        if (is_map_updating) return;
-        update_map_from_address(frm);
-    },
-    subcity: function(frm) {
-        if (is_map_updating) return;
-        update_map_from_address(frm);
-    },
-    street_name: function(frm) {
-        if (is_map_updating) return;
-        update_map_from_address(frm);
-    },
-    building_name: function(frm) {
-        if (is_map_updating) return;
-        update_map_from_address(frm);
-    }
-});
+frappe.sahl_erp.add_unit_request.MAP_UPDATE_FIELDS = [
+	"city",
+	"subcity",
+	"street_name",
+	"building_name",
+];
 
-// A flag to prevent recursive updates
-let is_map_updating = false;
-let geocode_debounce = null;
-
-function update_map_from_address(frm) {
-    clearTimeout(geocode_debounce);
-    geocode_debounce = setTimeout(() => {
-        const { city, subcity, street_name, building_name } = frm.doc;
-
-        if (!city && !subcity) return;
-
-        // Construct the query parameters following Nominatim's structured format
-        const params = new URLSearchParams({
-            format: 'json',
-            limit: '1',
-            country: 'مصر', // Adding country to improve accuracy
-            state: city || '', // city field represents state in your case
-            city: subcity || '', // subcity field represents city in your case
-        });
-
-        // Only add street if both street_name and building_name are present
-        if (street_name) {
-            let street = street_name;
-            if (building_name) {
-                street += ` ${building_name}`;
-            }
-            params.append('street', street);
-        }
-
-        // Make the API call with structured parameters
-        fetch(`https://nominatim.openstreetmap.org/search?${params.toString()}`)
-            .then(res => res.json())
-            .then(data => {
-                if (data && data.length > 0) {
-                    const { lat, lon } = data[0];
-                    const geojson = {
-                        "type": "FeatureCollection",
-                        "features": [{
-                            "type": "Feature",
-                            "properties": {},
-                            "geometry": { "type": "Point", "coordinates": [parseFloat(lon), parseFloat(lat)] }
-                        }]
-                    };
-
-                    is_map_updating = true;
-                    frm.set_value('geolocation_vwpv', JSON.stringify(geojson));
-
-                    // center map
-                    if (frm.fields_dict.geolocation_vwpv.map) {
-                        frm.fields_dict.geolocation_vwpv.map.setView([lat, lon], 8);
-                    }
-
-                    setTimeout(() => { is_map_updating = false; }, 500);
-                } else {
-                    frappe.msgprint({
-                        title: __('Location Not Found'),
-                        message: __('No location found for the provided address. Please check the address details.'),
-                        indicator: 'orange'
-                    });
-                }
-            })
-            .catch(error => {
-                console.error('Error fetching location:', error);
-                frappe.msgprint({
-                    title: __('Error'),
-                    message: __('An error occurred while fetching the location. Please try again.'),
-                    indicator: 'red'
-                });
-            });
-    }, 1000);
+async function before_workflow_action(frm) {
+	frappe.dom.unfreeze();
+	// there are 3 actions
+	// 1. send for review (do nothing)
+	if (frm.selected_workflow_action === "Send For Review") {
+		const send_for_review_promise = new Promise((resolve, reject) => {
+			frappe.show_alert({
+				message: __("Unit request sent for review."),
+				indicator: "blue",
+			});
+			resolve();
+		});
+		await send_for_review_promise.catch(() => frappe.throw());
+		return;
+	}
+	// 2. approve (create owner from temp owner and create unit from "add unit request")
+	if (frm.selected_workflow_action === "Approve") {
+		const create_unit_promise = new Promise((resolve, reject) => {
+			frappe
+				.call({
+					doc: frm.doc,
+					method: "approve",
+				})
+				.then(() => {
+					frappe.show_alert({
+						message: __(
+							"Unit request approved successfully, a new unit has been created."
+						),
+						indicator: "green",
+					});
+					resolve();
+					frappe.set_route("List", "Unit");
+				})
+				.catch(reject);
+		});
+		await create_unit_promise.catch(() => frappe.throw());
+	}
+	// 3. reject (show a dialog with the reason input field and reject button)
+	if (frm.selected_workflow_action === "Reject") {
+		let clicked_reject = false;
+		const reject_promise = new Promise((resolve, reject) => {
+			let dialog = new frappe.ui.Dialog({
+				title: __("Reject Unit Request"),
+				fields: [
+					{
+						label: __("Reason"),
+						fieldname: "rejection_reason",
+						fieldtype: "Small Text",
+					},
+				],
+				size: "small", // small, large, extra-large
+				primary_action_label: __("Reject"),
+				primary_action(values) {
+					clicked_reject = true;
+					frappe
+						.call({
+							doc: frm.doc,
+							method: "reject",
+							args: {
+								reason: values.rejection_reason,
+							},
+						})
+						.then(() => {
+							dialog.hide();
+							resolve();
+						})
+						.catch(reject);
+				},
+			});
+			dialog.show();
+		});
+		await reject_promise
+			.then(() => {
+				if (!clicked_reject) {
+					frappe.throw();
+				}
+			})
+			.catch(() => frappe.throw());
+	}
 }
 
+frappe.sahl_erp.add_unit_request.add_unit_request_events = {
+	refresh: function (frm) {
+		frm.fields_dict.subcity.get_query = frappe.sahl_erp.unit_utils.get_sub_city_query; // Filter sub-cities by city
+	},
+	city: function (frm) {
+		frm.fields_dict.subcity.get_query = frappe.sahl_erp.unit_utils.get_sub_city_query; // Filter sub-cities by city
+	},
+	before_workflow_action,
+};
+frappe.sahl_erp.unit_utils.add_handlers_to_events(
+	frappe.sahl_erp.add_unit_request.add_unit_request_events,
+	frappe.sahl_erp.add_unit_request.MAP_UPDATE_FIELDS,
+	frappe.sahl_erp.unit_utils.update_map_from_address
+);
+frappe.sahl_erp.unit_utils.add_handlers_to_events(
+	frappe.sahl_erp.add_unit_request.add_unit_request_events,
+	frappe.sahl_erp.add_unit_request.DESCRIPTION_UPDATE_FIELDS,
+	frappe.sahl_erp.unit_utils.update_description
+);
+
+frappe.ui.form.on("Add Unit Request", frappe.sahl_erp.add_unit_request.add_unit_request_events);
