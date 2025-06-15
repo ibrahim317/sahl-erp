@@ -51,7 +51,7 @@ async function before_workflow_action(frm) {
 					doc: frm.doc,
 					method: "approve",
 				})
-				.then(() => {
+				.then((r) => {
 					frappe.show_alert({
 						message: __(
 							"Unit request approved successfully, a new unit has been created."
@@ -59,7 +59,7 @@ async function before_workflow_action(frm) {
 						indicator: "green",
 					});
 					resolve();
-					frappe.set_route("List", "Unit");
+					frappe.set_route(["Form", "Unit", r.message]);
 				})
 				.catch(reject);
 		});
@@ -112,6 +112,7 @@ async function before_workflow_action(frm) {
 frappe.sahl_erp.add_unit_request.add_unit_request_events = {
 	refresh: function (frm) {
 		frm.fields_dict.subcity.get_query = frappe.sahl_erp.unit_utils.get_sub_city_query; // Filter sub-cities by city
+		frm.fields_dict.owner1.get_query = frappe.sahl_erp.unit_utils.get_temp_owner_query;
 	},
 	city: function (frm) {
 		frm.fields_dict.subcity.get_query = frappe.sahl_erp.unit_utils.get_sub_city_query; // Filter sub-cities by city

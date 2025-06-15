@@ -1,0 +1,72 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:UIO-{YYYY}-{MM}-{####}",
+ "creation": "2025-06-14 16:37:22.048184",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "unit",
+  "column_break_uplo",
+  "data_search_employee",
+  "section_break_qyve",
+  "note"
+ ],
+ "fields": [
+  {
+   "fieldname": "unit",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Unit",
+   "options": "Unit",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_uplo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "data_search_employee",
+   "fieldtype": "Link",
+   "label": "Data Search employee",
+   "options": "User"
+  },
+  {
+   "fieldname": "section_break_qyve",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "note",
+   "fieldtype": "Small Text",
+   "label": "Note"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-06-14 16:40:45.224833",
+ "modified_by": "Administrator",
+ "module": "Sahl PMS",
+ "name": "Unit Inspection Order",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "unit"
+}

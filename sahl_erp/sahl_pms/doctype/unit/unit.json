@@ -9,8 +9,13 @@
  "engine": "InnoDB",
  "field_order": [
   "type",
+  "column_break_igjx",
+  "owner1",
+  "request_unit_owner_access_permission",
+  "open_unit_owners_data",
+  "approval_for_owner_access_permission_is_still_pending",
   "section_break_lobd",
-  "owner_phone",
+  "city",
   "subcity",
   "bathrooms",
   "floor",
@@ -22,8 +27,6 @@
   "street_view",
   "features",
   "column_break_yqtr",
-  "owner1",
-  "city",
   "category",
   "rooms",
   "elevators",
@@ -54,7 +57,8 @@
   "hidden_fields_section",
   "unit_name_prefix",
   "column_break_qrfs",
-  "data_search_employee"
+  "added_by",
+  "inspected_by"
  ],
  "fields": [
   {
@@ -105,9 +109,9 @@
   {
    "fieldname": "owner1",
    "fieldtype": "Link",
+   "hidden": 1,
    "label": "Owner",
    "options": "Unit Owner",
-   "reqd": 1,
    "set_only_once": 1
   },
   {
@@ -306,11 +310,6 @@
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "owner_phone",
-   "fieldtype": "Phone",
-   "label": "Owner Phone Number"
-  },
-  {
    "fieldname": "main_image",
    "fieldtype": "Attach Image",
    "label": "Main image"
@@ -352,13 +351,46 @@
    "reqd": 1
   },
   {
-   "fieldname": "data_search_employee",
+   "fieldname": "added_by",
    "fieldtype": "Link",
    "hidden": 1,
-   "label": "Data Search employee",
+   "label": "Data Search employee who added unit",
    "options": "User",
    "print_hide": 1,
    "report_hide": 1
+  },
+  {
+   "fieldname": "inspected_by",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Data Search employee who inspected unit",
+   "options": "User",
+   "print_hide": 1,
+   "report_hide": 1
+  },
+  {
+   "fieldname": "column_break_igjx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "request_unit_owner_access_permission",
+   "fieldtype": "Button",
+   "hidden": 1,
+   "label": "Request Unit Owner Access Permission",
+   "placeholder": "Send a request to get access to Unit Owner's data"
+  },
+  {
+   "fieldname": "open_unit_owners_data",
+   "fieldtype": "Button",
+   "hidden": 1,
+   "label": "Open Unit Owner's Data"
+  },
+  {
+   "fieldname": "approval_for_owner_access_permission_is_still_pending",
+   "fieldtype": "Button",
+   "hidden": 1,
+   "label": "Approval for Owner Access Permission is still pending",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
@@ -367,7 +399,7 @@
  "links": [],
  "make_attachments_public": 1,
  "max_attachments": 10,
- "modified": "2025-06-13 06:36:30.582536",
+ "modified": "2025-06-15 23:51:56.937684",
  "modified_by": "Administrator",
  "module": "Sahl PMS",
  "name": "Unit",

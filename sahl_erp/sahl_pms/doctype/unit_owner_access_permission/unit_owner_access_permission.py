@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class AccessOwnerRequest(Document):
+class UnitOwnerAccessPermission(Document):
 	pass

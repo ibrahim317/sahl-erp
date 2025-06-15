@@ -13,9 +13,9 @@ IGNORE_TEST_RECORD_DEPENDENCIES = []  # eg. ["User"]
 
 
 
-class IntegrationTestAccessOwnerRequest(IntegrationTestCase):
+class IntegrationTestUnitInspectionOrder(IntegrationTestCase):
 	"""
-	Integration tests for AccessOwnerRequest.
+	Integration tests for UnitInspectionOrder.
 	Use this class for testing interactions between multiple components.
 	"""
 

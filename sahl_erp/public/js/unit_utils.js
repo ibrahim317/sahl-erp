@@ -7,60 +7,16 @@ frappe.sahl_erp = frappe.sahl_erp || {};
 
 frappe.sahl_erp.unit_utils = {};
 
-/** @param {import("frappe").Form} frm */
-frappe.sahl_erp.unit_utils.handle_owner_phone_change = function (frm) {
-	const fullPhoneNumberLength = 14;
-
-	if (frm.doc.owner_phone && frm.doc.owner_phone.length >= fullPhoneNumberLength) {
-		frappe.call({
-			method: "sahl_erp.sahl_pms.utils.get_owner_by_phone",
-			args: {
-				phone_number: frm.doc.owner_phone,
-			},
-			callback: function (r) {
-				if (r.message) {
-					frm.set_query("owner1", function () {
-						return {
-							filters: {
-								phone: frm.doc.owner_phone,
-							},
-						};
-					});
-					frm.set_value("owner1", r.message);
-				} else {
-					frm.set_value("owner1", "");
-					if (frm.doc.owner_phone) {
-						frappe.show_alert({
-							message: __("Owner not found for this phone number."),
-							indicator: "orange",
-						});
-					}
-				}
-			},
-		});
-	} else {
-		frm.set_value("owner1", "");
-		frm.set_query("owner1", function () {
-			return {
-				filters: {
-					name: "SET_PHONE_NUMBER_FIRST",
-				},
-			};
-		});
-	}
+frappe.sahl_erp.unit_utils.get_owner_query = function () {
+	return {
+		query: "sahl_erp.sahl_pms.utils.get_owner_by_phone_query",
+	};
 };
 
-/** @param {import("frappe").Form} frm */
-frappe.sahl_erp.unit_utils.initialize_owner_link_field = function (frm) {
-	if (!frm.doc.owner_phone || frm.doc.owner_phone.length < 15) {
-		frm.set_query("owner1", function () {
-			return {
-				filters: {
-					name: "SET_PHONE_NUMBER_FIRST",
-				},
-			};
-		});
-	}
+frappe.sahl_erp.unit_utils.get_temp_owner_query = function () {
+	return {
+		query: "sahl_erp.sahl_pms.utils.get_temp_owner_by_phone_query",
+	};
 };
 
 /** @param {import("frappe").Doc<import("sahl_erp").Unit>} doc */

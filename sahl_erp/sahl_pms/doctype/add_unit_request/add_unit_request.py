@@ -9,8 +9,9 @@ from frappe.model.document import Document
 class AddUnitRequest(Document):
 	@frappe.whitelist()
 	def approve(self):
-		self.create_unit()
+		unit_name = self.create_unit()
 		self.save(ignore_permissions=True)
+		return unit_name
 
 	@frappe.whitelist()
 	def reject(self, reason=None):
@@ -59,9 +60,10 @@ class AddUnitRequest(Document):
 		unit.geolocation_vwpv = self.geolocation_vwpv if self.geolocation_vwpv else ""
 		unit.unit_status = self.unit_status if self.unit_status else "Available"
 		unit.unit_name_prefix = "R" if unit.type == "Rent" else "O"
-		unit.data_search_employee = self.owner
+		unit.added_by = self.owner
 
 		unit.save(ignore_permissions=True)
+		return unit.name
 
 	def create_owner(self):
 		temp_owner = frappe.get_doc("Temp Owner", self.owner1)

@@ -30,7 +30,7 @@ add_to_apps_screen = [
 app_include_js = [
     "/assets/sahl_erp/js/map_defaults.js",
     "/assets/sahl_erp/js/unit_utils.js",
-    "/assets/sahl_erp/js/desk_styling.js",
+    "/assets/sahl_erp/js/desk_customizations.js",
 ]
 
 app_include_css = [

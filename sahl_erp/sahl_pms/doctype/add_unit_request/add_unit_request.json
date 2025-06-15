@@ -48,7 +48,9 @@
   "section_break_iqox",
   "geolocation_vwpv",
   "section_break_uvkw",
-  "amended_from"
+  "amended_from",
+  "need_initial_inspection",
+  "is_premium_unit"
  ],
  "fields": [
   {
@@ -95,7 +97,8 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Owner",
-   "options": "Temp Owner"
+   "options": "Temp Owner",
+   "reqd": 1
   },
   {
    "fieldname": "city",
@@ -303,6 +306,18 @@
   {
    "fieldname": "section_break_zxbt",
    "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "need_initial_inspection",
+   "fieldtype": "Check",
+   "label": "Need initial inspection?"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_premium_unit",
+   "fieldtype": "Check",
+   "label": "Is premium unit?"
   }
  ],
  "grid_page_length": 50,
@@ -312,7 +327,7 @@
  "links": [],
  "make_attachments_public": 1,
  "max_attachments": 10,
- "modified": "2025-06-13 06:34:18.736616",
+ "modified": "2025-06-14 18:37:48.589012",
  "modified_by": "Administrator",
  "module": "Sahl PMS",
  "name": "Add Unit Request",
