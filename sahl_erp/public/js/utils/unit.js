@@ -1,8 +1,3 @@
-// No reference path is needed here because of jsconfig.json
-
-/** @type {typeof import("frappe")} */
-const f = frappe; // This line helps TypeScript understand frappe's type
-
 frappe.sahl_erp = frappe.sahl_erp || {};
 
 frappe.sahl_erp.unit_utils = {};
@@ -19,7 +14,6 @@ frappe.sahl_erp.unit_utils.get_temp_owner_query = function () {
 	};
 };
 
-/** @param {import("frappe").Doc<import("sahl_erp").Unit>} doc */
 frappe.sahl_erp.unit_utils.get_sub_city_query = function (doc) {
 	return {
 		filters: {
@@ -28,9 +22,6 @@ frappe.sahl_erp.unit_utils.get_sub_city_query = function (doc) {
 	};
 };
 
-/**
- * @param {import("frappe").Form} frm
- */
 frappe.sahl_erp.unit_utils.update_description = function (frm) {
 	const doc = frm.doc;
 	let description_parts = [];
@@ -111,15 +102,11 @@ frappe.sahl_erp.unit_utils.update_description = function (frm) {
 	frm.set_value("description", description_parts.join("\n"));
 };
 
-/** @type {{ is_map_updating: boolean, geocode_debounce: number | null }} */
 const update_map_variables = {
 	is_map_updating: false,
 	geocode_debounce: null,
 };
 
-/**
- * @param {import("frappe").Form} frm
- */
 frappe.sahl_erp.unit_utils.update_map_from_address = function (frm) {
 	if (update_map_variables.is_map_updating) return;
 	clearTimeout(update_map_variables.geocode_debounce);
@@ -188,11 +175,6 @@ frappe.sahl_erp.unit_utils.update_map_from_address = function (frm) {
 	}, 2000);
 };
 
-/**
- * @param {Object.<string, (frm: import("frappe").Form) => void>} all_events
- * @param {string[] | Record<string, string>} fields_to_update
- * @param {(frm: import("frappe").Form) => void} update_function
- */
 frappe.sahl_erp.unit_utils.add_handlers_to_events = function (
 	all_events,
 	fields_to_update,
@@ -203,7 +185,6 @@ frappe.sahl_erp.unit_utils.add_handlers_to_events = function (
 		: Object.keys(fields_to_update);
 	fields.forEach((field) => {
 		const original_function = all_events[field];
-		/** @param {import("frappe").Form} frm */
 		all_events[field] = (frm) => {
 			if (typeof original_function === "function") original_function(frm);
 			update_function(frm);

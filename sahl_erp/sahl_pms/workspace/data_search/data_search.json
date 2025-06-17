@@ -1,7 +1,8 @@
 {
  "app": "sahl_erp",
+ "category": "Data",
  "charts": [],
- "content": "[{\"id\":\"2oWU25x1pH\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Quick Access</span>\",\"col\":12}},{\"id\":\"-9_3tklrDz\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Add Unit Request\",\"col\":12}}]",
+ "content": "[{\"id\":\"2oWU25x1pH\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Quick Access</span>\",\"col\":12}},{\"id\":\"tZMXUek4y-\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Unit Inspection Orders\",\"col\":3}},{\"id\":\"0NwCEJHiPc\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Unit Addition Requests\",\"col\":3}}]",
  "creation": "2025-06-08 23:01:53.904333",
  "custom_blocks": [],
  "docstatus": 0,
@@ -15,7 +16,7 @@
  "label": "Data Search",
  "link_type": "DocType",
  "links": [],
- "modified": "2025-06-08 23:53:12.079169",
+ "modified": "2025-06-17 01:40:38.394454",
  "modified_by": "Administrator",
  "module": "Sahl PMS",
  "name": "Data Search",
@@ -34,9 +35,16 @@
   {
    "color": "Grey",
    "doc_view": "List",
-   "label": "Add Unit Request",
-   "link_to": "Add Unit Request",
+   "label": "Unit Inspection Orders",
+   "link_to": "Unit Inspection Order",
    "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Unit Addition Requests",
+   "link_to": "Unit Addition Request",
    "type": "DocType"
   }
  ],

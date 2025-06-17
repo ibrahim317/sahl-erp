@@ -330,7 +330,7 @@
  "modified": "2025-06-14 18:37:48.589012",
  "modified_by": "Administrator",
  "module": "Sahl PMS",
- "name": "Add Unit Request",
+ "name": "Unit Addition Request",
  "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [

@@ -130,4 +130,4 @@ frappe.sahl_erp.unit_utils.add_handlers_to_events(
 	frappe.sahl_erp.unit_utils.update_description
 );
 
-frappe.ui.form.on("Add Unit Request", frappe.sahl_erp.add_unit_request.add_unit_request_events);
+frappe.ui.form.on("Unit Addition Request", frappe.sahl_erp.add_unit_request.add_unit_request_events);

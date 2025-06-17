@@ -6,7 +6,7 @@ from frappe import _
 from frappe.model.document import Document
 
 
-class AddUnitRequest(Document):
+class UnitAdditionRequest(Document):
 	@frappe.whitelist()
 	def approve(self):
 		unit_name = self.create_unit()

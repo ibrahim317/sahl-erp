@@ -4,3 +4,4 @@
 
 [post_model_sync]
 sahl_erp.patches.disable_search_by_role
+sahl_erp.patches.workspace_category

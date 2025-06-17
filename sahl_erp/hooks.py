@@ -10,7 +10,7 @@ app_license = "mit"
 # Apps
 # ------------------
 
-required_apps = ["frappe/erpnext"]
+required_apps = ["frappe/erpnext", "frappe/hrms"]
 
 # Each item in the list will be shown as an app in the apps page
 add_to_apps_screen = [
@@ -29,12 +29,17 @@ add_to_apps_screen = [
 # include js, css files in header of desk.html
 app_include_js = [
     "/assets/sahl_erp/js/map_defaults.js",
-    "/assets/sahl_erp/js/unit_utils.js",
-    "/assets/sahl_erp/js/desk_customizations.js",
+	"/assets/sahl_erp/js/utils/unit.js",
+    "/assets/sahl_erp/js/desk_customizations/disable_listview_sidebar_by_defualt.js",
+	"/assets/sahl_erp/js/desk_customizations/toggle_search_bar_by_role.js",
+	"/assets/sahl_erp/js/patches/sidebar.js",
+	"/assets/sahl_erp/js/patches/kanban.js",
 ]
 
 app_include_css = [
-    "/assets/sahl_erp/css/override_desk_components.css",
+    "/assets/sahl_erp/css/override_desk_components/sidebar.css",
+    "/assets/sahl_erp/css/override_desk_components/workspace.css",
+    "/assets/sahl_erp/css/override_desk_components/phone_field.css",
     "/assets/sahl_erp/css/arabic_font.css",
 ]
 

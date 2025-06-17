@@ -1,0 +1,15 @@
+/* Override the max-width and margin of the workspaces page when full-width is enabled */
+
+@media (min-width: 992px) {
+    [data-page-route=Workspaces] .layout-main {
+        height: calc(100vh - var(--navbar-height) - var(--page-head-height) - 5px);
+        max-width: var(--page-max-width);
+        margin: auto;
+    }
+
+    /* New rule: Override max-width and margin when body has 'full-width' class */
+    body.full-width [data-page-route=Workspaces] .layout-main {
+        max-width: none !important;
+        margin: 0 !important;
+    }
+}

@@ -1,0 +1,10 @@
+/* Phone field in modal */
+.frappe-control[data-fieldtype=Phone] .selected-phone {
+	top: 0 !important;
+	right: auto !important;
+	left: 8px !important;
+	direction: ltr !important;
+}
+.frappe-control[data-fieldtype=Phone] input {
+    direction: ltr !important;
+}

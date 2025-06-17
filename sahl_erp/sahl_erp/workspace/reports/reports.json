@@ -1,7 +1,8 @@
 {
  "app": "sahl_erp",
+ "category": "Management",
  "charts": [],
- "content": "[{\"id\":\"0adK6mWX3x\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Unit Reports</span>\",\"col\":12}},{\"id\":\"gzSLLl2fnj\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Number Of Rented Units Per Price\",\"col\":6}},{\"id\":\"NgFHnJOz4Y\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Number Of Units Per City\",\"col\":6}},{\"id\":\"I58IH-Qj9g\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Number Of Units Per Sub City\",\"col\":6}},{\"id\":\"iMdiDHz9eC\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Number Of Available Units Per Area\",\"col\":6}},{\"id\":\"Cd8CjBisRc\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Number Of Units Per Number Of Rooms\",\"col\":6}},{\"id\":\"TKI3suKHAy\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Number Of Units Per Status\",\"col\":6}},{\"id\":\"Tm8RBXqMxO\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>CRM Reports</b></span>\",\"col\":12}},{\"id\":\"SPsNw1SdtS\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>HR Reports</b></span>\",\"col\":12}}]",
+ "content": "[{\"id\":\"0adK6mWX3x\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Unit Reports</span>\",\"col\":12}},{\"id\":\"gzSLLl2fnj\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Number Of Rented Units Per Price\",\"col\":6}},{\"id\":\"NgFHnJOz4Y\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Number Of Units Per City\",\"col\":6}},{\"id\":\"I58IH-Qj9g\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Number Of Units Per Sub City\",\"col\":6}},{\"id\":\"iMdiDHz9eC\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Number Of Available Units Per Area\",\"col\":6}},{\"id\":\"Cd8CjBisRc\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Number Of Units Per Number Of Rooms\",\"col\":6}},{\"id\":\"TKI3suKHAy\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Number Of Units Per Status\",\"col\":6}},{\"id\":\"Tm8RBXqMxO\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>CRM Reports</b></span>\",\"col\":12}},{\"id\":\"SPsNw1SdtS\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>HR Reports</b></span>\",\"col\":12}},{\"id\":\"I0ZvQdsNKa\",\"type\":\"paragraph\",\"data\":{\"text\":\"Selling Reports\",\"col\":12}}]",
  "creation": "2025-06-04 02:30:01.397149",
  "custom_blocks": [],
  "docstatus": 0,
@@ -15,9 +16,9 @@
  "label": "Reports",
  "link_type": "DocType",
  "links": [],
- "modified": "2025-06-08 23:34:32.052822",
+ "modified": "2025-06-17 16:25:25.541833",
  "modified_by": "Administrator",
- "module": "Sahl Erp",
+ "module": "Sahl ERP",
  "name": "Reports",
  "number_cards": [],
  "owner": "Administrator",
@@ -25,7 +26,7 @@
  "public": 1,
  "quick_lists": [],
  "roles": [],
- "sequence_id": 100.0,
+ "sequence_id": 19.0,
  "shortcuts": [
   {
    "color": "Grey",

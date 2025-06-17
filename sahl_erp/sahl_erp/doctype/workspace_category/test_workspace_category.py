@@ -2,7 +2,7 @@
 # See license.txt
 
 # import frappe
-from frappe.tests import IntegrationTestCase, UnitTestCase
+from frappe.tests import IntegrationTestCase
 
 
 # On IntegrationTestCase, the doctype test records and all
@@ -12,18 +12,10 @@ EXTRA_TEST_RECORD_DEPENDENCIES = []  # eg. ["User"]
 IGNORE_TEST_RECORD_DEPENDENCIES = []  # eg. ["User"]
 
 
-class UnitTestAddUnitRequest(UnitTestCase):
-	"""
-	Unit tests for AddUnitRequest.
-	Use this class for testing individual functions and methods.
-	"""
 
-	pass
-
-
-class IntegrationTestAddUnitRequest(IntegrationTestCase):
+class IntegrationTestWorkspaceCategory(IntegrationTestCase):
 	"""
-	Integration tests for AddUnitRequest.
+	Integration tests for WorkspaceCategory.
 	Use this class for testing interactions between multiple components.
 	"""
 
