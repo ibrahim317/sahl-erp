@@ -2,9 +2,161 @@
  {
   "docstatus": 0,
   "doctype": "Workflow",
-  "document_type": "Add Unit Request",
+  "document_type": "Unit",
   "is_active": 1,
-  "modified": "2025-06-09 03:02:33.871148",
+  "modified": "2025-06-14 19:27:21.508664",
+  "name": "Unit Entry Workflow",
+  "override_status": 0,
+  "send_email_alert": 0,
+  "states": [
+   {
+    "allow_edit": "All",
+    "avoid_status_override": 0,
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "send_email": 1,
+    "state": "Draft",
+    "update_field": null,
+    "update_value": null,
+    "workflow_builder_id": "1"
+   },
+   {
+    "allow_edit": "All",
+    "avoid_status_override": 0,
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "send_email": 1,
+    "state": "Completed",
+    "update_field": null,
+    "update_value": null,
+    "workflow_builder_id": "2"
+   }
+  ],
+  "transitions": [
+   {
+    "action": "Complete",
+    "allow_self_approval": 1,
+    "allowed": "Data Entry",
+    "condition": null,
+    "next_state": "Completed",
+    "send_email_to_creator": 0,
+    "state": "Draft",
+    "workflow_builder_id": "action-1"
+   }
+  ],
+  "workflow_data": "[{\"type\":\"state\",\"dimensions\":{\"width\":84,\"height\":53},\"handleBounds\":{\"source\":[{\"id\":\"top\",\"position\":\"top\",\"x\":38.2955322265625,\"y\":-11.079544067382812,\"width\":7,\"height\":7},{\"id\":\"right\",\"position\":\"right\",\"x\":87.6846923828125,\"y\":22.91192626953125,\"width\":7,\"height\":7},{\"id\":\"bottom\",\"position\":\"bottom\",\"x\":38.2955322265625,\"y\":56.9176025390625,\"width\":7,\"height\":7},{\"id\":\"left\",\"position\":\"left\",\"x\":-11.0794677734375,\"y\":22.91192626953125,\"width\":7,\"height\":7}]},\"computedPosition\":{\"x\":550,\"y\":100,\"z\":0},\"id\":\"1\",\"position\":{\"x\":550,\"y\":100}},{\"type\":\"state\",\"dimensions\":{\"width\":118,\"height\":53},\"handleBounds\":{\"source\":[{\"id\":\"top\",\"position\":\"top\",\"x\":55.4971923828125,\"y\":-11.079544067382812,\"width\":7,\"height\":7},{\"id\":\"right\",\"position\":\"right\",\"x\":122.0738525390625,\"y\":22.91192626953125,\"width\":7,\"height\":7},{\"id\":\"bottom\",\"position\":\"bottom\",\"x\":55.4971923828125,\"y\":56.9176025390625,\"width\":7,\"height\":7},{\"id\":\"left\",\"position\":\"left\",\"x\":-11.0794677734375,\"y\":22.91192626953125,\"width\":7,\"height\":7}]},\"computedPosition\":{\"x\":950,\"y\":100,\"z\":0},\"id\":\"2\",\"position\":{\"x\":950,\"y\":100}},{\"type\":\"action\",\"dimensions\":{\"width\":80,\"height\":33},\"handleBounds\":{\"source\":[{\"id\":\"top\",\"position\":\"top\",\"x\":37.1448974609375,\"y\":-2.08807373046875,\"width\":6,\"height\":6},{\"id\":\"right\",\"position\":\"right\",\"x\":76.3779296875,\"y\":13.409088134765625,\"width\":6,\"height\":6},{\"id\":\"bottom\",\"position\":\"bottom\",\"x\":37.1448974609375,\"y\":28.920455932617188,\"width\":6,\"height\":6},{\"id\":\"left\",\"position\":\"left\",\"x\":-2.0880126953125,\"y\":13.409088134765625,\"width\":6,\"height\":6}]},\"computedPosition\":{\"x\":800,\"y\":120,\"z\":0},\"id\":\"action-1\",\"position\":{\"x\":800,\"y\":120},\"data\":{\"from_id\":\"1\",\"to_id\":\"2\"}},{\"sourceHandle\":\"right\",\"targetHandle\":\"left\",\"type\":\"transition\",\"source\":\"1\",\"target\":\"action-1\",\"updatable\":true,\"id\":\"edge-1-action-1\",\"animated\":true,\"sourceX\":644.6846923828125,\"sourceY\":126.41192626953125,\"targetX\":797.9119873046875,\"targetY\":136.40908813476562},{\"sourceHandle\":\"right\",\"targetHandle\":\"left\",\"type\":\"transition\",\"source\":\"action-1\",\"target\":\"2\",\"updatable\":true,\"id\":\"edge-action-1-2\",\"animated\":true,\"sourceX\":882.3779296875,\"sourceY\":136.40908813476562,\"targetX\":938.9205322265625,\"targetY\":126.41192626953125,\"markerEnd\":{\"type\":\"arrow\",\"width\":15,\"height\":15,\"strokeWidth\":1.5,\"color\":\"#687178\"}}]",
+  "workflow_name": "Unit Entry Workflow",
+  "workflow_state_field": "workflow_state"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow",
+  "document_type": "Unit Owner Access Permission",
+  "is_active": 1,
+  "modified": "2025-06-14 20:16:35.291772",
+  "name": "Unit Owner Access Workflow",
+  "override_status": 0,
+  "send_email_alert": 0,
+  "states": [
+   {
+    "allow_edit": "All",
+    "avoid_status_override": 0,
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "send_email": 1,
+    "state": "Approval Pending",
+    "update_field": null,
+    "update_value": null,
+    "workflow_builder_id": null
+   },
+   {
+    "allow_edit": "All",
+    "avoid_status_override": 0,
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "send_email": 1,
+    "state": "Approved",
+    "update_field": null,
+    "update_value": null,
+    "workflow_builder_id": null
+   },
+   {
+    "allow_edit": "All",
+    "avoid_status_override": 0,
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "send_email": 1,
+    "state": "Rejected",
+    "update_field": null,
+    "update_value": null,
+    "workflow_builder_id": null
+   },
+   {
+    "allow_edit": "All",
+    "avoid_status_override": 0,
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "send_email": 1,
+    "state": "Expired",
+    "update_field": null,
+    "update_value": null,
+    "workflow_builder_id": null
+   }
+  ],
+  "transitions": [
+   {
+    "action": "Approve",
+    "allow_self_approval": 1,
+    "allowed": "Data Check",
+    "condition": null,
+    "next_state": "Approved",
+    "send_email_to_creator": 0,
+    "state": "Approval Pending",
+    "workflow_builder_id": null
+   },
+   {
+    "action": "Reject",
+    "allow_self_approval": 1,
+    "allowed": "Data Check",
+    "condition": null,
+    "next_state": "Rejected",
+    "send_email_to_creator": 0,
+    "state": "Approval Pending",
+    "workflow_builder_id": null
+   },
+   {
+    "action": "Expire",
+    "allow_self_approval": 1,
+    "allowed": "Data Check",
+    "condition": null,
+    "next_state": "Expired",
+    "send_email_to_creator": 0,
+    "state": "Approved",
+    "workflow_builder_id": null
+   }
+  ],
+  "workflow_data": null,
+  "workflow_name": "Unit Owner Access Workflow",
+  "workflow_state_field": "workflow_state"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow",
+  "document_type": "Unit Addition Request",
+  "is_active": 1,
+  "modified": "2025-06-18 18:17:01.599440",
   "name": "Add Unit Request Workflow",
   "override_status": 0,
   "send_email_alert": 0,

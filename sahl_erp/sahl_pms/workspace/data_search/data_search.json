@@ -2,7 +2,7 @@
  "app": "sahl_erp",
  "category": "Data",
  "charts": [],
- "content": "[{\"id\":\"2oWU25x1pH\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Quick Access</span>\",\"col\":12}},{\"id\":\"tZMXUek4y-\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Unit Inspection Orders\",\"col\":3}},{\"id\":\"0NwCEJHiPc\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Unit Addition Requests\",\"col\":3}}]",
+ "content": "[{\"id\":\"2oWU25x1pH\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">\u0627\u0644\u0648\u0635\u0648\u0644 \u0627\u0644\u0633\u0631\u064a\u0639</span>\",\"col\":12}},{\"id\":\"tZMXUek4y-\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Initial Inspection Orders\",\"col\":3}},{\"id\":\"0NwCEJHiPc\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Unit Addition Requests\",\"col\":3}}]",
  "creation": "2025-06-08 23:01:53.904333",
  "custom_blocks": [],
  "docstatus": 0,
@@ -16,7 +16,7 @@
  "label": "Data Search",
  "link_type": "DocType",
  "links": [],
- "modified": "2025-06-17 01:40:38.394454",
+ "modified": "2025-06-18 18:43:31.058085",
  "modified_by": "Administrator",
  "module": "Sahl PMS",
  "name": "Data Search",
@@ -30,21 +30,21 @@
    "role": "Data Search"
   }
  ],
- "sequence_id": 23.002,
+ "sequence_id": 13.0,
  "shortcuts": [
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Unit Inspection Orders",
-   "link_to": "Unit Inspection Order",
-   "stats_filter": "[]",
-   "type": "DocType"
-  },
   {
    "color": "Grey",
    "doc_view": "List",
    "label": "Unit Addition Requests",
    "link_to": "Unit Addition Request",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Initial Inspection Orders",
+   "link_to": "Initial Inspection Order",
+   "stats_filter": "[]",
    "type": "DocType"
   }
  ],

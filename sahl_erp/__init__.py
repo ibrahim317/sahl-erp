@@ -21,8 +21,12 @@ def load_monkey_patches():
 
     patches_loaded = True
 
-    if app_name not in frappe.get_installed_apps():
-        return
+    try:
+        if app_name not in frappe.get_installed_apps():
+            return
+    except RuntimeError:
+        # During bench commands, we can't check installed_apps, so we'll just assume it is installed
+        pass
 
     for module_name in os.listdir(frappe.get_app_path(app_name, "monkey_patches")):
         if not module_name.endswith(".py") or module_name == "__init__.py":

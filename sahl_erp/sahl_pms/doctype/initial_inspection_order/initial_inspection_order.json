@@ -47,7 +47,7 @@
  "modified": "2025-06-14 16:40:45.224833",
  "modified_by": "Administrator",
  "module": "Sahl PMS",
- "name": "Unit Inspection Order",
+ "name": "Initial Inspection Order",
  "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [

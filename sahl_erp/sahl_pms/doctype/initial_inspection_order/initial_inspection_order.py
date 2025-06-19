@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class UnitInspectionOrder(Document):
+class InitialInspectionOrder(Document):
 	pass

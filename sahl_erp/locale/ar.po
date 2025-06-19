@@ -82,6 +82,67 @@ msgstr "<span class=\"h4\">تقارير الوحدات</span>"
 msgid "<span style=\"font-size: 16px;\">Units</span>"
 msgstr "<span style=\"font-size: 16px;\">الوحدات</span>"
 
+#. Header text in the Student Affairs Coordinator Workspace
+#: sahl_erp/sahl_student_services/workspace/student_affairs_coordinator/student_affairs_coordinator.json
+msgid "<span class=\"h4\">Student Affairs Coordinator</span>"
+msgstr "<span class=\"h4\">منسق شؤون الطلاب</span>"
+
+#. Header text in the Student Search Workspace
+#: sahl_erp/sahl_student_services/workspace/student_search/student_search.json
+msgid "<span class=\"h4\">Student Search</span>"
+msgstr "<span class=\"h4\">بحث الطلاب</span>"
+
+#. Name of a Workspace
+#: sahl_erp/sahl_student_services/workspace/student_affairs_coordinator/student_affairs_coordinator.json
+msgid "Student Affairs Coordinator"
+msgstr "منسق شؤون الطلاب"
+
+#. Name of a DocType
+#: sahl_erp/sahl_student_services/doctype/student_request_type/student_request_type.json
+msgid "Student Request Type"
+msgstr "نوع طلب الطالب"
+
+#. Name of a Workspace
+#: sahl_erp/sahl_student_services/workspace/student_search/student_search.json
+msgid "Student Search"
+msgstr "بحث الطلاب"
+
+#. Name of a DocType
+#: sahl_erp/sahl_pms/doctype/unit_owner_access_permission/unit_owner_access_permission.json
+msgid "Unit Owner Access Permission"
+msgstr "إذن وصول مالك الوحدة"
+
+#. Label of a shortcut in the Units Management Workspace
+#: sahl_erp/sahl_pms/workspace/units_management/units_management.json
+msgid "Unit Owner Access Permissions"
+msgstr "أذونات وصول مالك الوحدة"
+
+#. Name of a DocType
+#: sahl_erp/sahl_pms/doctype/unit_addition_request/unit_addition_request.json
+msgid "Unit Addition Request"
+msgstr "طلب إضافة وحدة"
+
+#. Label of a shortcut in the Data Entry Workspace
+#. Label of a shortcut in the Data Search Workspace
+#. Label of a shortcut in the Units Management Workspace
+#: sahl_erp/sahl_pms/workspace/data_entry/data_entry.json
+#: sahl_erp/sahl_pms/workspace/data_search/data_search.json
+#: sahl_erp/sahl_pms/workspace/units_management/units_management.json
+msgid "Unit Addition Requests"
+msgstr "طلبات إضافة الوحدات"
+
+#. Name of a Workspace
+#. Header text in the Students Sales Workspace
+#: sahl_erp/sahl_student_services/workspace/students_sales/students_sales.json
+msgid "Students Sales"
+msgstr "مبيعات الطلاب"
+
+
+#. Name of a DocType
+#: sahl_erp/sahl_erp/doctype/workspace_category/workspace_category.json
+msgid "Workspace Category"
+msgstr "فئة مساحة العمل"
+
 #. Label of a Link in the Users Workspace
 #: sahl_erp/sahl_erp/workspace/users/users.json
 msgid "Access Log"
@@ -110,7 +171,7 @@ msgstr "سجل النشاط"
 #: sahl_erp/sahl_pms/workspace/data_entry/data_entry.json
 #: sahl_erp/sahl_pms/workspace/data_search/data_search.json
 #: sahl_erp/sahl_pms/workspace/units_management/units_management.json
-msgid "Add Unit Request"
+msgid "Unit Addition Request"
 msgstr "طلب إضافة وحدة"
 
 #. Label of the additional_phone_numbers (Table) field in DocType 'Temp Owner'
@@ -988,8 +1049,14 @@ msgstr "صور الوحدة"
 
 #. Name of a DocType
 #: sahl_erp/sahl_pms/doctype/unit_inspection_order/unit_inspection_order.json
-msgid "Unit Inspection Order"
-msgstr "أمر معاينة الوحدة"
+msgid "Initial Inspection Order"
+msgstr "أمر معاينة أولية"
+
+#. Label of a shortcut in the Data Search Workspace
+#: sahl_erp/sahl_pms/workspace/data_search/data_search.json
+msgid "Initial Inspection Orders"
+msgstr "أوامر المعاينة الاولية"
+
 
 #. Label of the unit_name_prefix (Data) field in DocType 'Unit'
 #: sahl_erp/sahl_pms/doctype/unit/unit.json
