@@ -271,4 +271,6 @@ fixtures = [
     },
     # Exporting a specific Workflow
     {"doctype": "Workflow"},
+    {"doctype": "Workflow State"},
+    {"doctype": "Workflow Action Master"},
 ]

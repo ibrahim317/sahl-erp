@@ -1,0 +1,44 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-06-21 23:41:59.330859",
+  "name": "Send For Review",
+  "workflow_action_name": "Send For Review"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-06-21 23:42:36.590900",
+  "name": "Expire",
+  "workflow_action_name": "Expire"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-06-21 23:44:02.290816",
+  "name": "Complete",
+  "workflow_action_name": "Complete"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-06-22 00:39:39.793709",
+  "name": "Approve",
+  "workflow_action_name": "Approve"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-06-22 00:39:39.794303",
+  "name": "Reject",
+  "workflow_action_name": "Reject"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2025-06-22 00:39:39.794840",
+  "name": "Review",
+  "workflow_action_name": "Review"
+ }
+]

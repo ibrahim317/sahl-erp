@@ -156,7 +156,7 @@
   "doctype": "Workflow",
   "document_type": "Unit Addition Request",
   "is_active": 1,
-  "modified": "2025-06-18 18:17:01.599440",
+  "modified": "2025-06-21 23:42:14.632336",
   "name": "Add Unit Request Workflow",
   "override_status": 0,
   "send_email_alert": 0,
@@ -172,7 +172,7 @@
     "state": "Draft",
     "update_field": null,
     "update_value": null,
-    "workflow_builder_id": "1"
+    "workflow_builder_id": null
    },
    {
     "allow_edit": "All",
@@ -185,7 +185,7 @@
     "state": "Approval Pending",
     "update_field": null,
     "update_value": null,
-    "workflow_builder_id": "2"
+    "workflow_builder_id": null
    },
    {
     "allow_edit": "All",
@@ -223,7 +223,7 @@
     "next_state": "Approval Pending",
     "send_email_to_creator": 0,
     "state": "Draft",
-    "workflow_builder_id": "action-1"
+    "workflow_builder_id": null
    },
    {
     "action": "Approve",
