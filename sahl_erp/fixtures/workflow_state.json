@@ -21,15 +21,6 @@
   "docstatus": 0,
   "doctype": "Workflow State",
   "icon": "",
-  "modified": "2025-06-21 23:42:27.982954",
-  "name": "Expired",
-  "style": "",
-  "workflow_state_name": "Expired"
- },
- {
-  "docstatus": 0,
-  "doctype": "Workflow State",
-  "icon": "",
   "modified": "2025-06-21 23:43:42.110629",
   "name": "Completed",
   "style": "",

@@ -2,7 +2,7 @@
  "app": "sahl_erp",
  "category": "Data",
  "charts": [],
- "content": "[{\"id\":\"aBvUd28Suc\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Quick Access</span>\",\"col\":12}},{\"id\":\"eLOrqpG9IF\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Unit Owners\",\"col\":12}},{\"id\":\"S0qwduYoE-\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Ownership Units\",\"col\":6}},{\"id\":\"WEVZ7p59Hq\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Rent Units\",\"col\":6}},{\"id\":\"sTQ1nRf1g_\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Requests</b></span>\",\"col\":12}},{\"id\":\"yi-QDANi0d\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Data Entry Requests to Access Owners\",\"col\":12}}]",
+ "content": "[{\"id\":\"aBvUd28Suc\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Quick Access</span>\",\"col\":12}},{\"id\":\"eLOrqpG9IF\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Unit Owners\",\"col\":12}},{\"id\":\"S0qwduYoE-\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Ownership Units\",\"col\":6}},{\"id\":\"WEVZ7p59Hq\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Rent Units\",\"col\":6}}]",
  "creation": "2025-06-14 13:39:55.099792",
  "custom_blocks": [],
  "docstatus": 0,
@@ -16,7 +16,7 @@
  "label": "Data Check",
  "link_type": "DocType",
  "links": [],
- "modified": "2025-06-16 20:29:26.678218",
+ "modified": "2025-06-25 22:06:13.748781",
  "modified_by": "Administrator",
  "module": "Sahl PMS",
  "name": "Data Check",
@@ -32,14 +32,6 @@
  ],
  "sequence_id": 101.0,
  "shortcuts": [
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Data Entry Requests to Access Owners",
-   "link_to": "Unit Owner Access Permission",
-   "stats_filter": "[]",
-   "type": "DocType"
-  },
   {
    "color": "Grey",
    "doc_view": "List",
