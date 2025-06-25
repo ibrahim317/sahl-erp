@@ -269,6 +269,8 @@ fixtures = [
         "doctype": "Custom DocPerm",
         "filters": [["role", "in", ["Data Entry", "Data Search", "Data Check"]]],
     },
+	# Form Customizations
+	{"doctype": "Property Setter"},
     # Exporting a specific Workflow
     {"doctype": "Workflow"},
     {"doctype": "Workflow State"},
