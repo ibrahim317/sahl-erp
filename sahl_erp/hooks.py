@@ -10,7 +10,8 @@ app_license = "mit"
 # Apps
 # ------------------
 
-required_apps = ["frappe/erpnext", "frappe/hrms"]
+required_apps = ["frappe/erpnext", "frappe/hrms", "The-Commit-Company/raven", "ibrahim317/enhanced_kanban_view"]
+
 
 # Each item in the list will be shown as an app in the apps page
 add_to_apps_screen = [
@@ -27,15 +28,8 @@ add_to_apps_screen = [
 # ------------------
 
 # include js, css files in header of desk.html
-app_include_js = [
-    "/assets/sahl_erp/js/map_defaults.js",
-	"/assets/sahl_erp/js/utils/unit.js",
-	"/assets/sahl_erp/js/utils/events.js",
-    "/assets/sahl_erp/js/desk_customizations/disable_listview_sidebar_by_defualt.js",
-	"/assets/sahl_erp/js/desk_customizations/toggle_search_bar_by_role.js",
-	"/assets/sahl_erp/js/patches/sidebar.js",
-	"/assets/sahl_erp/js/patches/kanban.js",
-]
+app_include_js = "sahl_erp.bundle.js"
+
 
 app_include_css = [
     "/assets/sahl_erp/css/override_desk_components/sidebar.css",
@@ -73,7 +67,7 @@ app_include_css = [
 # ----------
 
 # application home page (will override Website Settings)
-home_page = "/app/erp-home"
+# home_page = "/app/erp-home"
 
 # website user home page (by Role)
 # role_home_page = {
@@ -270,8 +264,14 @@ fixtures = [
         "doctype": "Custom DocPerm",
         "filters": [["role", "in", ["Data Entry", "Data Search", "Data Check"]]],
     },
+	# Kanban Boards and Statuses
+	{"doctype": "Kanban Board"},
+	{"doctype": "Kanban Board Column"},
+	{"doctype": "Workspace"},
+	{"doctype": "Lead Statuses"},
 	# Form Customizations
 	{"doctype": "Property Setter"},
+	{"doctype": "Custom Field"},
     # Exporting a specific Workflow
     {"doctype": "Workflow"},
     {"doctype": "Workflow State"},
