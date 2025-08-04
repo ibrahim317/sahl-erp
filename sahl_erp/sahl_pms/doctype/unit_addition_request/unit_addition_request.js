@@ -1,5 +1,7 @@
 frappe.sahl_erp.add_unit_request = {};
+frappe.sahl_erp.add_unit_request.add_unit_request_events = {};
 
+// --------------------- events ---------------------
 frappe.sahl_erp.add_unit_request.DESCRIPTION_UPDATE_FIELDS = [
 	"features",
 	"type",
@@ -20,15 +22,18 @@ frappe.sahl_erp.add_unit_request.DESCRIPTION_UPDATE_FIELDS = [
 	"furnishing",
 	"is_premium_unit",
 ];
-
 frappe.sahl_erp.add_unit_request.MAP_UPDATE_FIELDS = [
 	"city",
 	"subcity",
 	"street_name",
 	"building_name",
 ];
+frappe.sahl_erp.add_unit_request.SUBCITY_UPDATE_FIELDS = ["refresh", "subcity"];
+frappe.sahl_erp.add_unit_request.OWNER_UPDATE_FIELDS = ["refresh"];
+frappe.sahl_erp.add_unit_request.BEFORE_WORKFLOW_ACTION = ["before_workflow_action"];
 
-async function before_workflow_action(frm) {
+// --------------------- handlers ---------------------
+const before_workflow_action_handler = async function (frm) {
 	frappe.dom.unfreeze();
 	// there are 3 actions
 	// 1. send for review (do nothing)
@@ -109,25 +114,29 @@ async function before_workflow_action(frm) {
 	}
 }
 
-frappe.sahl_erp.add_unit_request.add_unit_request_events = {
-	refresh: function (frm) {
-		frm.fields_dict.subcity.get_query = frappe.sahl_erp.unit_utils.get_sub_city_query; // Filter sub-cities by city
-		frm.fields_dict.owner1.get_query = frappe.sahl_erp.unit_utils.get_temp_owner_query;
+const add_unit_request_handler_definitions = [
+	{
+		handler: frappe.sahl_erp.unit_utils.update_subcity,
+		events: frappe.sahl_erp.add_unit_request.SUBCITY_UPDATE_FIELDS,
 	},
-	city: function (frm) {
-		frm.fields_dict.subcity.get_query = frappe.sahl_erp.unit_utils.get_sub_city_query; // Filter sub-cities by city
+	{
+		handler: frappe.sahl_erp.unit_utils.update_owner,
+		events: frappe.sahl_erp.add_unit_request.OWNER_UPDATE_FIELDS,
 	},
-	before_workflow_action,
-};
-frappe.sahl_erp.unit_utils.add_handlers_to_events(
-	frappe.sahl_erp.add_unit_request.add_unit_request_events,
-	frappe.sahl_erp.add_unit_request.MAP_UPDATE_FIELDS,
-	frappe.sahl_erp.unit_utils.update_map_from_address
+	{
+		handler: before_workflow_action_handler,
+		events: frappe.sahl_erp.add_unit_request.BEFORE_WORKFLOW_ACTION,
+	},
+	{
+		handler: frappe.sahl_erp.unit_utils.update_map_from_address,
+		events: frappe.sahl_erp.add_unit_request.MAP_UPDATE_FIELDS,
+	},
+	{
+		handler: frappe.sahl_erp.unit_utils.update_description,
+		events: frappe.sahl_erp.add_unit_request.DESCRIPTION_UPDATE_FIELDS,
+	},
+];
+const add_unit_request_events = frappe.sahl_erp.events_utils.build_event_handlers(
+	add_unit_request_handler_definitions
 );
-frappe.sahl_erp.unit_utils.add_handlers_to_events(
-	frappe.sahl_erp.add_unit_request.add_unit_request_events,
-	frappe.sahl_erp.add_unit_request.DESCRIPTION_UPDATE_FIELDS,
-	frappe.sahl_erp.unit_utils.update_description
-);
-
-frappe.ui.form.on("Unit Addition Request", frappe.sahl_erp.add_unit_request.add_unit_request_events);
+frappe.ui.form.on("Unit Addition Request", add_unit_request_events);

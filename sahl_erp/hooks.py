@@ -30,6 +30,7 @@ add_to_apps_screen = [
 app_include_js = [
     "/assets/sahl_erp/js/map_defaults.js",
 	"/assets/sahl_erp/js/utils/unit.js",
+	"/assets/sahl_erp/js/utils/events.js",
     "/assets/sahl_erp/js/desk_customizations/disable_listview_sidebar_by_defualt.js",
 	"/assets/sahl_erp/js/desk_customizations/toggle_search_bar_by_role.js",
 	"/assets/sahl_erp/js/patches/sidebar.js",

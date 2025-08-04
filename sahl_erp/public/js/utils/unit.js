@@ -2,6 +2,7 @@ frappe.sahl_erp = frappe.sahl_erp || {};
 
 frappe.sahl_erp.unit_utils = {};
 
+// --------------------- queries ---------------------
 frappe.sahl_erp.unit_utils.get_owner_query = function () {
 	return {
 		query: "sahl_erp.sahl_pms.utils.get_owner_by_phone_query",
@@ -22,6 +23,22 @@ frappe.sahl_erp.unit_utils.get_sub_city_query = function (doc) {
 	};
 };
 
+// --------------------- handlers ---------------------
+frappe.sahl_erp.unit_utils.update_owner = function (frm) {
+	frm.fields_dict.owner1.get_query = frappe.sahl_erp.unit_utils.get_owner_query;
+	if (frm.is_new()) {
+		frm.set_df_property("owner1", "hidden", 0);
+		frm.set_df_property("owner1", "reqd", 1);
+	}
+};
+
+frappe.sahl_erp.unit_utils.update_subcity = function (frm) {
+	frm.fields_dict.subcity.get_query = frappe.sahl_erp.unit_utils.get_sub_city_query; // Filter sub-cities by city
+};
+
+frappe.sahl_erp.unit_utils.update_unit_name_prefix = function (frm) {
+	frm.set_value("unit_name_prefix", frm.doc.type?.substring(0, 1) ?? "");
+};
 frappe.sahl_erp.unit_utils.update_description = function (frm) {
 	const doc = frm.doc;
 	let description_parts = [];
@@ -173,21 +190,4 @@ frappe.sahl_erp.unit_utils.update_map_from_address = function (frm) {
 				});
 			});
 	}, 2000);
-};
-
-frappe.sahl_erp.unit_utils.add_handlers_to_events = function (
-	all_events,
-	fields_to_update,
-	update_function
-) {
-	const fields = Array.isArray(fields_to_update)
-		? fields_to_update
-		: Object.keys(fields_to_update);
-	fields.forEach((field) => {
-		const original_function = all_events[field];
-		all_events[field] = (frm) => {
-			if (typeof original_function === "function") original_function(frm);
-			update_function(frm);
-		};
-	});
 };

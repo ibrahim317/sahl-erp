@@ -11,9 +11,6 @@
   "type",
   "column_break_igjx",
   "owner1",
-  "request_unit_owner_access_permission",
-  "open_unit_owners_data",
-  "approval_for_owner_access_permission_is_still_pending",
   "section_break_lobd",
   "city",
   "subcity",
@@ -371,26 +368,6 @@
   {
    "fieldname": "column_break_igjx",
    "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "request_unit_owner_access_permission",
-   "fieldtype": "Button",
-   "hidden": 1,
-   "label": "Request Unit Owner Access Permission",
-   "placeholder": "Send a request to get access to Unit Owner's data"
-  },
-  {
-   "fieldname": "open_unit_owners_data",
-   "fieldtype": "Button",
-   "hidden": 1,
-   "label": "Open Unit Owner's Data"
-  },
-  {
-   "fieldname": "approval_for_owner_access_permission_is_still_pending",
-   "fieldtype": "Button",
-   "hidden": 1,
-   "label": "Approval for Owner Access Permission is still pending",
-   "read_only": 1
   }
  ],
  "grid_page_length": 50,
@@ -399,7 +376,7 @@
  "links": [],
  "make_attachments_public": 1,
  "max_attachments": 10,
- "modified": "2025-06-15 23:51:56.937684",
+ "modified": "2025-06-25 22:26:36.772894",
  "modified_by": "Administrator",
  "module": "Sahl PMS",
  "name": "Unit",
