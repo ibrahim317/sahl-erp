@@ -27,11 +27,13 @@ frappe.sahl_erp.events_utils.build_event_handlers = function (handler_definition
 	const final_events = {}; // maps field to a single function
 	for (const event in all_events) {
 		const handlers = all_events[event];
-		final_events[event] = (frm) => {
+		final_events[event] = async (frm) => {
 			// Using Set to ensure a handler is not called twice for the same event
 			const unique_handlers = [...new Set(handlers)];
 
-			unique_handlers.forEach((h) => h(frm));
+			for (const h of unique_handlers) {
+				await h(frm);
+			}
 		};
 	}
 

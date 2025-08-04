@@ -72,21 +72,22 @@ const before_workflow_action_handler = async function (frm) {
 	}
 	// 3. reject (show a dialog with the reason input field and reject button)
 	if (frm.selected_workflow_action === "Reject") {
-		let clicked_reject = false;
 		const reject_promise = new Promise((resolve, reject) => {
-			let dialog = new frappe.ui.Dialog({
+			let primary_action_taken = false;
+			const dialog = new frappe.ui.Dialog({
 				title: __("Reject Unit Request"),
 				fields: [
 					{
-						label: __("Reason"),
+						label: __("Rejection Reason"),
 						fieldname: "rejection_reason",
 						fieldtype: "Small Text",
+						reqd: 1,
 					},
 				],
 				size: "small", // small, large, extra-large
 				primary_action_label: __("Reject"),
 				primary_action(values) {
-					clicked_reject = true;
+					primary_action_taken = true;
 					frappe
 						.call({
 							doc: frm.doc,
@@ -102,15 +103,26 @@ const before_workflow_action_handler = async function (frm) {
 						.catch(reject);
 				},
 			});
+
+			dialog.onhide = () => {
+				if (!primary_action_taken) {
+					reject();
+				}
+			};
+
 			dialog.show();
 		});
-		await reject_promise
-			.then(() => {
-				if (!clicked_reject) {
-					frappe.throw();
-				}
-			})
-			.catch(() => frappe.throw());
+
+		try {
+			console.log("before reject_promise");
+			await reject_promise;
+			console.log("after reject_promise");
+		} catch (e) {
+			console.log("error in reject_promise");
+			// if promise is rejected (dialog closed or API error),
+			// prevent workflow action from proceeding
+			frappe.throw();
+		}
 	}
 }
 
@@ -120,7 +132,7 @@ const add_unit_request_handler_definitions = [
 		events: frappe.sahl_erp.add_unit_request.SUBCITY_UPDATE_FIELDS,
 	},
 	{
-		handler: frappe.sahl_erp.unit_utils.update_owner,
+		handler: frappe.sahl_erp.unit_utils.update_temp_owner,
 		events: frappe.sahl_erp.add_unit_request.OWNER_UPDATE_FIELDS,
 	},
 	{

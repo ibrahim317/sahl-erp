@@ -32,6 +32,10 @@ frappe.sahl_erp.unit_utils.update_owner = function (frm) {
 	}
 };
 
+frappe.sahl_erp.unit_utils.update_temp_owner = function (frm) {
+	frm.fields_dict.owner1.get_query = frappe.sahl_erp.unit_utils.get_temp_owner_query;
+};
+
 frappe.sahl_erp.unit_utils.update_subcity = function (frm) {
 	frm.fields_dict.subcity.get_query = frappe.sahl_erp.unit_utils.get_sub_city_query; // Filter sub-cities by city
 };
