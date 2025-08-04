@@ -22,7 +22,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-06-02 21:03:40.124654",
+ "modified": "2025-06-25 23:52:03.931085",
  "modified_by": "Administrator",
  "module": "Sahl PMS",
  "name": "Unit Owner Type",
@@ -38,6 +38,7 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "select": 1,
    "share": 1,
    "write": 1
   }

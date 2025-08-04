@@ -154,7 +154,7 @@
   "export": 0,
   "if_owner": 0,
   "import": 0,
-  "modified": "2025-06-09 00:04:26.420405",
+  "modified": "2025-06-26 00:22:01.056539",
   "name": "iu55o6q2l2",
   "parent": "Unit Category",
   "permlevel": 0,
@@ -165,7 +165,7 @@
   "select": 1,
   "share": 0,
   "submit": 0,
-  "write": 0
+  "write": 1
  },
  {
   "amend": 0,
@@ -178,18 +178,18 @@
   "export": 0,
   "if_owner": 0,
   "import": 0,
-  "modified": "2025-06-09 00:11:16.373469",
+  "modified": "2025-06-25 23:51:30.404410",
   "name": "n2fuad0ku3",
   "parent": "Unit Owner Type",
   "permlevel": 0,
   "print": 0,
-  "read": 0,
+  "read": 1,
   "report": 0,
   "role": "Data Entry",
   "select": 1,
   "share": 0,
   "submit": 0,
-  "write": 0
+  "write": 1
  },
  {
   "amend": 0,
@@ -274,7 +274,7 @@
   "export": 0,
   "if_owner": 0,
   "import": 0,
-  "modified": "2025-06-09 00:51:16.797832",
+  "modified": "2025-06-26 00:22:05.151634",
   "name": "eh8agm99kq",
   "parent": "Unit Category",
   "permlevel": 0,
@@ -285,7 +285,7 @@
   "select": 1,
   "share": 0,
   "submit": 0,
-  "write": 0
+  "write": 1
  },
  {
   "amend": 0,
