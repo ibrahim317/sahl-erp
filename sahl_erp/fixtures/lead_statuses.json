@@ -1,0 +1,37 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Lead Statuses",
+  "modified": "2025-07-11 00:24:29.346515",
+  "name": "asd",
+  "status_name": "asd"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Lead Statuses",
+  "modified": "2025-06-26 02:41:44.374169",
+  "name": "عميل جديد",
+  "status_name": "عميل جديد"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Lead Statuses",
+  "modified": "2025-06-26 19:19:27.114949",
+  "name": "العميل غير مهتم",
+  "status_name": "العميل غير مهتم"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Lead Statuses",
+  "modified": "2025-06-26 21:02:04.590191",
+  "name": "العميل لا يرد (يحتاج لمتابعة)",
+  "status_name": "العميل لا يرد (يحتاج لمتابعة)"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Lead Statuses",
+  "modified": "2025-06-26 21:02:46.099325",
+  "name": "تم الحصول على طلب العميل",
+  "status_name": "تم الحصول على طلب العميل"
+ }
+]
