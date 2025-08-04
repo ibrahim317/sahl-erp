@@ -1,0 +1,23 @@
+{
+  "name": "sahl_erp",
+  "version": "1.0.0",
+  "description": "Integrated ERP system for Sahl, serve both real estate and students.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "cd Sahl && yarn install",
+    "dev": "cd Sahl && yarn dev",
+    "build": "cd Sahl && yarn build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ibrahim317/sahl-erp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ibrahim317/sahl-erp/issues"
+  },
+  "homepage": "https://github.com/ibrahim317/sahl-erp#readme"
+}
