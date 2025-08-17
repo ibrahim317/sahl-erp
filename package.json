@@ -5,9 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "cd Sahl && yarn install",
-    "dev": "cd Sahl && yarn dev",
-    "build": "cd Sahl && yarn build"
+    "build":"yarn run translate:all",
+    "translate:all":"yarn run translate:frappe && yarn run translate:erpnext && yarn run translate:hrms",
+    "translate:frappe":"cp -r sahl_erp/locale/other-apps/frappe/ar.po ../frappe/frappe/locale/ar.po",
+    "translate:erpnext":"cp -r sahl_erp/locale/other-apps/erpnext/ar.po ../erpnext/erpnext/locale/ar.po",
+    "translate:hrms":"cp -r sahl_erp/locale/other-apps/hrms/ar.po ../hrms/hrms/locale/ar.po"
   },
   "repository": {
     "type": "git",
