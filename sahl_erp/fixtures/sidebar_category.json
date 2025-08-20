@@ -1,0 +1,44 @@
+[
+ {
+  "category_name": "Accounts",
+  "docstatus": 0,
+  "doctype": "Sidebar Category",
+  "modified": "2025-08-18 02:24:32.315385",
+  "name": "Accounts"
+ },
+ {
+  "category_name": "Student Services",
+  "docstatus": 0,
+  "doctype": "Sidebar Category",
+  "modified": "2025-08-18 02:25:17.041513",
+  "name": "Student Services"
+ },
+ {
+  "category_name": "Data",
+  "docstatus": 0,
+  "doctype": "Sidebar Category",
+  "modified": "2025-08-18 02:26:35.147361",
+  "name": "Data"
+ },
+ {
+  "category_name": "Sales",
+  "docstatus": 0,
+  "doctype": "Sidebar Category",
+  "modified": "2025-08-18 02:26:51.161772",
+  "name": "Sales"
+ },
+ {
+  "category_name": "HR",
+  "docstatus": 0,
+  "doctype": "Sidebar Category",
+  "modified": "2025-08-18 02:24:11.463450",
+  "name": "HR"
+ },
+ {
+  "category_name": "Management",
+  "docstatus": 0,
+  "doctype": "Sidebar Category",
+  "modified": "2025-08-18 02:25:06.316142",
+  "name": "Management"
+ }
+]

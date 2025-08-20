@@ -10,18 +10,24 @@ app_license = "mit"
 # Apps
 # ------------------
 
-required_apps = ["frappe/erpnext", "frappe/hrms", "The-Commit-Company/raven", "ibrahim317/enhanced_kanban_view"]
+required_apps = [
+	"frappe/erpnext",
+	"frappe/hrms",
+	"The-Commit-Company/raven",
+	"ibrahim317/enhanced_kanban_view",
+	"ibrahim317/frappe_enhanced_sidebar",
+]
 
 
 # Each item in the list will be shown as an app in the apps page
 add_to_apps_screen = [
-    {
-        "name": "sahl_erp",
-        "logo": "/assets/sahl_erp/images/sahl-logo.png",
-        "title": "Sahl Erp",
-        "route": "/app/erp-home",
-        # "has_permission": "sahl_erp.api.permission.has_app_permission"
-    }
+	{
+		"name": "sahl_erp",
+		"logo": "/assets/sahl_erp/images/sahl-logo.png",
+		"title": "Sahl Erp",
+		"route": "/app/erp-home",
+		# "has_permission": "sahl_erp.api.permission.has_app_permission"
+	}
 ]
 
 # Includes in <head>
@@ -32,10 +38,10 @@ app_include_js = "sahl_erp.bundle.js"
 
 
 app_include_css = [
-    "/assets/sahl_erp/css/override_desk_components/sidebar.css",
-    "/assets/sahl_erp/css/override_desk_components/workspace.css",
-    "/assets/sahl_erp/css/override_desk_components/phone_field.css",
-    "/assets/sahl_erp/css/arabic_font.css",
+	"/assets/sahl_erp/css/override_desk_components/workspace.css",
+	"/assets/sahl_erp/css/override_desk_components/phone_field.css",
+	"/assets/sahl_erp/css/override_desk_components/app_logo.css",
+	"/assets/sahl_erp/css/arabic_font.css",
 ]
 
 # include js, css files in header of web template
@@ -252,18 +258,18 @@ website_context = {
 }
 
 fixtures = [
-    # To export specific documents from a DocType, use a dictionary with filters.
-    # This is the recommended approach.
-    # Exporting specific Roles
-    {"doctype": "Role", "filters": [["name", "in", ["Data Entry", "Data Search", "Data Check"]]]},
-    # 2. Export the permissions for those roles from DocPerm
-    # This is the crucial missing piece.
-    {"doctype": "DocPerm", "filters": [["role", "in", ["Data Entry", "Data Search", "Data Check"]]]},
-    # 3. (Recommended) Export any permissions for custom doctypes
-    {
-        "doctype": "Custom DocPerm",
-        "filters": [["role", "in", ["Data Entry", "Data Search", "Data Check"]]],
-    },
+	# To export specific documents from a DocType, use a dictionary with filters.
+	# This is the recommended approach.
+	# Exporting specific Roles
+	{"doctype": "Role", "filters": [["name", "in", ["Data Entry", "Data Search", "Data Check"]]]},
+	# 2. Export the permissions for those roles from DocPerm
+	# This is the crucial missing piece.
+	{"doctype": "DocPerm", "filters": [["role", "in", ["Data Entry", "Data Search", "Data Check"]]]},
+	# 3. (Recommended) Export any permissions for custom doctypes
+	{
+		"doctype": "Custom DocPerm",
+		"filters": [["role", "in", ["Data Entry", "Data Search", "Data Check"]]],
+	},
 	# Kanban Boards and Statuses
 	{"doctype": "Kanban Board"},
 	{"doctype": "Kanban Board Column"},
@@ -272,8 +278,12 @@ fixtures = [
 	# Form Customizations
 	{"doctype": "Property Setter"},
 	{"doctype": "Custom Field"},
-    # Exporting a specific Workflow
-    {"doctype": "Workflow"},
-    {"doctype": "Workflow State"},
-    {"doctype": "Workflow Action Master"},
+	# Exporting a specific Workflow
+	{"doctype": "Workflow"},
+	{"doctype": "Workflow State"},
+	{"doctype": "Workflow Action Master"},
+	# Enhanced Sidebar
+	{"doctype": "Enhanced Navbar Settings"},
+	{"doctype": "Sidebar Menu Item"},
+	{"doctype": "Sidebar Category"},
 ]

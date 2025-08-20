@@ -1,13 +1,13 @@
 [
  {
-  "column_name": "عميل جديد",
+  "column_name": "New Lead",
   "docstatus": 0,
   "doctype": "Kanban Board Column",
   "indicator": "Gray",
-  "modified": "2025-07-17 15:32:53.085533",
+  "modified": "2025-08-17 16:02:41.318211",
   "name": "عميل جديد-20",
-  "order": "[\"CRM-LEAD-2025-00004\", \"CRM-LEAD-2025-00003\", \"CRM-LEAD-2025-00002\"]",
-  "parent": "عميل محتمل",
+  "order": "[]",
+  "parent": "Potential Customer",
   "parentfield": "columns",
   "parenttype": "Kanban Board",
   "status": "Active"
@@ -26,14 +26,14 @@
   "status": "Active"
  },
  {
-  "column_name": "العميل غير مهتم",
+  "column_name": "Not Interested",
   "docstatus": 0,
   "doctype": "Kanban Board Column",
   "indicator": "Gray",
-  "modified": "2025-07-17 15:32:53.085533",
+  "modified": "2025-08-17 16:02:41.318211",
   "name": "العميل غير مهتم-21",
   "order": "[]",
-  "parent": "عميل محتمل",
+  "parent": "Potential Customer",
   "parentfield": "columns",
   "parenttype": "Kanban Board",
   "status": "Active"
@@ -52,14 +52,14 @@
   "status": "Active"
  },
  {
-  "column_name": "العميل لا يرد (يحتاج لمتابعة)",
+  "column_name": "Not Responding",
   "docstatus": 0,
   "doctype": "Kanban Board Column",
   "indicator": "Gray",
-  "modified": "2025-07-17 15:32:53.085533",
+  "modified": "2025-08-17 16:02:41.318211",
   "name": "العميل لا يرد (يحتاج لمتابعة)-22",
   "order": "[]",
-  "parent": "عميل محتمل",
+  "parent": "Potential Customer",
   "parentfield": "columns",
   "parenttype": "Kanban Board",
   "status": "Active"
@@ -78,14 +78,14 @@
   "status": "Active"
  },
  {
-  "column_name": "تم الحصول على طلب العميل",
+  "column_name": "Got The Customer Need",
   "docstatus": 0,
   "doctype": "Kanban Board Column",
-  "indicator": "Gray",
-  "modified": "2025-07-17 15:32:53.085533",
+  "indicator": "Pink",
+  "modified": "2025-08-17 16:02:41.318211",
   "name": "تم الحصول على طلب العميل-23",
   "order": "[]",
-  "parent": "عميل محتمل",
+  "parent": "Potential Customer",
   "parentfield": "columns",
   "parenttype": "Kanban Board",
   "status": "Active"

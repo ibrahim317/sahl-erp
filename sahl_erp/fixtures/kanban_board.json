@@ -2,45 +2,6 @@
  {
   "columns": [
    {
-    "column_name": "عميل جديد",
-    "indicator": "Gray",
-    "order": "[\"CRM-LEAD-2025-00004\", \"CRM-LEAD-2025-00003\", \"CRM-LEAD-2025-00002\"]",
-    "status": "Active"
-   },
-   {
-    "column_name": "العميل غير مهتم",
-    "indicator": "Gray",
-    "order": "[]",
-    "status": "Active"
-   },
-   {
-    "column_name": "العميل لا يرد (يحتاج لمتابعة)",
-    "indicator": "Gray",
-    "order": "[]",
-    "status": "Active"
-   },
-   {
-    "column_name": "تم الحصول على طلب العميل",
-    "indicator": "Gray",
-    "order": "[]",
-    "status": "Active"
-   }
-  ],
-  "docstatus": 0,
-  "doctype": "Kanban Board",
-  "field_name": "status",
-  "fields": null,
-  "filters": null,
-  "kanban_board_name": "عميل محتمل",
-  "modified": "2025-07-17 15:32:53.085533",
-  "name": "عميل محتمل",
-  "private": 0,
-  "reference_doctype": "Lead",
-  "show_labels": 0
- },
- {
-  "columns": [
-   {
     "column_name": "جاري البحث عن طلب العميل",
     "indicator": "Gray",
     "order": "[]",
@@ -81,6 +42,45 @@
   "name": "تم الحصول على طلب العميل",
   "private": 0,
   "reference_doctype": "Opportunity",
+  "show_labels": 0
+ },
+ {
+  "columns": [
+   {
+    "column_name": "New Lead",
+    "indicator": "Gray",
+    "order": "[]",
+    "status": "Active"
+   },
+   {
+    "column_name": "Not Interested",
+    "indicator": "Gray",
+    "order": "[]",
+    "status": "Active"
+   },
+   {
+    "column_name": "Not Responding",
+    "indicator": "Gray",
+    "order": "[]",
+    "status": "Active"
+   },
+   {
+    "column_name": "Got The Customer Need",
+    "indicator": "Pink",
+    "order": "[]",
+    "status": "Active"
+   }
+  ],
+  "docstatus": 0,
+  "doctype": "Kanban Board",
+  "field_name": "status",
+  "fields": null,
+  "filters": null,
+  "kanban_board_name": "Potential Customer",
+  "modified": "2025-08-17 16:02:41.318211",
+  "name": "Potential Customer",
+  "private": 0,
+  "reference_doctype": "Lead",
   "show_labels": 0
  }
 ]
