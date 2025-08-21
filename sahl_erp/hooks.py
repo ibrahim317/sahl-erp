@@ -15,7 +15,7 @@ required_apps = [
 	"frappe/hrms",
 	"The-Commit-Company/raven",
 	"ibrahim317/enhanced_kanban_view",
-	"ibrahim317/frappe_enhanced_sidebar",
+	"ibrahim317/enhanced_sidebar",
 ]
 
 
