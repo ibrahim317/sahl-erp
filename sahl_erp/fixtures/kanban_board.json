@@ -2,6 +2,36 @@
  {
   "columns": [
    {
+    "column_name": "فرصة جديدة",
+    "indicator": "Gray",
+    "order": "[]",
+    "status": "Active"
+   },
+   {
+    "column_name": "تم توقيع العقد",
+    "indicator": "Gray",
+    "order": "[\n \"CRM-OPP-2025-00001\"\n]",
+    "status": "Active"
+   },
+   {
+    "column_name": "جاري البحث عن طلب العميل",
+    "indicator": "Gray",
+    "order": "[]",
+    "status": "Active"
+   },
+   {
+    "column_name": "موافقة بعد المعاينة ويحتاج لمتابعة",
+    "indicator": "Gray",
+    "order": "[]",
+    "status": "Active"
+   },
+   {
+    "column_name": "تمت الموافقة الاولية وتحديد موعد المعاينة",
+    "indicator": "Gray",
+    "order": "[]",
+    "status": "Active"
+   },
+   {
     "column_name": "جاري البحث عن طلب العميل",
     "indicator": "Gray",
     "order": "[]",
@@ -46,6 +76,30 @@
  },
  {
   "columns": [
+   {
+    "column_name": "New Lead",
+    "indicator": "Gray",
+    "order": "[]",
+    "status": "Active"
+   },
+   {
+    "column_name": "Not Interested",
+    "indicator": "Gray",
+    "order": "[]",
+    "status": "Active"
+   },
+   {
+    "column_name": "Got The Customer Need",
+    "indicator": "Pink",
+    "order": "[]",
+    "status": "Active"
+   },
+   {
+    "column_name": "Not Responding",
+    "indicator": "Gray",
+    "order": "[]",
+    "status": "Active"
+   },
    {
     "column_name": "New Lead",
     "indicator": "Gray",

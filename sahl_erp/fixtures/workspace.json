@@ -2665,7 +2665,7 @@
   "type": "Workspace"
  },
  {
-  "app": null,
+  "app": "frappe",
   "category": null,
   "charts": [],
   "content": "[{\"id\":\"yq1JKyNTFg\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Web Page\",\"col\":3}},{\"id\":\"5GuZo0uP_K\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Web Form\",\"col\":3}},{\"id\":\"292vrD2W3o\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Blog Post\",\"col\":3}},{\"id\":\"xAkA6ItB7O\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"k8RquSngSk\",\"type\":\"card\",\"data\":{\"card_name\":\"Blog\",\"col\":4}},{\"id\":\"qEHBG-BEBI\",\"type\":\"card\",\"data\":{\"card_name\":\"Web Site\",\"col\":4}},{\"id\":\"oUox7d-8lQ\",\"type\":\"card\",\"data\":{\"card_name\":\"Knowledge Base\",\"col\":4}},{\"id\":\"96xAe0QVaV\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"ZvrzvEoYtc\",\"type\":\"card\",\"data\":{\"card_name\":\"Settings\",\"col\":4}},{\"id\":\"FVMFcgsiyK\",\"type\":\"card\",\"data\":{\"card_name\":\"Tracking\",\"col\":4}}]",
@@ -3161,7 +3161,7 @@
   "type": "Workspace"
  },
  {
-  "app": null,
+  "app": "frappe",
   "category": null,
   "charts": [],
   "content": "[{\"id\":\"sR-UFcO7II\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Import Data\",\"col\":3}},{\"id\":\"IkcVmgWb3z\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"ToDo\",\"col\":3}},{\"id\":\"6wir-jZFRE\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"File\",\"col\":3}},{\"id\":\"45a1jzQkTm\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Assignment Rule\",\"col\":3}},{\"id\":\"EgtURZsoiF\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"0yceBIfhHM\",\"type\":\"card\",\"data\":{\"card_name\":\"Data\",\"col\":4}},{\"id\":\"42WbBA9rpj\",\"type\":\"card\",\"data\":{\"card_name\":\"Tools\",\"col\":4}},{\"id\":\"wE9n7TIrAc\",\"type\":\"card\",\"data\":{\"card_name\":\"Alerts and Notifications\",\"col\":4}},{\"id\":\"7_U7_xCOos\",\"type\":\"card\",\"data\":{\"card_name\":\"Email\",\"col\":4}},{\"id\":\"3imoh2oqsJ\",\"type\":\"card\",\"data\":{\"card_name\":\"Printing\",\"col\":4}},{\"id\":\"SlYKJZj5r3\",\"type\":\"card\",\"data\":{\"card_name\":\"Automation\",\"col\":4}},{\"id\":\"O7jrc2YQTN\",\"type\":\"card\",\"data\":{\"card_name\":\"Newsletter\",\"col\":4}}]",
@@ -4002,7 +4002,7 @@
   "type": "Workspace"
  },
  {
-  "app": null,
+  "app": "frappe",
   "category": null,
   "charts": [],
   "content": "[{\"id\":\"NPK_AfSLQ2\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reports &amp; Masters</b></span>\",\"col\":12}},{\"id\":\"lDOo58F7ZI\",\"type\":\"card\",\"data\":{\"card_name\":\"Backup\",\"col\":4}},{\"id\":\"ij1pcK8jst\",\"type\":\"card\",\"data\":{\"card_name\":\"Google Services\",\"col\":4}},{\"id\":\"aTlMujEHpN\",\"type\":\"card\",\"data\":{\"card_name\":\"Authentication\",\"col\":4}},{\"id\":\"gY5NXKtXss\",\"type\":\"card\",\"data\":{\"card_name\":\"Settings\",\"col\":4}},{\"id\":\"n_CI3GGqW-\",\"type\":\"card\",\"data\":{\"card_name\":\"Push Notifications\",\"col\":4}}]",
@@ -5341,7 +5341,7 @@
   "type": "Workspace"
  },
  {
-  "app": null,
+  "app": "erpnext",
   "category": null,
   "charts": [
    {
@@ -5810,7 +5810,7 @@
     "link_type": "Report",
     "onboard": 0,
     "only_for": null,
-    "report_ref_doctype": null,
+    "report_ref_doctype": "Serial No",
     "type": "Link"
    },
    {
@@ -5825,7 +5825,7 @@
     "link_type": "Report",
     "onboard": 0,
     "only_for": null,
-    "report_ref_doctype": null,
+    "report_ref_doctype": "Serial No",
     "type": "Link"
    },
    {
@@ -5840,7 +5840,7 @@
     "link_type": "Report",
     "onboard": 0,
     "only_for": null,
-    "report_ref_doctype": null,
+    "report_ref_doctype": "Serial No",
     "type": "Link"
    },
    {
@@ -6185,7 +6185,7 @@
     "link_type": "Report",
     "onboard": 0,
     "only_for": null,
-    "report_ref_doctype": null,
+    "report_ref_doctype": "Stock Ledger Entry",
     "type": "Link"
    },
    {
@@ -6530,7 +6530,7 @@
     "kanban_board": null,
     "label": "Stock Ledger",
     "link_to": "Stock Ledger",
-    "report_ref_doctype": null,
+    "report_ref_doctype": "Stock Ledger Entry",
     "restrict_to_domain": null,
     "stats_filter": null,
     "type": "Report",
@@ -6544,7 +6544,7 @@
     "kanban_board": null,
     "label": "Stock Balance",
     "link_to": "Stock Balance",
-    "report_ref_doctype": null,
+    "report_ref_doctype": "Stock Ledger Entry",
     "restrict_to_domain": null,
     "stats_filter": null,
     "type": "Report",
@@ -6569,7 +6569,7 @@
   "type": "Workspace"
  },
  {
-  "app": null,
+  "app": "erpnext",
   "category": null,
   "charts": [
    {
@@ -6828,7 +6828,7 @@
     "link_type": "Report",
     "onboard": 0,
     "only_for": null,
-    "report_ref_doctype": null,
+    "report_ref_doctype": "Asset Maintenance",
     "type": "Link"
    },
    {
@@ -6843,7 +6843,7 @@
     "link_type": "Report",
     "onboard": 0,
     "only_for": null,
-    "report_ref_doctype": null,
+    "report_ref_doctype": "Asset Activity",
     "type": "Link"
    }
   ],
@@ -6894,7 +6894,7 @@
     "kanban_board": null,
     "label": "Fixed Asset Register",
     "link_to": "Fixed Asset Register",
-    "report_ref_doctype": null,
+    "report_ref_doctype": "Asset",
     "restrict_to_domain": null,
     "stats_filter": null,
     "type": "Report",
@@ -6919,7 +6919,7 @@
   "type": "Workspace"
  },
  {
-  "app": null,
+  "app": "erpnext",
   "category": null,
   "charts": [
    {
@@ -7272,7 +7272,7 @@
     "kanban_board": null,
     "label": "Timesheet Billing Summary",
     "link_to": "Timesheet Billing Summary",
-    "report_ref_doctype": null,
+    "report_ref_doctype": "Timesheet",
     "restrict_to_domain": null,
     "stats_filter": null,
     "type": "Report",
@@ -7297,7 +7297,7 @@
   "type": "Workspace"
  },
  {
-  "app": null,
+  "app": "erpnext",
   "category": null,
   "charts": [],
   "content": "[{\"id\":\"qzP2mZrGOu\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Your Shortcuts</b></span>\",\"col\":12}},{\"id\":\"Fkdjo6bJ7A\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Issue\",\"col\":3}},{\"id\":\"OTS8kx2f3x\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Maintenance Visit\",\"col\":3}},{\"id\":\"smDTSjBR3Z\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Service Level Agreement\",\"col\":3}},{\"id\":\"WCqL_gBYGU\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"oxhWhXp9b2\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reports &amp; Masters</b></span>\",\"col\":12}},{\"id\":\"Ff8Ab3nLLN\",\"type\":\"card\",\"data\":{\"card_name\":\"Issues\",\"col\":4}},{\"id\":\"_lndiuJTVP\",\"type\":\"card\",\"data\":{\"card_name\":\"Maintenance\",\"col\":4}},{\"id\":\"R_aNO5ESzJ\",\"type\":\"card\",\"data\":{\"card_name\":\"Service Level Agreement\",\"col\":4}},{\"id\":\"N8aA2afWfi\",\"type\":\"card\",\"data\":{\"card_name\":\"Warranty\",\"col\":4}},{\"id\":\"M5fxGuFwUR\",\"type\":\"card\",\"data\":{\"card_name\":\"Settings\",\"col\":4}},{\"id\":\"xKH0kO9q4P\",\"type\":\"card\",\"data\":{\"card_name\":\"Reports\",\"col\":4}}]",
@@ -8879,7 +8879,7 @@
   "type": "Workspace"
  },
  {
-  "app": null,
+  "app": "erpnext",
   "category": null,
   "charts": [],
   "content": "[{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Your Shortcuts</b></span>\",\"col\":12}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Quality Goal\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Quality Procedure\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Quality Inspection\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Quality Review\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Quality Action\",\"col\":3}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Non Conformance\",\"col\":3}},{\"type\":\"spacer\",\"data\":{\"col\":12}},{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reports & Masters</b></span>\",\"col\":12}},{\"type\":\"card\",\"data\":{\"card_name\":\"Goal and Procedure\",\"col\":4}},{\"type\":\"card\",\"data\":{\"card_name\":\"Feedback\",\"col\":4}},{\"type\":\"card\",\"data\":{\"card_name\":\"Meeting\",\"col\":4}},{\"type\":\"card\",\"data\":{\"card_name\":\"Review and Action\",\"col\":4}}]",
@@ -9882,7 +9882,7 @@
     "kanban_board": null,
     "label": "Forecasting",
     "link_to": "Exponential Smoothing Forecasting",
-    "report_ref_doctype": null,
+    "report_ref_doctype": "Sales Order",
     "restrict_to_domain": null,
     "stats_filter": null,
     "type": "Report",
@@ -9896,7 +9896,7 @@
     "kanban_board": null,
     "label": "BOM Stock Report",
     "link_to": "BOM Stock Report",
-    "report_ref_doctype": null,
+    "report_ref_doctype": "BOM",
     "restrict_to_domain": null,
     "stats_filter": null,
     "type": "Report",
@@ -9910,7 +9910,7 @@
     "kanban_board": null,
     "label": "Production Planning Report",
     "link_to": "Production Planning Report",
-    "report_ref_doctype": null,
+    "report_ref_doctype": "Work Order",
     "restrict_to_domain": null,
     "stats_filter": null,
     "type": "Report",
@@ -13140,7 +13140,7 @@
   "type": "Workspace"
  },
  {
-  "app": null,
+  "app": "crm",
   "category": null,
   "charts": [],
   "content": "[{\"id\":\"1nr6UkvDiL\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h5\\\"><b>PORTAL</b></span>\",\"col\":12}},{\"id\":\"1hyi8SysUY\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"CRM Portal Page\",\"col\":3}},{\"id\":\"ktENiGaqXQ\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"VgeWLYOuAS\",\"type\":\"paragraph\",\"data\":{\"text\":\"<b>SHORTCUTS</b>\",\"col\":12}},{\"id\":\"A66FpG-K3T\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Leads\",\"col\":3}},{\"id\":\"n9b6N5ebOj\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Deals\",\"col\":3}},{\"id\":\"sGHTXrludH\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Organizations\",\"col\":3}},{\"id\":\"uXZNCdqxy0\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Contacts\",\"col\":3}},{\"id\":\"v1kkMwlntf\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"SLA\",\"col\":3}},{\"id\":\"WRzt4SMh_b\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Assignment Rule\",\"col\":3}},{\"id\":\"TZ7cULX3Tk\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"zpySv0nGVQ\",\"type\":\"paragraph\",\"data\":{\"text\":\"<b>META</b>\",\"col\":12}},{\"id\":\"fa-uKzobpp\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Lead Statuses\",\"col\":3}},{\"id\":\"hxoZghUHP2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Deal Statuses\",\"col\":3}},{\"id\":\"HbgghUpc8N\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Lead Sources\",\"col\":3}},{\"id\":\"8cPs7Fohb4\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Industries\",\"col\":3}},{\"id\":\"arT4xZ9HWR\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Territories\",\"col\":3}},{\"id\":\"ApHOcISpiJ\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Communication Statuses\",\"col\":3}}]",
@@ -13355,7 +13355,7 @@
   "type": "Workspace"
  },
  {
-  "app": null,
+  "app": "erpnext",
   "category": "Accounts",
   "charts": [],
   "content": "[{\"id\":\"vikWSkNm6_\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Shortcuts</b></span>\",\"col\":12}},{\"id\":\"G984SgVRJN\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sales Invoice\",\"col\":3}},{\"id\":\"5yHldR0JNk\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"POS Invoice\",\"col\":3}},{\"id\":\"F9f4I1viNr\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Payment Entry\",\"col\":3}},{\"id\":\"1ArNvt9qhz\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Journal Entry\",\"col\":3}},{\"id\":\"4IBBOIxfqW\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Accounts Receivable\",\"col\":3}},{\"id\":\"ILlIxJuexy\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Cost Center\",\"col\":3}},{\"id\":\"B7-uxs8tkU\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"tHb3yxthkR\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reports &amp; Masters</b></span>\",\"col\":12}},{\"id\":\"jLgv00c6ek\",\"type\":\"card\",\"data\":{\"card_name\":\"Invoicing\",\"col\":4}},{\"id\":\"npwfXlz0u1\",\"type\":\"card\",\"data\":{\"card_name\":\"Payments\",\"col\":4}},{\"id\":\"am70C27Jrb\",\"type\":\"card\",\"data\":{\"card_name\":\"Dunning\",\"col\":4}},{\"id\":\"xOHTyD8b5l\",\"type\":\"card\",\"data\":{\"card_name\":\"Reports\",\"col\":4}}]",
@@ -13732,7 +13732,7 @@
     "kanban_board": null,
     "label": "Accounts Receivable",
     "link_to": "Accounts Receivable",
-    "report_ref_doctype": null,
+    "report_ref_doctype": "Sales Invoice",
     "restrict_to_domain": null,
     "stats_filter": null,
     "type": "Report",
@@ -13743,7 +13743,7 @@
   "type": "Workspace"
  },
  {
-  "app": null,
+  "app": "erpnext",
   "category": "Accounts",
   "charts": [],
   "content": "[{\"id\":\"nKKr6fjgjb\",\"type\":\"card\",\"data\":{\"card_name\":\"Ledgers\",\"col\":4}},{\"id\":\"p7NY6MHe2Y\",\"type\":\"card\",\"data\":{\"card_name\":\"Financial Statements\",\"col\":4}},{\"id\":\"3AK1Zf0oew\",\"type\":\"card\",\"data\":{\"card_name\":\"Profitability\",\"col\":4}},{\"id\":\"Q_hBCnSeJY\",\"type\":\"card\",\"data\":{\"card_name\":\"Other Reports\",\"col\":4}}]",
@@ -14121,7 +14121,7 @@
   "type": "Workspace"
  },
  {
-  "app": null,
+  "app": "builder",
   "category": null,
   "charts": [],
   "content": "[{\"id\":\"_-b0CpVZje\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Open <strong>Frappe Builder</strong>\",\"col\":4}}]",
@@ -16443,7 +16443,7 @@
   "type": "Workspace"
  },
  {
-  "app": null,
+  "app": "frappe",
   "category": null,
   "charts": [],
   "content": "[{\"id\":\"2eyXSHwMTE\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h2\\\">Hi,</span>\",\"col\":12}},{\"id\":\"ZusKvFOXgu\",\"type\":\"paragraph\",\"data\":{\"text\":\"I guess you don't have access to any workspace yet, but you can create one just for yourself. Click on the <b>Create Workspace</b> button to create one.<br>\",\"col\":12}}]",
@@ -16475,7 +16475,7 @@
   "type": "Workspace"
  },
  {
-  "app": null,
+  "app": "erpnext",
   "category": "Accounts",
   "charts": [],
   "content": "[{\"id\":\"rMMsfn2eB4\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Shortcuts</b></span>\",\"col\":12}},{\"id\":\"G984SgVRJN\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Purchase Invoice\",\"col\":3}},{\"id\":\"F9f4I1viNr\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Payment Entry\",\"col\":3}},{\"id\":\"1ArNvt9qhz\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Journal Entry\",\"col\":3}},{\"id\":\"4IBBOIxfqW\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Accounts Payable\",\"col\":3}},{\"id\":\"B7-uxs8tkU\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"jAcOH-cC-Q\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Reports &amp; Masters</b></span>\",\"col\":12}},{\"id\":\"7dj93PEUjW\",\"type\":\"card\",\"data\":{\"card_name\":\"Invoicing\",\"col\":4}},{\"id\":\"_Cb7C8XdJJ\",\"type\":\"card\",\"data\":{\"card_name\":\"Payments\",\"col\":4}},{\"id\":\"9yseIkdG50\",\"type\":\"card\",\"data\":{\"card_name\":\"Reports\",\"col\":4}}]",
@@ -16737,7 +16737,7 @@
     "kanban_board": null,
     "label": "Accounts Payable",
     "link_to": "Accounts Payable",
-    "report_ref_doctype": null,
+    "report_ref_doctype": "Purchase Invoice",
     "restrict_to_domain": null,
     "stats_filter": null,
     "type": "Report",
