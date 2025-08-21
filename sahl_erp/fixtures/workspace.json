@@ -3158,7 +3158,7 @@
    }
   ],
   "title": "Website",
-  "type": null
+  "type": "Workspace"
  },
  {
   "app": null,
@@ -3713,7 +3713,7 @@
    }
   ],
   "title": "Tools",
-  "type": null
+  "type": "Workspace"
  },
  {
   "app": "sahl_erp",
@@ -4332,7 +4332,7 @@
   "sequence_id": 20.0,
   "shortcuts": [],
   "title": "Integrations",
-  "type": null
+  "type": "Workspace"
  },
  {
   "app": "sahl_erp",
@@ -6566,7 +6566,7 @@
    }
   ],
   "title": "Stock",
-  "type": null
+  "type": "Workspace"
  },
  {
   "app": null,
@@ -6916,7 +6916,7 @@
    }
   ],
   "title": "Assets",
-  "type": null
+  "type": "Workspace"
  },
  {
   "app": null,
@@ -7294,7 +7294,7 @@
    }
   ],
   "title": "Projects",
-  "type": null
+  "type": "Workspace"
  },
  {
   "app": null,
@@ -7610,7 +7610,7 @@
    }
   ],
   "title": "Support",
-  "type": null
+  "type": "Workspace"
  },
  {
   "app": "hrms",
@@ -9189,7 +9189,7 @@
    }
   ],
   "title": "Quality",
-  "type": null
+  "type": "Workspace"
  },
  {
   "app": "erpnext",
@@ -13352,7 +13352,7 @@
    }
   ],
   "title": "Frappe CRM",
-  "type": null
+  "type": "Workspace"
  },
  {
   "app": null,
@@ -13740,7 +13740,7 @@
    }
   ],
   "title": "Receivables",
-  "type": null
+  "type": "Workspace"
  },
  {
   "app": null,
@@ -14118,7 +14118,7 @@
   "sequence_id": 5.0,
   "shortcuts": [],
   "title": "Financial Reports",
-  "type": null
+  "type": "Workspace"
  },
  {
   "app": null,
@@ -14172,7 +14172,7 @@
    }
   ],
   "title": "Frappe Builder",
-  "type": null
+  "type": "Workspace"
  },
  {
   "app": "sahl_erp",
@@ -16472,7 +16472,7 @@
   "sequence_id": 22.0,
   "shortcuts": [],
   "title": "Welcome Workspace",
-  "type": null
+  "type": "Workspace"
  },
  {
   "app": null,
@@ -16787,7 +16787,7 @@
    }
   ],
   "title": "Payables",
-  "type": null
+  "type": "Workspace"
  },
  {
   "app": "sahl_erp",
