@@ -13,6 +13,7 @@ app_license = "mit"
 required_apps = [
 	"frappe/erpnext",
 	"frappe/hrms",
+	"frappe/crm",
 	"The-Commit-Company/raven",
 	"ibrahim317/enhanced_kanban_view",
 	"ibrahim317/enhanced_sidebar",
@@ -41,6 +42,7 @@ app_include_css = [
 	"/assets/sahl_erp/css/override_desk_components/workspace.css",
 	"/assets/sahl_erp/css/override_desk_components/phone_field.css",
 	"/assets/sahl_erp/css/override_desk_components/app_logo.css",
+	"/assets/sahl_erp/css/override_desk_components/raven.css",
 	"/assets/sahl_erp/css/arabic_font.css",
 ]
 

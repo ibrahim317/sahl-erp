@@ -83,24 +83,6 @@
     "status": "Active"
    },
    {
-    "column_name": "Not Interested",
-    "indicator": "Gray",
-    "order": "[]",
-    "status": "Active"
-   },
-   {
-    "column_name": "Got The Customer Need",
-    "indicator": "Pink",
-    "order": "[]",
-    "status": "Active"
-   },
-   {
-    "column_name": "Not Responding",
-    "indicator": "Gray",
-    "order": "[]",
-    "status": "Active"
-   },
-   {
     "column_name": "New Lead",
     "indicator": "Gray",
     "order": "[]",
@@ -113,6 +95,12 @@
     "status": "Active"
    },
    {
+    "column_name": "Not Interested",
+    "indicator": "Gray",
+    "order": "[]",
+    "status": "Active"
+   },
+   {
     "column_name": "Not Responding",
     "indicator": "Gray",
     "order": "[]",
@@ -123,6 +111,18 @@
     "indicator": "Pink",
     "order": "[]",
     "status": "Active"
+   },
+   {
+    "column_name": "Got The Customer Need",
+    "indicator": "Pink",
+    "order": "[]",
+    "status": "Active"
+   },
+   {
+    "column_name": "Not Responding",
+    "indicator": "Gray",
+    "order": "[]",
+    "status": "Active"
    }
   ],
   "docstatus": 0,
@@ -131,7 +131,7 @@
   "fields": null,
   "filters": null,
   "kanban_board_name": "Potential Customer",
-  "modified": "2025-08-17 16:02:41.318211",
+  "modified": "2025-08-22 17:27:48.047917",
   "name": "Potential Customer",
   "private": 0,
   "reference_doctype": "Lead",

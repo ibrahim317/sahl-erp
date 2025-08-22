@@ -1,0 +1,8 @@
+html[lang="ar"] .raven-chat {
+    left: 40px !important;
+    right: auto !important;
+}
+html[lang="en"] .raven-chat {
+    right: 40px !important;
+    left: auto !important;
+}

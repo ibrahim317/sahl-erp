@@ -28,17 +28,17 @@
   "name": "Sales"
  },
  {
-  "category_name": "HR",
-  "docstatus": 0,
-  "doctype": "Sidebar Category",
-  "modified": "2025-08-18 02:24:11.463450",
-  "name": "HR"
- },
- {
   "category_name": "Management",
   "docstatus": 0,
   "doctype": "Sidebar Category",
   "modified": "2025-08-18 02:25:06.316142",
   "name": "Management"
+ },
+ {
+  "category_name": "HR",
+  "docstatus": 0,
+  "doctype": "Sidebar Category",
+  "modified": "2025-08-18 02:24:11.463450",
+  "name": "HR"
  }
 ]

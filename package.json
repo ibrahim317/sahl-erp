@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build":"yarn run translate:all",
-    "translate:all":"yarn run translate:frappe && yarn run translate:erpnext && yarn run translate:hrms",
+    "translate:all":"yarn run translate:frappe && yarn run translate:erpnext && yarn run translate:hrms && yarn run translate:crm",
+    "translate:crm":"cp -r sahl_erp/locale/other-apps/crm/ar.po ../crm/crm/locale/ar.po",
     "translate:frappe":"cp -r sahl_erp/locale/other-apps/frappe/ar.po ../frappe/frappe/locale/ar.po",
     "translate:erpnext":"cp -r sahl_erp/locale/other-apps/erpnext/ar.po ../erpnext/erpnext/locale/ar.po",
     "translate:hrms":"cp -r sahl_erp/locale/other-apps/hrms/ar.po ../hrms/hrms/locale/ar.po"
