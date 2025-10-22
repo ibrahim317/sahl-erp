@@ -1,0 +1,106 @@
+FROM frappe/bench:latest AS base
+
+# Copy nginx template and entrypoints
+COPY resources/nginx-template.conf /templates/nginx/frappe.conf.template
+COPY resources/nginx-entrypoint.sh /usr/local/bin/nginx-entrypoint.sh
+COPY resources/app-entrypoint.sh /usr/local/bin/app-entrypoint.sh
+
+USER root
+RUN apt-get update \
+    && DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y \
+    nginx \
+    gettext-base \
+    mariadb-client \
+    postgresql-client \
+    wait-for-it \
+    jq \
+    less \
+    && rm -rf /var/lib/apt/lists/* \
+    # remove default nginx site and adjust for non-root
+    && rm -f /etc/nginx/sites-enabled/default \
+    && sed -i '/user www-data/d' /etc/nginx/nginx.conf \
+    && ln -sf /dev/stdout /var/log/nginx/access.log \
+    && ln -sf /dev/stderr /var/log/nginx/error.log \
+    && touch /run/nginx.pid \
+    && chown -R frappe:frappe /etc/nginx/conf.d /etc/nginx/nginx.conf /var/log/nginx /var/lib/nginx /run/nginx.pid \
+    && chmod 755 /usr/local/bin/nginx-entrypoint.sh \
+    && chmod 644 /templates/nginx/frappe.conf.template \
+    && chmod 755 /usr/local/bin/app-entrypoint.sh
+
+USER frappe
+
+# ---------- Build bench with apps (cached by layers) ----------
+FROM base AS builder
+
+ARG FRAPPE_BRANCH=develop
+ARG FRAPPE_PATH=https://github.com/frappe/frappe
+
+WORKDIR /home/frappe
+
+# Initialize a clean bench with frappe only (cache-friendly)
+RUN bench init \
+    --frappe-branch=${FRAPPE_BRANCH} \
+    --frappe-path=${FRAPPE_PATH} \
+    --no-procfile \
+    --no-backups \
+    --skip-redis-config-generation \
+    --verbose \
+    /home/frappe/frappe-bench && \
+  cd /home/frappe/frappe-bench && \
+  echo "{}" > sites/common_site_config.json
+
+# Copy apps.json and helper to fetch apps
+COPY --chown=frappe:frappe apps.json /opt/frappe/apps.json
+COPY --chown=frappe:frappe scripts/check-app-updates.sh /opt/frappe/check-app-updates.sh
+
+ARG APP_UPDATE_TIMESTAMP=1
+
+RUN cd /home/frappe/frappe-bench && \
+    jq -c '.[]' /opt/frappe/apps.json | while read -r app; do \
+      url=$(echo "$app" | jq -r '.url'); \
+      branch=$(echo "$app" | jq -r '.branch // empty'); \
+      if [ -n "$branch" ] && [ "$branch" != "null" ]; then \
+        bench get-app --branch "$branch" "$url"; \
+      else \
+        bench get-app "$url"; \
+      fi; \
+    done && \
+    find apps -mindepth 1 -path "*/.git" | xargs rm -fr
+
+# ---------- Runtime image ----------
+FROM base AS backend
+
+USER frappe
+
+COPY --from=builder --chown=frappe:frappe /home/frappe/frappe-bench /home/frappe/frappe-bench
+
+# Runtime helper scripts
+COPY --chown=frappe:frappe scripts/configure-frappe.sh /usr/local/bin/configure-frappe
+COPY --chown=frappe:frappe scripts/create-site.sh /usr/local/bin/create-site
+COPY --chown=frappe:frappe scripts/migrate-all.sh /usr/local/bin/migrate-all
+RUN chmod 755 /usr/local/bin/configure-frappe /usr/local/bin/create-site /usr/local/bin/migrate-all
+
+WORKDIR /home/frappe/frappe-bench
+
+VOLUME [ \
+  "/home/frappe/frappe-bench/sites", \
+  "/home/frappe/frappe-bench/sites/assets", \
+  "/home/frappe/frappe-bench/logs" \
+]
+
+ENTRYPOINT ["/usr/local/bin/app-entrypoint.sh"]
+
+CMD [ \
+  "/home/frappe/frappe-bench/env/bin/gunicorn", \
+  "--chdir=/home/frappe/frappe-bench/sites", \
+  "--bind=0.0.0.0:8000", \
+  "--threads=4", \
+  "--workers=2", \
+  "--worker-class=gthread", \
+  "--worker-tmp-dir=/dev/shm", \
+  "--timeout=120", \
+  "--preload", \
+  "frappe.app:application" \
+]
+
+
