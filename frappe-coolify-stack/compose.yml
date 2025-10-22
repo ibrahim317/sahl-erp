@@ -21,7 +21,7 @@ services:
     environment:
       - DB_HOST=db
       - DB_PORT=3306
-      - SERVICE_URL_APP_8080
+      - SERVICE_FQDN_APP_8080=8080
       - SITE_NAME=${SERVICE_FQDN_APP}
       - ADMIN_PASSWORD=${SERVICE_PASSWORD_CREATESITE}
       - DB_ROOT_PASSWORD=${SERVICE_PASSWORD_MARIADBROOT}
@@ -41,7 +41,7 @@ services:
     healthcheck:
       test:
         - CMD-SHELL
-        - 'wait-for-it -t 15 localhost:8080 || exit 1'
+        - 'curl -f -H "Host: ${SERVICE_FQDN_APP}" http://localhost:8080/api/method/ping || exit 1'
       interval: 10s
       timeout: 60s
       retries: 90
