@@ -30,16 +30,6 @@ a.app-switcher-dropdown.active-sidebar {
     align-items: center;
 }
 
-/* Custom styles for the Sahl ERP logo to mimic Frappe's */
-.sahl-logo-container {
-	text-decoration: none;
-	text-align: center;
-    padding: var(--padding-xs);
-    border-radius: var(--border-radius-sm);
-    transition: all 0.2s ease;
-    flex-shrink: 0;
-}
-
 .sahl-app-title {
     font-weight: 600;
     color: var(--text-color);
